@@ -4,15 +4,25 @@ Tomato Desktop là ứng dụng Windows của [VanHuynh205](https://github.com/V
 
 ## Trạng thái bản public
 
-Repo có mã nguồn, giao diện đã build, tám thẻ chăm sóc đã duyệt cùng đầu vào để kiểm lại catalog và các bài kiểm thử. **Repo chưa phân phối checkpoint DINOv2 v1 đã tinh chỉnh**, vì chủ dự án chưa có xác nhận quyền phát hành model từ các nguồn dữ liệu còn vướng. Vì vậy, bản clone sạch chưa thể nhận diện ảnh ngay. Không có lệnh tải weights tự động hoặc train lại.
+Bản desktop Windows và weights đã train được phân phối qua [GitHub Release v0.1.0-dinov2-v1-280](https://github.com/VanHuynh205/TomatoAI-Public/releases/tag/v0.1.0-dinov2-v1-280). Weights lớn hơn giới hạn tệp Git nên không nằm trong lịch sử source. Repo giữ source train ảnh, runtime, giao diện đã build, tám thẻ chăm sóc đã duyệt và các bài kiểm thử. Không train lại trong đợt phát hành này; chưa triển khai nhận diện hay train video.
+
+Chủ dự án yêu cầu đưa model lên để cộng tác. **Các khoảng trống quyền dataset/checkpoint vẫn chưa giải quyết; upload không phải xác nhận clearance và không gán Apache-2.0 cho weights.** Xem các thông báo bên dưới trước khi tái sử dụng hoặc phân phối tiếp.
 
 Model đúng của dự án là DINOv2 v1, backbone `facebook/dinov2-base` (ViT-B/14), checkpoint epoch 6 train ở 224px và suy luận ở **280px**. DINOv2 pretrained của Meta không thay thế được đầu phân loại lá đã train. Xem [model card](MODEL_CARD.md), [ghi công dataset](DATASET_ATTRIBUTIONS.md) và [hồ sơ phát hành](RELEASE.md).
 
-## Chạy trên Windows x64 với bundle được cấp quyền
+## Tải và chạy desktop, không cần Python
+
+1. Tải [TomatoDesktop-0.1.0-dinov2-v1-280-win-x64.zip](https://github.com/VanHuynh205/TomatoAI-Public/releases/download/v0.1.0-dinov2-v1-280/TomatoDesktop-0.1.0-dinov2-v1-280-win-x64.zip) và đối chiếu SHA-256 với [SHA256SUMS.txt](https://github.com/VanHuynh205/TomatoAI-Public/releases/download/v0.1.0-dinov2-v1-280/SHA256SUMS.txt).
+2. Giải nén **toàn bộ ZIP** ra một thư mục trên Windows x64. Giữ nguyên `TomatoDesktop.exe`, `_internal/` và `release-manifest.json` cạnh nhau. Không chạy EXE ngay trong ZIP hoặc chỉ chép riêng EXE.
+3. Máy cần [WebView2 Evergreen Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) và .NET Framework 4.6.2 trở lên. Mở `TomatoDesktop.exe`, chờ nạp model rồi chọn ảnh để nhận diện. Gói đã có model và Python runtime CPU; không cần GPU, CUDA, Node.js hoặc tải thêm weights.
+
+EXE chưa có chữ ký Authenticode. Nếu Windows cảnh báo, kiểm lại nguồn tải và checksum trước khi quyết định chạy; không tắt SmartScreen hoặc phần mềm bảo mật. Khi đã có prerequisites, suy luận chạy tại máy và không cần Internet; mở liên kết nguồn chăm sóc có thể cần Internet. Đây là bản cộng tác thử nghiệm, chưa phải kết quả kiểm trên mọi máy Windows.
+
+## Chạy từ source trên Windows x64
 
 Yêu cầu: Windows x64, [uv](https://docs.astral.sh/uv/getting-started/installation/), [Microsoft Edge WebView2 Evergreen Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) và .NET Framework 4.6.2 trở lên. Bootstrap dùng CPython 3.12.14 x64 và các dependency CPU đã khóa; lần cài đầu cần Internet. Không cần GPU, CUDA, Node.js hoặc dataset huấn luyện để chạy giao diện đã build. Desktop host hiện không hỗ trợ macOS/Linux; chưa kiểm chứng Windows ARM64.
 
-Chỉ khi bạn có quyền sử dụng bundle DINOv2 v1 tương ứng, đặt đủ sáu tệp vào:
+Tải [dinov2-v1-280-model.zip](https://github.com/VanHuynh205/TomatoAI-Public/releases/download/v0.1.0-dinov2-v1-280/dinov2-v1-280-model.zip), đối chiếu checksum trong Release rồi giải nén vào `ai/artifacts/`. Sau giải nén phải có đúng sáu tệp model ở vị trí sau (thư mục `model-notices/` đi kèm giữ các thông báo riêng):
 
 ```text
 ai/artifacts/dinov2-v1-280/
@@ -71,7 +81,11 @@ Pop-Location
 
 Không commit token. Các bài E2E hiện dùng locator/assertion tường minh, không có bước `agent.act`, nên không cần model API key. Runner cần trình duyệt Chromium phù hợp. Báo cáo nằm trong `frontend/.e2e/`.
 
-Kết quả clone mới, 284 test Python, 33 test frontend, 9 E2E và giới hạn kiểm chứng được ghi trong [báo cáo ngày 13/11/2026](docs/verification/2026-11-13-public-release.md). Các kết quả này không có nghĩa repo đã phân phối model hoặc đã kiểm native/offline release.
+Kết quả kiểm source ban đầu nằm trong [báo cáo source ngày 13/11/2026](docs/verification/2026-11-13-public-release.md). Kiểm bản Windows lần này được ghi riêng trong [báo cáo release Windows](docs/verification/2026-11-13-windows-release.md); test fixture không thay thế kiểm executable thật.
+
+## Làm tiếp train ảnh và hướng video
+
+Đọc [bàn giao DINOv2 ảnh sang video](docs/training/IMAGE_TO_VIDEO_HANDOFF.md) trước khi sửa trainer. Tài liệu chỉ đúng source ảnh gốc, cách nạp backbone/head đã train và lấy đặc trưng từng frame, schema manifest và quy tắc tách clip để tránh leakage. Có ví dụ warm-start từ weights phát hành. Bundle suy luận không chứa optimizer/scaler để resume chính xác lượt train cũ; repo chưa có trainer video hoặc mô hình thời gian. Không kèm raw dataset, ảnh hay video.
 
 ## Giấy phép và ghi công
 

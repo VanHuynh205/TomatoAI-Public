@@ -15,7 +15,7 @@
 
 Train: 6.969 ảnh; validation: 1.642 ảnh. [Danh sách nguồn, tác giả, phiên bản, điều kiện và khoảng trống](DATASET_ATTRIBUTIONS.md) phân biệt tập train/validation với đánh giá ngoài nguồn. Repo không phân phối ảnh huấn luyện.
 
-**Checkpoint tinh chỉnh chưa được phát hành và chưa được gán Apache-2.0.** Chủ dự án chưa có xác nhận quyền phát hành từ các nguồn còn vướng. Apache của DINOv2 gốc và của mã ứng dụng không tự giải quyết điều khoản PlantVillage hoặc quyền ảnh thu từ web của PlantDoc. Việc bổ sung ghi công không thay thế xin quyền hoặc rà soát pháp lý. Người tái sử dụng phải đánh giá quyền phù hợp với cách dùng của mình.
+Chủ dự án yêu cầu phát hành checkpoint tinh chỉnh qua GitHub Release để cộng tác làm tiếp phần video. **Giấy phép riêng của checkpoint chưa được chốt; quyền dữ liệu còn các điểm chưa xác minh.** Việc chủ dự án yêu cầu upload không phải xác nhận clearance từ các nguồn dữ liệu. Apache của DINOv2 gốc và của mã ứng dụng không tự giải quyết điều khoản PlantVillage hoặc quyền ảnh thu từ web của PlantDoc. Việc bổ sung ghi công không thay thế xin quyền hoặc rà soát pháp lý. Người tái sử dụng phải đánh giá quyền phù hợp với cách dùng của mình.
 
 Lần cập nhật giấy phép/khả năng tái tạo này không train lại, không chọn checkpoint mới và không chỉnh weights. Không có độ chính xác mới hoặc cam kết độ chính xác trên mọi ảnh/địa phương. Test synthetic trong repo chỉ kiểm hợp đồng API/UI và cơ chế inference; chúng không đánh giá chất lượng phân loại thực tế.
 

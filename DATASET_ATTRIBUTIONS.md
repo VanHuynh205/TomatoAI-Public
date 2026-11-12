@@ -89,6 +89,6 @@ Taiwan Tomato và TOM2024 được ghi nhận là nguồn so sánh bên ngoài, 
 
 Bốn dataset Mendeley train/validation có metadata đúng version công bố CC BY 4.0. Ghi công phải giữ tác giả, nguồn/DOI, license và thay đổi; giấy phép không cho phép giả chứng thực. Quyền của nội dung bên thứ ba trong mỗi dataset vẫn cần xét theo từng nguồn.
 
-PlantVillage, PlantDoc và Open Images còn các khoảng trống nêu trên. Bổ sung tài liệu này không tự giải quyết chúng. **Chưa phát hành checkpoint tinh chỉnh hoặc executable chứa checkpoint.** Không gán Apache-2.0 cho weights theo giấy phép mã nguồn. Khi có xác nhận quyền hoặc kết luận pháp lý phù hợp với artifact và cách phân phối, mới quyết định giấy phép/phạm vi phát hành checkpoint; không cần train lại để hoàn thành việc rà quyền.
+PlantVillage, PlantDoc và Open Images còn các khoảng trống nêu trên. Bổ sung tài liệu này không tự giải quyết chúng. Chủ dự án yêu cầu phát hành checkpoint tinh chỉnh và executable chứa checkpoint qua GitHub Release để cộng tác, dù các khoảng trống quyền này chưa được giải quyết. Việc upload không xác nhận clearance hoặc gán Apache-2.0 cho weights theo giấy phép mã nguồn. Người tái sử dụng cần đánh giá các điều kiện nguồn và quyền phù hợp với cách phân phối của mình; không cần train lại để hoàn thành việc rà quyền.
 
 Tham khảo thêm [hướng dẫn CC về AI training](https://creativecommons.org/using-cc-licensed-works-for-ai-training-2/). Việc điều khoản áp dụng ra sao phụ thuộc quyền tác giả, tác phẩm được chia sẻ và khu vực pháp lý. Tài liệu này không phải tư vấn pháp lý.

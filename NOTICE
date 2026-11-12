@@ -17,9 +17,10 @@ Project modifications to the pretrained model: a nine-class leaf head and
 fine-tuning of the last four backbone blocks and final normalization;
 checkpoint selected at epoch 6 with 224 px training input. The project v1
 runtime uses that same checkpoint at 280 px with horizontal-flip averaging.
-This repository does not distribute that fine-tuned checkpoint pending
-clarification of training-data rights. No retraining was performed for this
-licensing and reproducibility update.
+The project owner requested distribution of this fine-tuned checkpoint in
+GitHub Release assets for collaboration. Training-data rights remain
+unresolved; publication is not a clearance finding or a grant of rights in
+the underlying images. No retraining was performed for this release.
 
 Care text, datasets, dependency code and pretrained/fine-tuned weights are
 not relicensed by the application's Apache-2.0 license. See

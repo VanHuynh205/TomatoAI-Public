@@ -10,7 +10,7 @@ try {
     $required = @('classifier.safetensors', 'config.json', 'dinov2-release.json', 'leaf-classifier.json', 'model.safetensors', 'preprocessor_config.json')
     $missing = @($required | Where-Object { -not (Test-Path -LiteralPath (Join-Path $bundle $_) -PathType Leaf) })
     if ($missing.Count) {
-        throw ('Missing authorized DINOv2 v1 bundle files: ' + ($missing -join ', ') + '. See MODEL_CARD.md and README.md. This public repository does not distribute the checkpoint while data rights remain unresolved.')
+        throw ('Missing authorized DINOv2 v1 bundle files: ' + ($missing -join ', ') + '. Download dinov2-v1-280-model.zip from GitHub Release v0.1.0-dinov2-v1-280 and extract it into ai/artifacts; see README.md and MODEL_CARD.md. Weights are release assets, not Git blobs. Training-data rights remain unresolved.')
     }
     if (-not (Get-Command uv -ErrorAction SilentlyContinue)) {
         throw 'Install uv from https://docs.astral.sh/uv/getting-started/installation/ and rerun this script.'
