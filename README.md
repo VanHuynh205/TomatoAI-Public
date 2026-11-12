@@ -35,3 +35,5 @@ Mã và tài liệu do dự án viết dùng [MIT License](LICENSE). Khi chia s�
 Backbone DINOv2 gốc do Meta AI Research, Maxime Oquab và cộng sự phát triển, theo Apache License 2.0. [Ghi công, model card và giấy phép gốc](THIRD_PARTY_NOTICES.md).
 
 Nội dung chăm sóc giữ [CC BY-SA 4.0 và ghi công theo từng nguồn](infra/knowledge/CONTENT-LICENSE.md). Các thành phần bên thứ ba giữ giấy phép riêng.
+
+Xem [hồ sơ phát hành](RELEASE.md) để tra nguồn huấn luyện, phạm vi ghi công và điều kiện phát hành bản Windows.

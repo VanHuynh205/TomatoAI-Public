@@ -1,2 +1,3 @@
 infra/knowledge/** -text
 frontend/dist/** -text
+desktop/notices/microsoft-webview2-sdk/LICENSE.txt -text
