@@ -2,6 +2,19 @@
 
 Tomato Desktop là ứng dụng Windows của [VanHuynh205](https://github.com/VanHuynh205) để nhận diện dấu hiệu bệnh trên ảnh lá cà chua. Ứng dụng suy luận tại chỗ trên CPU và hiển thị thẻ chăm sóc tiếng Việt. Kết quả không thay thế chẩn đoán chuyên môn.
 
+## Bắt đầu trên máy mới
+
+Đọc [hướng dẫn cài Windows từ đầu](docs/SETUP_WINDOWS.md) nếu bạn chưa từng dùng dự án. Chọn phần phù hợp để tránh cài công cụ phát triển khi chỉ cần mở app:
+
+| Bạn muốn làm gì? | Bắt đầu ở đâu? |
+| --- | --- |
+| Tải app, chọn ảnh và nhận diện | [A. Chạy app có sẵn](docs/SETUP_WINDOWS.md#a-chạy-app-có-sẵn) |
+| Lấy source, cài uv, đặt model và chạy Python | [B. Chạy từ mã nguồn](docs/SETUP_WINDOWS.md#b-chạy-từ-mã-nguồn) |
+| Sửa giao diện hoặc làm tiếp hướng video | [C. Môi trường phát triển](docs/SETUP_WINDOWS.md#c-môi-trường-phát-triển-và-bàn-giao-video) |
+| Đang cài và gặp lỗi | [D. Tra lỗi theo thông báo](docs/SETUP_WINDOWS.md#d-tra-lỗi-theo-thông-báo) |
+
+Hướng dẫn có lệnh kiểm checksum, cách chọn bộ cài Microsoft, cây thư mục sau giải nén và kết quả cần thấy ở mỗi bước. Các mục bên dưới là bản rút gọn để tra lại sau khi bạn đã biết cách cài.
+
 ## Trạng thái bản public
 
 Bản desktop Windows và weights đã train được phân phối qua [GitHub Release v0.1.0-dinov2-v1-280](https://github.com/VanHuynh205/TomatoAI-Public/releases/tag/v0.1.0-dinov2-v1-280). Weights lớn hơn giới hạn tệp Git nên không nằm trong lịch sử source. Repo giữ source train ảnh, runtime, giao diện đã build, tám thẻ chăm sóc đã duyệt và các bài kiểm thử. Không train lại trong đợt phát hành này; chưa triển khai nhận diện hay train video.

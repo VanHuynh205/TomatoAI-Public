@@ -34,6 +34,8 @@ Mã ứng dụng do đồ án viết dùng [Apache License 2.0](LICENSE), kèm [
 
 Release có ZIP Windows đầy đủ gồm `TomatoDesktop.exe`, `_internal/`, `release-manifest.json`, hướng dẫn prerequisites và ZIP model riêng cho người dùng source. `SHA256SUMS.txt` ghi hash của hai ZIP. Giữ nguyên toàn bộ thư mục sau giải nén; không phân phối riêng EXE. EXE chưa ký Authenticode. [Báo cáo kiểm Windows](docs/verification/2026-11-13-windows-release.md) phân biệt kiểm integrity, chạy frozen/native và test fixture; không tuyên bố đã đo lại accuracy hoặc kiểm mọi máy Windows. [Hướng dẫn bàn giao](docs/training/IMAGE_TO_VIDEO_HANDOFF.md) chỉ rõ mã ảnh gốc và giới hạn warm-start trước khi phát triển video.
 
+Người nhận bản phát hành có thể làm theo [hướng dẫn cài trên máy Windows mới](docs/SETUP_WINDOWS.md). Hướng dẫn tách cách mở app có sẵn với cách lấy source, cài môi trường và đặt model; có lệnh đối chiếu checksum và bảng tra lỗi.
+
 ### Dựng gói cho người bảo trì
 
 Dùng Windows x64, CPython 3.12.14 và uv. Lấy model ZIP từ Release, kiểm checksum rồi đặt đủ sáu tệp ở `ai/artifacts/dinov2-v1-280/`. Tám bản thảo care-v1 đã duyệt trong `infra/knowledge/drafts/` có nguyên bytes theo allowlist để kiểm lại catalog khi build. App không tự tải weights. Build không train hoặc sửa tham số model; giữ nguyên các thông báo quyền chưa hoàn tất khi phân phối tiếp.
