@@ -1,5 +1,6 @@
 """Fresh-clone checks use synthetic inputs, never training data or real weights."""
 
+import importlib
 import json
 import shutil
 import subprocess
@@ -12,6 +13,15 @@ import pytest
 from desktop.release import validate_care_export
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def test_project_modules_do_not_fall_back_to_another_checkout() -> None:
+    importlib.import_module("backend.openapi")
+    for name, module in tuple(sys.modules.items()):
+        if name.split(".", 1)[0] in {"ai", "backend", "desktop"}:
+            source = getattr(module, "__file__", None)
+            if source:
+                assert Path(source).resolve().is_relative_to(ROOT), f"{name}: {source}"
 
 
 def test_care_build_inputs_reproduce_published_catalog() -> None:
