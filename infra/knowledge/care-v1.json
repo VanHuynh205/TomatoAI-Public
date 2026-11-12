@@ -1,0 +1,437 @@
+{
+  "artifact_kind": "curated",
+  "cards": [
+    {
+      "actions": [
+        {
+          "applicability": "Biện pháp trong factsheet Kenya; cần đối chiếu mưa, tưới và điều kiện lao động tại nơi trồng.",
+          "source_ids": [
+            "pw_bacterial"
+          ],
+          "text": "Tránh thao tác trên cây hoặc ruộng khi tán còn ướt để hạn chế phát tán."
+        }
+      ],
+      "category": "disease",
+      "checked_at": "2026-11-05",
+      "class_id": "bacterial_spot",
+      "confusable_conditions": [
+        "Đốm Septoria cũng tạo đốm nhỏ trên lá; màu đốm đơn lẻ không đủ phân biệt."
+      ],
+      "expert_verified": false,
+      "limits": [
+        "Ảnh và điểm mô hình không xác nhận bệnh học. Nội dung tham khảo chưa được thẩm định chuyên môn tại địa phương.",
+        "Chỉ biên soạn phần quan sát và canh tác có nguồn; không áp liều thuốc, biện pháp đốt cây hoặc lịch mùa vụ từ tài liệu nước ngoài."
+      ],
+      "name_en": "Bacterial spot",
+      "name_vi": "Đốm vi khuẩn",
+      "observe_next": [
+        "Quan sát thêm lá già, mặt dưới lá và quả; ghi nhận cây có bị thao tác khi tán còn ướt hay không."
+      ],
+      "review_status": "source_checked",
+      "reviewer": "Công Văn",
+      "reviewer_role": "project_author",
+      "sources": [
+        {
+          "checked_at": "2026-11-05",
+          "geographic_scope": "Kenya, 12/2012; tài liệu ghi nhiều nước có vấn đề này, chưa là quy trình đã thẩm định tại Việt Nam",
+          "locator": "Trang 1, Recognize the problem; Background; Management / Non-chemical control",
+          "rights_basis": "Bacterial Spot on tomato. KENGAP Horticulture, The Tomato Farming Handbook (2011); Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+          "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804207.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+          "rights_status": "permitted",
+          "source_id": "pw_bacterial",
+          "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804207.pdf"
+        },
+        {
+          "checked_at": "2026-11-05",
+          "geographic_scope": "Kenya, 12/2012; nguồn ghi All Countries, không đồng nghĩa đã thẩm định tại Việt Nam",
+          "locator": "Trang 1, Recognize the problem; Background; Management / Non-chemical control",
+          "rights_basis": "Septoria on Tomato. KENGAP Horticulture, The Tomato Farming Handbook (2011); Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+          "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804217.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+          "rights_status": "permitted",
+          "source_id": "pw_septoria",
+          "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804217.pdf"
+        }
+      ],
+      "symptoms": [
+        "Vết trên lá có thể trông úng nước, rồi chuyển từ vàng sang nâu sẫm; quả có thể xuất hiện đốm sần nâu."
+      ]
+    },
+    {
+      "actions": [
+        {
+          "applicability": "Nguồn Kenya; kiểu giàn và cách tỉa phải phù hợp giống, giai đoạn và điều kiện trồng, không áp một lịch tỉa chung.",
+          "source_ids": [
+            "pw_early"
+          ],
+          "text": "Dùng giàn đỡ và tỉa phù hợp để tăng lưu thông không khí trong tán."
+        }
+      ],
+      "category": "disease",
+      "checked_at": "2026-11-05",
+      "class_id": "early_blight",
+      "confusable_conditions": [
+        "Đốm Septoria cũng thường xuất hiện ở lá già; cần đối chiếu dạng đốm và cấu trúc nhỏ ở tâm đốm."
+      ],
+      "expert_verified": false,
+      "limits": [
+        "Ảnh và điểm mô hình không xác nhận bệnh học. Nội dung tham khảo chưa được thẩm định chuyên môn tại địa phương.",
+        "Chỉ biên soạn phần quan sát và canh tác có nguồn; không áp liều thuốc, biện pháp đốt cây hoặc lịch mùa vụ từ tài liệu nước ngoài."
+      ],
+      "name_en": "Early blight",
+      "name_vi": "Đốm vòng",
+      "observe_next": [
+        "So sánh lá thấp với lá non và tìm vòng đồng tâm; quan sát cả thân và phần quả gần cuống."
+      ],
+      "review_status": "source_checked",
+      "reviewer": "Công Văn",
+      "reviewer_role": "project_author",
+      "sources": [
+        {
+          "checked_at": "2026-11-05",
+          "geographic_scope": "Kenya, 12/2012; tài liệu ghi nhiều nước có vấn đề này, chưa là quy trình đã thẩm định tại Việt Nam",
+          "locator": "Trang 1, Recognize the problem; Management / Non-chemical control",
+          "rights_basis": "Early blight on Tomato. KENGAP Horticulture, The Tomato Farming Handbook (2011); Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+          "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804212.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+          "rights_status": "permitted",
+          "source_id": "pw_early",
+          "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804212.pdf"
+        },
+        {
+          "checked_at": "2026-11-05",
+          "geographic_scope": "Kenya, 12/2012; nguồn ghi All Countries, không đồng nghĩa đã thẩm định tại Việt Nam",
+          "locator": "Trang 1, Recognize the problem; Background; Management / Non-chemical control",
+          "rights_basis": "Septoria on Tomato. KENGAP Horticulture, The Tomato Farming Handbook (2011); Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+          "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804217.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+          "rights_status": "permitted",
+          "source_id": "pw_septoria",
+          "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804217.pdf"
+        }
+      ],
+      "symptoms": [
+        "Đốm nâu sẫm thường xuất hiện ở lá thấp; có thể thấy vòng đồng tâm và mô tổn thương khô, dai."
+      ]
+    },
+    {
+      "actions": [
+        {
+          "applicability": "Nguồn Campuchia nêu stress nước trong bối cảnh nhện; lượng và lịch tưới phụ thuộc đất, thời tiết, giai đoạn cây tại nơi trồng.",
+          "source_ids": [
+            "pw_water"
+          ],
+          "text": "Duy trì tưới phù hợp để tránh cây bị thiếu nước."
+        }
+      ],
+      "category": "healthy",
+      "checked_at": "2026-11-05",
+      "class_id": "healthy",
+      "confusable_conditions": [
+        "Tình trạng nằm ngoài tám nhãn của mô hình hoặc dấu hiệu không thể hiện rõ trong ảnh."
+      ],
+      "expert_verified": false,
+      "limits": [
+        "Ảnh và điểm mô hình không xác nhận bệnh học. Nội dung tham khảo chưa được thẩm định chuyên môn tại địa phương.",
+        "Chỉ biên soạn phần quan sát và canh tác có nguồn; không áp liều thuốc, biện pháp đốt cây hoặc lịch mùa vụ từ tài liệu nước ngoài."
+      ],
+      "name_en": "Healthy",
+      "name_vi": "Lá khỏe theo nhãn dữ liệu",
+      "observe_next": [
+        "Quan sát thêm toàn cây; một ảnh lá không thể hiện đầy đủ tình trạng rễ, thân và quả."
+      ],
+      "review_status": "source_checked",
+      "reviewer": "Công Văn",
+      "reviewer_role": "project_author",
+      "sources": [
+        {
+          "checked_at": "2026-11-05",
+          "geographic_scope": "Campuchia, 11/2014; phạm vi nhện Tetranychus spp. và cây trồng bị stress nước",
+          "locator": "Trang 1, Management / Water stress; không dùng các claim virus, thuốc hoặc tiêu hủy cây",
+          "rights_basis": "Spider mites on Tomato. General Directorate of Agriculture (GDA), Cambodia; Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+          "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20177800164.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+          "rights_status": "permitted",
+          "source_id": "pw_water",
+          "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20177800164.pdf"
+        }
+      ],
+      "symptoms": [
+        "Đây là nhãn của mô hình, không phải xác nhận toàn cây không có bệnh."
+      ]
+    },
+    {
+      "actions": [
+        {
+          "applicability": "Biện pháp canh tác từ Kenya; vật liệu phủ và hệ tưới cần phù hợp thoát nước tại chỗ, không phải cách chữa bệnh đã xác nhận.",
+          "source_ids": [
+            "pw_late"
+          ],
+          "text": "Dùng giàn đỡ và lớp phủ đất phù hợp để giảm tiếp xúc đất và nước bắn lên cây."
+        }
+      ],
+      "category": "disease",
+      "checked_at": "2026-11-05",
+      "class_id": "late_blight",
+      "confusable_conditions": [
+        "Đốm vòng cũng gây tổn thương lá nhưng nguồn mô tả các vòng đồng tâm; cần quan sát thêm thay vì chỉ so màu."
+      ],
+      "expert_verified": false,
+      "limits": [
+        "Ảnh và điểm mô hình không xác nhận bệnh học. Nội dung tham khảo chưa được thẩm định chuyên môn tại địa phương.",
+        "Chỉ biên soạn phần quan sát và canh tác có nguồn; không áp liều thuốc, biện pháp đốt cây hoặc lịch mùa vụ từ tài liệu nước ngoài."
+      ],
+      "name_en": "Late blight",
+      "name_vi": "Mốc sương",
+      "observe_next": [
+        "Quan sát rìa vết ở mặt dưới lá trong điều kiện ẩm; kiểm tra thân, quả và mức lan rộng trên cây."
+      ],
+      "review_status": "source_checked",
+      "reviewer": "Công Văn",
+      "reviewer_role": "project_author",
+      "sources": [
+        {
+          "checked_at": "2026-11-05",
+          "geographic_scope": "Kenya, 12/2012; tài liệu ghi nhiều nước có vấn đề này, chưa là quy trình đã thẩm định tại Việt Nam",
+          "locator": "Trang 1, Recognize the problem; Background; Management / Non-chemical control",
+          "rights_basis": "Late blight on Tomato. KENGAP Horticulture, The Tomato Farming Handbook (2011); Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+          "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804214.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+          "rights_status": "permitted",
+          "source_id": "pw_late",
+          "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804214.pdf"
+        },
+        {
+          "checked_at": "2026-11-05",
+          "geographic_scope": "Kenya, 12/2012; tài liệu ghi nhiều nước có vấn đề này, chưa là quy trình đã thẩm định tại Việt Nam",
+          "locator": "Trang 1, Recognize the problem; Management / Non-chemical control",
+          "rights_basis": "Early blight on Tomato. KENGAP Horticulture, The Tomato Farming Handbook (2011); Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+          "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804212.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+          "rights_status": "permitted",
+          "source_id": "pw_early",
+          "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804212.pdf"
+        }
+      ],
+      "symptoms": [
+        "Vết bệnh không đều có màu xanh úng nước hoặc xám; khi ẩm có thể có lớp trắng mịn quanh rìa vết ở mặt dưới lá."
+      ]
+    },
+    {
+      "actions": [
+        {
+          "applicability": "Nguồn Trung Quốc mô tả quản lý nhà kính; không suy ra ngưỡng vận hành hoặc lịch tưới chung cho nhà màng Việt Nam.",
+          "source_ids": [
+            "pw_leaf_mold"
+          ],
+          "text": "Trong nhà kính, điều chỉnh thông gió và cách tưới để giảm ẩm và thời gian đọng sương trên lá."
+        }
+      ],
+      "category": "disease",
+      "checked_at": "2026-11-05",
+      "class_id": "leaf_mold",
+      "confusable_conditions": [
+        "Nhện cũng gây bạc hoặc vàng lá; cần phân biệt lớp mốc với tơ mịn và tìm nhện ở mặt dưới lá."
+      ],
+      "expert_verified": false,
+      "limits": [
+        "Ảnh và điểm mô hình không xác nhận bệnh học. Nội dung tham khảo chưa được thẩm định chuyên môn tại địa phương.",
+        "Chỉ biên soạn phần quan sát và canh tác có nguồn; không áp liều thuốc, biện pháp đốt cây hoặc lịch mùa vụ từ tài liệu nước ngoài."
+      ],
+      "name_en": "Leaf mold",
+      "name_vi": "Mốc lá",
+      "observe_next": [
+        "Đối chiếu hai mặt cùng một lá và ghi nhận ẩm, đọng sương, mật độ tán và thông gió."
+      ],
+      "review_status": "source_checked",
+      "reviewer": "Công Văn",
+      "reviewer_role": "project_author",
+      "sources": [
+        {
+          "checked_at": "2026-11-05",
+          "geographic_scope": "Trung Quốc; tạo 2012, sửa 2020; phần canh tác mô tả nhà kính",
+          "locator": "Trang 1, 问题识别 (nhận biết); 背景 (bối cảnh); 管理 / 1. 农业防治 (quản lý canh tác)",
+          "rights_basis": "番茄叶霉病 (Mốc lá cà chua). 赵世福, 北京市顺义区植保植检站; Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+          "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804306.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+          "rights_status": "permitted",
+          "source_id": "pw_leaf_mold",
+          "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804306.pdf"
+        },
+        {
+          "checked_at": "2026-11-05",
+          "geographic_scope": "Kenya, 10/2012; cà chua ngoài đồng và nhà kính",
+          "locator": "Trang 1, Recognize the problem; Background; Management / Cultural",
+          "rights_basis": "Tomato red spider mite. Faith Toroitich, James Kimani; University of Nairobi; Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+          "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804187.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+          "rights_status": "permitted",
+          "source_id": "pw_mites",
+          "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804187.pdf"
+        }
+      ],
+      "symptoms": [
+        "Mặt trên lá có mảng vàng nhạt; mặt dưới xuất hiện lớp mốc ban đầu xám trắng rồi chuyển xám nâu hoặc nâu sẫm; thường bắt đầu ở lá thấp."
+      ]
+    },
+    {
+      "actions": [
+        {
+          "applicability": "Nguồn Kenya; chọn vật liệu phù hợp đất và thoát nước tại nơi trồng. Không chuyển khuyến cáo trồng sớm của nguồn thành lịch mùa vụ Việt Nam.",
+          "source_ids": [
+            "pw_septoria"
+          ],
+          "text": "Phủ đất sau khi trồng để tạo lớp ngăn đất và bào tử bắn lên cây."
+        }
+      ],
+      "category": "disease",
+      "checked_at": "2026-11-05",
+      "class_id": "septoria_leaf_spot",
+      "confusable_conditions": [
+        "Đốm vòng cũng thường bắt đầu trên lá thấp; nguồn mô tả vòng đồng tâm, cần quan sát thêm thay vì chỉ dựa một ảnh."
+      ],
+      "expert_verified": false,
+      "limits": [
+        "Ảnh và điểm mô hình không xác nhận bệnh học. Nội dung tham khảo chưa được thẩm định chuyên môn tại địa phương.",
+        "Chỉ biên soạn phần quan sát và canh tác có nguồn; không áp liều thuốc, biện pháp đốt cây hoặc lịch mùa vụ từ tài liệu nước ngoài."
+      ],
+      "name_en": "Septoria leaf spot",
+      "name_vi": "Đốm lá Septoria",
+      "observe_next": [
+        "Kiểm tra lá gần mặt đất, dạng tâm vết và tình trạng rụng lá; ghi nhận thời tiết ấm ẩm."
+      ],
+      "review_status": "source_checked",
+      "reviewer": "Công Văn",
+      "reviewer_role": "project_author",
+      "sources": [
+        {
+          "checked_at": "2026-11-05",
+          "geographic_scope": "Kenya, 12/2012; nguồn ghi All Countries, không đồng nghĩa đã thẩm định tại Việt Nam",
+          "locator": "Trang 1, Recognize the problem; Background; Management / Non-chemical control",
+          "rights_basis": "Septoria on Tomato. KENGAP Horticulture, The Tomato Farming Handbook (2011); Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+          "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804217.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+          "rights_status": "permitted",
+          "source_id": "pw_septoria",
+          "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804217.pdf"
+        },
+        {
+          "checked_at": "2026-11-05",
+          "geographic_scope": "Kenya, 12/2012; tài liệu ghi nhiều nước có vấn đề này, chưa là quy trình đã thẩm định tại Việt Nam",
+          "locator": "Trang 1, Recognize the problem; Management / Non-chemical control",
+          "rights_basis": "Early blight on Tomato. KENGAP Horticulture, The Tomato Farming Handbook (2011); Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+          "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804212.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+          "rights_status": "permitted",
+          "source_id": "pw_early",
+          "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804212.pdf"
+        }
+      ],
+      "symptoms": [
+        "Các đốm nhỏ úng nước thường xuất hiện đầu tiên ở lá già; về sau có thể thấy chấm nâu sẫm nhỏ ở tâm vết, lá chết và rụng."
+      ]
+    },
+    {
+      "actions": [
+        {
+          "applicability": "Nguồn Kenya nói về Tetranychus spp.; ảnh này không xác định chắc loài nhện hai chấm hoặc mật độ cần xử lý.",
+          "source_ids": [
+            "pw_mites"
+          ],
+          "text": "Kiểm tra cây ở bờ ruộng để phát hiện các dấu hiệu nhện và theo dõi phạm vi ảnh hưởng."
+        }
+      ],
+      "category": "pest",
+      "checked_at": "2026-11-05",
+      "class_id": "spider_mites",
+      "confusable_conditions": [
+        "Mốc lá cũng làm lá vàng; cần tìm lớp mốc ở mặt dưới và đối chiếu với tơ hoặc nhện thực tế."
+      ],
+      "expert_verified": false,
+      "limits": [
+        "Ảnh và điểm mô hình không xác nhận bệnh học. Nội dung tham khảo chưa được thẩm định chuyên môn tại địa phương.",
+        "Chỉ biên soạn phần quan sát và canh tác có nguồn; không áp liều thuốc, biện pháp đốt cây hoặc lịch mùa vụ từ tài liệu nước ngoài."
+      ],
+      "name_en": "Twospotted spider mites",
+      "name_vi": "Nhện hai chấm",
+      "observe_next": [
+        "Quan sát kỹ mặt dưới lá, tơ và cây ở bờ ruộng; ghi nhận điều kiện nóng, khô."
+      ],
+      "review_status": "source_checked",
+      "reviewer": "Công Văn",
+      "reviewer_role": "project_author",
+      "sources": [
+        {
+          "checked_at": "2026-11-05",
+          "geographic_scope": "Kenya, 10/2012; cà chua ngoài đồng và nhà kính",
+          "locator": "Trang 1, Recognize the problem; Background; Management / Cultural",
+          "rights_basis": "Tomato red spider mite. Faith Toroitich, James Kimani; University of Nairobi; Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+          "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804187.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+          "rights_status": "permitted",
+          "source_id": "pw_mites",
+          "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804187.pdf"
+        },
+        {
+          "checked_at": "2026-11-05",
+          "geographic_scope": "Trung Quốc; tạo 2012, sửa 2020; phần canh tác mô tả nhà kính",
+          "locator": "Trang 1, 问题识别 (nhận biết); 背景 (bối cảnh); 管理 / 1. 农业防治 (quản lý canh tác)",
+          "rights_basis": "番茄叶霉病 (Mốc lá cà chua). 赵世福, 北京市顺义区植保植检站; Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+          "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804306.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+          "rights_status": "permitted",
+          "source_id": "pw_leaf_mold",
+          "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804306.pdf"
+        }
+      ],
+      "symptoms": [
+        "Mặt trên lá có nhiều chấm vàng nhạt; nhện thường ở mặt dưới và khó thấy bằng mắt thường. Mật độ cao có thể xuất hiện tơ mịn."
+      ]
+    },
+    {
+      "actions": [
+        {
+          "applicability": "Nguyên tắc từ Kenya; cần đối chiếu giống và điều kiện canh tác tại Việt Nam, không tự chọn giống ngoại địa hoặc coi kháng là miễn nhiễm.",
+          "source_ids": [
+            "pw_yellow"
+          ],
+          "text": "Khi chuẩn bị vụ mới, tìm giống có thông tin kháng hoặc chống chịu TYLCV phù hợp địa phương."
+        }
+      ],
+      "category": "disease",
+      "checked_at": "2026-11-05",
+      "class_id": "yellow_leaf_curl",
+      "confusable_conditions": [
+        "Nhện cũng có thể gây nhiều chấm vàng trên lá; kiểm tra mặt dưới và tơ để bổ sung quan sát, không tự xác nhận virus từ ảnh."
+      ],
+      "expert_verified": false,
+      "limits": [
+        "Ảnh và điểm mô hình không xác nhận bệnh học. Nội dung tham khảo chưa được thẩm định chuyên môn tại địa phương.",
+        "Chỉ biên soạn phần quan sát và canh tác có nguồn; không áp liều thuốc, biện pháp đốt cây hoặc lịch mùa vụ từ tài liệu nước ngoài."
+      ],
+      "name_en": "Tomato yellow leaf curl",
+      "name_vi": "Vàng xoăn lá",
+      "observe_next": [
+        "Quan sát đọt, độ lớn lá, hoa và bọ phấn quanh cây; ghi nhận những cây khác có dấu hiệu tương tự."
+      ],
+      "review_status": "source_checked",
+      "reviewer": "Công Văn",
+      "reviewer_role": "project_author",
+      "sources": [
+        {
+          "checked_at": "2026-11-05",
+          "geographic_scope": "Kenya, 12/2012; tài liệu ghi nhiều nước có vấn đề này, chưa là quy trình đã thẩm định tại Việt Nam",
+          "locator": "Trang 1, Recognize the problem; Background; Management / Non-chemical control",
+          "rights_basis": "Tomato Yellow Leaf Curl Virus on Tomato. KENGAP Horticulture, The Tomato Farming Handbook (2011); Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+          "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804221.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+          "rights_status": "permitted",
+          "source_id": "pw_yellow",
+          "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804221.pdf"
+        },
+        {
+          "checked_at": "2026-11-05",
+          "geographic_scope": "Kenya, 10/2012; cà chua ngoài đồng và nhà kính",
+          "locator": "Trang 1, Recognize the problem; Background; Management / Cultural",
+          "rights_basis": "Tomato red spider mite. Faith Toroitich, James Kimani; University of Nairobi; Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+          "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804187.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+          "rights_status": "permitted",
+          "source_id": "pw_mites",
+          "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804187.pdf"
+        }
+      ],
+      "symptoms": [
+        "Cây có thể thấp, rậm; lá nhỏ, cuốn lên và vàng giữa gân hoặc ở mép, kèm giảm hoa và quả."
+      ]
+    }
+  ],
+  "knowledge_version": "care-v1",
+  "schema_version": 1
+}

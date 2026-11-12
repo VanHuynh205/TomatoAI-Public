@@ -1,0 +1,93 @@
+:root {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #24362e;
+  background: #f3f6f4;
+  font-synthesis: none;
+  line-height: 1.6;
+  --accent: #185b47;
+  --muted: #53675d;
+  --line: #cbd7d0;
+  --surface: #fff;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 280px; }
+button, input { font: inherit; }
+button, a, input, summary { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid #226faa; outline-offset: 4px; }
+::selection { color: #143e2f; background: #cfebd9; }
+input { caret-color: var(--accent); }
+a { color: var(--accent); text-underline-offset: 0.2em; }
+a:hover { color: #103e31; text-decoration-thickness: 2px; }
+button { cursor: pointer; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { line-height: 1.3; text-wrap: balance; }
+h1 { font-size: 1.75rem; font-weight: 650; }
+h2 { font-size: 1.3rem; font-weight: 650; }
+h3 { font-size: 1rem; margin-top: var(--space-xl); margin-bottom: var(--space-xs); }
+p + p { margin-top: var(--space-sm); }
+ul, ol { margin-block: var(--space-xs) var(--space-md); padding-inline-start: 1.4rem; }
+li + li { margin-top: var(--space-xs); }
+.app-shell { max-width: 76rem; margin: 0 auto; padding: var(--space-xl); }
+.app-header { display: flex; align-items: center; justify-content: space-between; gap: var(--space-lg); padding-bottom: var(--space-xl); }
+.app-header p { color: var(--muted); margin-top: var(--space-xs); }
+.local-label { color: var(--accent); font-size: 0.875rem; white-space: nowrap; }
+.diagnosis-layout { display: grid; grid-template-columns: minmax(17rem, 0.9fr) minmax(0, 1.65fr); gap: var(--space-xl); align-items: start; }
+.image-panel { padding: var(--space-lg); background: #e8eeea; border-radius: 14px; min-width: 0; }
+.image-panel > .secondary { margin-top: var(--space-sm); }
+.secondary, .privacy { color: var(--muted); font-size: 0.875rem; }
+.file-label { display: inline-flex; position: relative; margin-block: var(--space-lg) var(--space-xs); font-weight: 600; color: #24362e; background: var(--surface); border: 1px solid #879e90; border-radius: 6px; padding: 0.65rem 0.8rem; cursor: pointer; }
+.file-label:hover { background: #f3f6f4; }
+.file-label:focus-within { outline: 3px solid #226faa; outline-offset: 4px; }
+input[type=file] { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+.preview { display: grid; place-items: center; min-height: 15rem; margin-top: var(--space-lg); border: 1px solid #bacbc0; border-radius: 10px; background: #f4f7f5; overflow: hidden; }
+.preview p { text-align: center; color: var(--muted); font-size: 0.875rem; padding: var(--space-md); }
+.preview img { width: 100%; height: 17rem; object-fit: contain; }
+.filename { display: flex; justify-content: space-between; gap: var(--space-sm); overflow-wrap: anywhere; font-size: 0.875rem; margin-top: var(--space-sm); }
+.filename span { color: var(--muted); white-space: nowrap; }
+.primary { width: 100%; min-height: 46px; border: 0; border-radius: 7px; color: white; background: var(--accent); font-weight: 600; margin-top: var(--space-lg); transition: background-color 160ms ease-out; }
+.primary:hover:not(:disabled) { background: #104333; }
+.primary:active:not(:disabled) { background: #0c3529; }
+.primary:disabled { color: #52685b; background: #c9d6ce; cursor: not-allowed; }
+.status { min-height: 1.6em; margin-top: var(--space-sm); font-size: 0.875rem; }
+.privacy { border-top: 1px solid #bacbc0; padding-top: var(--space-md); margin-top: var(--space-lg); }
+.reading-panel { min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: var(--space-xl); overflow-wrap: anywhere; }
+.reading-panel p, .reading-panel ul, .reading-panel ol { max-width: 70ch; }
+.result { min-height: 12rem; }
+.result > p { margin-top: var(--space-md); }
+.result.uncertain h2 { color: #805321; }
+.score { display: flex; align-items: baseline; gap: var(--space-md); }
+.score strong { font-size: 1.75rem; color: var(--accent); font-weight: 650; font-variant-numeric: tabular-nums; }
+.prediction-details { margin-top: var(--space-lg); font-size: 0.875rem; }
+summary { cursor: pointer; min-height: 2.5rem; padding-block: var(--space-xs); color: var(--accent); }
+summary:hover { text-decoration: underline; text-underline-offset: 0.2em; }
+dl { margin: var(--space-sm) 0; }
+dl > div { display: flex; justify-content: space-between; gap: var(--space-md); padding-block: 0.25rem; }
+dd { margin: 0; font-variant-numeric: tabular-nums; }
+.care { padding-top: var(--space-xl); margin-top: var(--space-xl); border-top: 1px solid var(--line); }
+.reference-notice { color: #65512c; margin-top: var(--space-sm); }
+.care > .secondary { margin-top: var(--space-sm); }
+.actions li + li { margin-top: var(--space-md); }
+.actions p + p { margin-top: 0.25rem; }
+.sources li + li { margin-top: var(--space-lg); }
+.sources p, .sources details { font-size: 0.875rem; }
+.sources p { margin-top: 0.25rem; }
+.error { color: #842d29; background: #fff1ed; border-radius: 8px; padding: var(--space-md); margin-bottom: var(--space-lg); }
+.warning { color: #805321; }
+footer { display: flex; flex-wrap: wrap; gap: var(--space-sm) var(--space-lg); color: var(--muted); font-size: 0.8rem; padding-top: var(--space-lg); overflow-wrap: anywhere; }
+.skip-link { position: absolute; top: -6rem; padding: var(--space-sm); background: white; z-index: 1; }
+.skip-link:focus { top: var(--space-xs); }
+@media (max-width: 760px) {
+  .app-shell { padding: var(--space-md); }
+  .app-header { align-items: flex-start; flex-direction: column; gap: var(--space-xs); padding-bottom: var(--space-lg); }
+  .diagnosis-layout { grid-template-columns: minmax(0, 1fr); gap: var(--space-lg); }
+  .image-panel, .reading-panel { padding: var(--space-lg); }
+  .preview { min-height: 10rem; }
+  .preview img { height: 14rem; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
+@media (forced-colors: active) { .primary, .image-panel { border: 1px solid ButtonText; } }

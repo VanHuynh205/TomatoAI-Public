@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=77,<83"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tomato-desktop"
+version = "0.1.0"
+license = "MIT"
+description = "Tomato desktop application contracts"
+requires-python = ">=3.12,<3.13"
+dependencies = ["pydantic>=2.10,<3"]
+
+[project.optional-dependencies]
+api = ["fastapi>=0.115,<1", "python-multipart>=0.0.20,<1", "Pillow>=13,<14", "uvicorn==0.54.0"]
+test = ["pytest>=8,<10", "httpx>=0.28,<1", "ruff>=0.11,<1", "mypy>=1.15,<2"]
+desktop = ["pywebview==6.2.1"]
+build = ["PyInstaller==6.22.3"]
+ml = ["torch==2.14.1", "torchvision==0.29.1", "Pillow>=13,<14"]
+dino = ["transformers==4.57.6", "safetensors==0.7.0"]
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+include = ["ai", "ai.*", "backend", "backend.*", "desktop", "desktop.*"]
+exclude = ["backend.tests*", "desktop.tests*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests/ai", "backend/tests", "desktop/tests"]
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+explicit_package_bases = true
+files = ["ai", "backend", "desktop", "tests/ai"]
+exclude = ["desktop/(build|dist)/"]

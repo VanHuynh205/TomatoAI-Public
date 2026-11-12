@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "knowledge_version": "care-v1",
+  "allowed_use": "offline_reference_vn",
+  "cards": [
+    {
+      "class_id": "bacterial_spot",
+      "file": "bacterial_spot.json",
+      "sha256": "4664ce972067d6e9bf4a539139440aa1f60654956578d200f03ab2b2b8be4ae6"
+    },
+    {
+      "class_id": "early_blight",
+      "file": "early_blight.json",
+      "sha256": "f25719bb530dc3a42acf0a6bf8abf0892604251ec0b7d0a753345a4a1bfad833"
+    },
+    {
+      "class_id": "healthy",
+      "file": "healthy.json",
+      "sha256": "f4aa257a08c1d25ff5d6de75b6d92a1bdb84161e96862d2377e419bb1db9177a"
+    },
+    {
+      "class_id": "late_blight",
+      "file": "late_blight.json",
+      "sha256": "fe8987041c45a4bed2200bdcb8221d37b546f4d20d358897bd3b96be884249ac"
+    },
+    {
+      "class_id": "leaf_mold",
+      "file": "leaf_mold.json",
+      "sha256": "cd0e01c16051ec66f881af20187fbecccb777325e9009181ad63bccb789cee35"
+    },
+    {
+      "class_id": "septoria_leaf_spot",
+      "file": "septoria_leaf_spot.json",
+      "sha256": "90f3bcd00599d4868ad99926b09006d16602c1ac9f700bc1b6244285c4a1dccf"
+    },
+    {
+      "class_id": "spider_mites",
+      "file": "spider_mites.json",
+      "sha256": "edf0d8d47f6036ceb3d0b484b1ef815f2877fde7386c2c7eae28bf025f01985a"
+    },
+    {
+      "class_id": "yellow_leaf_curl",
+      "file": "yellow_leaf_curl.json",
+      "sha256": "11dc5aa81cfa1b32d938f667aaa6a327477b0532396e8fb9fb5aa7d78a4c7048"
+    }
+  ]
+}
