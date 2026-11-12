@@ -30,13 +30,13 @@ Creative Commons giải thích rằng điều kiện của giấy phép phụ th
 
 ## Phát hành Windows
 
-Mã ứng dụng do đồ án viết dùng MIT. Catalog care-v1 giữ [CC BY-SA 4.0 và ghi công nguồn](infra/knowledge/CONTENT-LICENSE.md).
+Mã ứng dụng do đồ án viết dùng [Apache License 2.0](LICENSE), kèm [NOTICE](NOTICE); thông báo MIT của các revision cũ vẫn được giữ. Catalog care-v1 giữ [CC BY-SA 4.0 và ghi công nguồn](infra/knowledge/CONTENT-LICENSE.md). Chi tiết tác giả, version/DOI, thay đổi và giới hạn quyền dataset nằm trong [DATASET_ATTRIBUTIONS.md](DATASET_ATTRIBUTIONS.md); [MODEL_CARD.md](MODEL_CARD.md) ghi đúng danh tính và hashes của v1. Checkpoint tinh chỉnh chưa được phát hành hoặc gán Apache-2.0.
 
 Khi quyền phát hành model đã rõ, gói tải xuống cần có TomatoDesktop.exe, thư mục _internal, release-manifest.json, hướng dẫn WebView2 và SHA-256 của ZIP. Kiểm manifest, mở app, thử nhận diện lá cà chua và từ chối ảnh ngoài đối tượng trên Windows x64. Đính kèm ZIP đầy đủ vào [GitHub Release](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases).
 
 ### Dựng gói cho người bảo trì
 
-Dùng Windows x64, CPython 3.12.14 và uv. Cần đủ sáu tệp bundle tương thích ở ai/artifacts/dinov2-v1-280 và các bản thảo care-v1 đã duyệt trong infra/knowledge/drafts để công cụ kiểm lại catalog theo allowlist. Bản clone công khai cần được bổ sung hai đầu vào này từ bản lưu được cấp quyền.
+Dùng Windows x64, CPython 3.12.14 và uv. Cần đủ sáu tệp bundle được cấp quyền ở `ai/artifacts/dinov2-v1-280/`. Tám bản thảo care-v1 đã duyệt trong `infra/knowledge/drafts/` đã có trong repo public, nguyên bytes theo allowlist, để kiểm lại catalog khi build. Chỉ bundle model còn thiếu và không được tải tự động. Không phát hành executable chứa weights trước khi quyền phát hành được làm rõ.
 
 Chạy PowerShell từ thư mục gốc. Dùng một thư mục dist mới nếu đã có gói trước đó.
 

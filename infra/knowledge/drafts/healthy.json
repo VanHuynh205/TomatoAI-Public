@@ -1,0 +1,45 @@
+{
+  "class_id": "healthy",
+  "name_vi": "Lá khỏe theo nhãn dữ liệu",
+  "name_en": "Healthy",
+  "category": "healthy",
+  "symptoms": [
+    "Đây là nhãn của mô hình, không phải xác nhận toàn cây không có bệnh."
+  ],
+  "confusable_conditions": [
+    "Tình trạng nằm ngoài tám nhãn của mô hình hoặc dấu hiệu không thể hiện rõ trong ảnh."
+  ],
+  "observe_next": [
+    "Quan sát thêm toàn cây; một ảnh lá không thể hiện đầy đủ tình trạng rễ, thân và quả."
+  ],
+  "actions": [
+    {
+      "text": "Duy trì tưới phù hợp để tránh cây bị thiếu nước.",
+      "source_ids": [
+        "pw_water"
+      ],
+      "applicability": "Nguồn Campuchia nêu stress nước trong bối cảnh nhện; lượng và lịch tưới phụ thuộc đất, thời tiết, giai đoạn cây tại nơi trồng."
+    }
+  ],
+  "limits": [
+    "Ảnh và điểm mô hình không xác nhận bệnh học. Nội dung tham khảo chưa được thẩm định chuyên môn tại địa phương.",
+    "Chỉ biên soạn phần quan sát và canh tác có nguồn; không áp liều thuốc, biện pháp đốt cây hoặc lịch mùa vụ từ tài liệu nước ngoài."
+  ],
+  "sources": [
+    {
+      "source_id": "pw_water",
+      "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20177800164.pdf",
+      "locator": "Trang 1, Management / Water stress; không dùng các claim virus, thuốc hoặc tiêu hủy cây",
+      "geographic_scope": "Campuchia, 11/2014; phạm vi nhện Tetranychus spp. và cây trồng bị stress nước",
+      "rights_status": "permitted",
+      "rights_basis": "Spider mites on Tomato. General Directorate of Agriculture (GDA), Cambodia; Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+      "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20177800164.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "checked_at": "2026-11-05"
+    }
+  ],
+  "reviewer": "Công Văn",
+  "checked_at": "2026-11-05",
+  "review_status": "source_checked",
+  "reviewer_role": "project_author",
+  "expert_verified": false
+}

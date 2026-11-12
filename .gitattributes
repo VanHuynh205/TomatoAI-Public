@@ -1,3 +1,7 @@
-infra/knowledge/** -text
+# Generated API declarations must match generator bytes on Windows clones.
+frontend/src/api/schema.d.ts text eol=lf
+frontend/index.html text eol=lf
+# Care approval hashes cover exact CRLF bytes; preserve them and recognize CRLF.
+infra/knowledge/** -text whitespace=cr-at-eol
 frontend/dist/** -text
 desktop/notices/microsoft-webview2-sdk/LICENSE.txt -text

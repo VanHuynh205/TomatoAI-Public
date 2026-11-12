@@ -1,0 +1,55 @@
+{
+  "class_id": "late_blight",
+  "name_vi": "Mốc sương",
+  "name_en": "Late blight",
+  "category": "disease",
+  "symptoms": [
+    "Vết bệnh không đều có màu xanh úng nước hoặc xám; khi ẩm có thể có lớp trắng mịn quanh rìa vết ở mặt dưới lá."
+  ],
+  "confusable_conditions": [
+    "Đốm vòng cũng gây tổn thương lá nhưng nguồn mô tả các vòng đồng tâm; cần quan sát thêm thay vì chỉ so màu."
+  ],
+  "observe_next": [
+    "Quan sát rìa vết ở mặt dưới lá trong điều kiện ẩm; kiểm tra thân, quả và mức lan rộng trên cây."
+  ],
+  "actions": [
+    {
+      "text": "Dùng giàn đỡ và lớp phủ đất phù hợp để giảm tiếp xúc đất và nước bắn lên cây.",
+      "source_ids": [
+        "pw_late"
+      ],
+      "applicability": "Biện pháp canh tác từ Kenya; vật liệu phủ và hệ tưới cần phù hợp thoát nước tại chỗ, không phải cách chữa bệnh đã xác nhận."
+    }
+  ],
+  "limits": [
+    "Ảnh và điểm mô hình không xác nhận bệnh học. Nội dung tham khảo chưa được thẩm định chuyên môn tại địa phương.",
+    "Chỉ biên soạn phần quan sát và canh tác có nguồn; không áp liều thuốc, biện pháp đốt cây hoặc lịch mùa vụ từ tài liệu nước ngoài."
+  ],
+  "sources": [
+    {
+      "source_id": "pw_late",
+      "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804214.pdf",
+      "locator": "Trang 1, Recognize the problem; Background; Management / Non-chemical control",
+      "geographic_scope": "Kenya, 12/2012; tài liệu ghi nhiều nước có vấn đề này, chưa là quy trình đã thẩm định tại Việt Nam",
+      "rights_status": "permitted",
+      "rights_basis": "Late blight on Tomato. KENGAP Horticulture, The Tomato Farming Handbook (2011); Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+      "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804214.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "source_id": "pw_early",
+      "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804212.pdf",
+      "locator": "Trang 1, Recognize the problem; Management / Non-chemical control",
+      "geographic_scope": "Kenya, 12/2012; tài liệu ghi nhiều nước có vấn đề này, chưa là quy trình đã thẩm định tại Việt Nam",
+      "rights_status": "permitted",
+      "rights_basis": "Early blight on Tomato. KENGAP Horticulture, The Tomato Farming Handbook (2011); Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+      "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804212.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "checked_at": "2026-11-05"
+    }
+  ],
+  "reviewer": "Công Văn",
+  "checked_at": "2026-11-05",
+  "review_status": "source_checked",
+  "reviewer_role": "project_author",
+  "expert_verified": false
+}

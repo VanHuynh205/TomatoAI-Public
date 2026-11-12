@@ -1,0 +1,735 @@
+{
+  "components": {
+    "schemas": {
+      "CareAction": {
+        "properties": {
+          "applicability": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Applicability",
+            "type": "string"
+          },
+          "source_ids": {
+            "items": {
+              "pattern": "^[a-z][a-z0-9_]{0,63}$",
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Source Ids",
+            "type": "array"
+          },
+          "text": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "text",
+          "source_ids",
+          "applicability"
+        ],
+        "title": "CareAction",
+        "type": "object"
+      },
+      "CareResponse": {
+        "properties": {
+          "actions": {
+            "items": {
+              "$ref": "#/components/schemas/CareAction"
+            },
+            "title": "Actions",
+            "type": "array"
+          },
+          "category": {
+            "enum": [
+              "disease",
+              "pest",
+              "healthy"
+            ],
+            "title": "Category",
+            "type": "string"
+          },
+          "checked_at": {
+            "format": "date",
+            "title": "Checked At",
+            "type": "string"
+          },
+          "class_id": {
+            "pattern": "^[a-z][a-z0-9_]{0,63}$",
+            "title": "Class Id",
+            "type": "string"
+          },
+          "confusable_conditions": {
+            "items": {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Confusable Conditions",
+            "type": "array"
+          },
+          "expert_verified": {
+            "const": false,
+            "title": "Expert Verified",
+            "type": "boolean"
+          },
+          "knowledge_version": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Knowledge Version",
+            "type": "string"
+          },
+          "limits": {
+            "items": {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Limits",
+            "type": "array"
+          },
+          "name_en": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Name En",
+            "type": "string"
+          },
+          "name_vi": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Name Vi",
+            "type": "string"
+          },
+          "observe_next": {
+            "items": {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Observe Next",
+            "type": "array"
+          },
+          "review_status": {
+            "const": "source_checked",
+            "title": "Review Status",
+            "type": "string"
+          },
+          "reviewer": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Reviewer",
+            "type": "string"
+          },
+          "reviewer_role": {
+            "const": "project_author",
+            "title": "Reviewer Role",
+            "type": "string"
+          },
+          "schema_version": {
+            "const": "1",
+            "default": "1",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "sources": {
+            "items": {
+              "$ref": "#/components/schemas/CareSource"
+            },
+            "minItems": 1,
+            "title": "Sources",
+            "type": "array"
+          },
+          "symptoms": {
+            "items": {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Symptoms",
+            "type": "array"
+          }
+        },
+        "required": [
+          "class_id",
+          "name_vi",
+          "name_en",
+          "category",
+          "symptoms",
+          "confusable_conditions",
+          "observe_next",
+          "actions",
+          "limits",
+          "sources",
+          "reviewer",
+          "checked_at",
+          "review_status",
+          "reviewer_role",
+          "expert_verified",
+          "knowledge_version"
+        ],
+        "title": "CareResponse",
+        "type": "object"
+      },
+      "CareSource": {
+        "properties": {
+          "checked_at": {
+            "format": "date",
+            "title": "Checked At",
+            "type": "string"
+          },
+          "geographic_scope": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Geographic Scope",
+            "type": "string"
+          },
+          "locator": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Locator",
+            "type": "string"
+          },
+          "rights_basis": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Rights Basis",
+            "type": "string"
+          },
+          "rights_evidence": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Rights Evidence",
+            "type": "string"
+          },
+          "rights_status": {
+            "const": "permitted",
+            "title": "Rights Status",
+            "type": "string"
+          },
+          "source_id": {
+            "pattern": "^[a-z][a-z0-9_]{0,63}$",
+            "title": "Source Id",
+            "type": "string"
+          },
+          "url": {
+            "format": "uri",
+            "maxLength": 2083,
+            "minLength": 1,
+            "title": "Url",
+            "type": "string"
+          }
+        },
+        "required": [
+          "source_id",
+          "url",
+          "locator",
+          "geographic_scope",
+          "rights_status",
+          "rights_basis",
+          "rights_evidence",
+          "checked_at"
+        ],
+        "title": "CareSource",
+        "type": "object"
+      },
+      "ErrorDetail": {
+        "properties": {
+          "code": {
+            "enum": [
+              "unauthorized",
+              "forbidden_origin",
+              "forbidden_host",
+              "care_not_found",
+              "payload_too_large",
+              "image_too_large",
+              "unsupported_image",
+              "invalid_input",
+              "busy",
+              "model_unavailable",
+              "internal_error"
+            ],
+            "title": "Code",
+            "type": "string"
+          },
+          "message": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Message",
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "ErrorDetail",
+        "type": "object"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ErrorDetail"
+          },
+          "schema_version": {
+            "const": "1",
+            "default": "1",
+            "title": "Schema Version",
+            "type": "string"
+          }
+        },
+        "required": [
+          "error"
+        ],
+        "title": "ErrorResponse",
+        "type": "object"
+      },
+      "HealthResponse": {
+        "properties": {
+          "knowledge_version": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Knowledge Version",
+            "type": "string"
+          },
+          "model_version": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Model Version",
+            "type": "string"
+          },
+          "ready": {
+            "title": "Ready",
+            "type": "boolean"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "pattern": "\\S",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reason"
+          },
+          "schema_version": {
+            "const": "1",
+            "default": "1",
+            "title": "Schema Version",
+            "type": "string"
+          }
+        },
+        "required": [
+          "ready",
+          "model_version",
+          "knowledge_version",
+          "reason"
+        ],
+        "title": "HealthResponse",
+        "type": "object"
+      },
+      "PredictResponse": {
+        "properties": {
+          "care_card_id": {
+            "anyOf": [
+              {
+                "pattern": "^[a-z][a-z0-9_]{0,63}$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Care Card Id"
+          },
+          "class_id": {
+            "anyOf": [
+              {
+                "pattern": "^[a-z][a-z0-9_]{0,63}$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Class Id"
+          },
+          "knowledge_version": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Knowledge Version",
+            "type": "string"
+          },
+          "model_version": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Model Version",
+            "type": "string"
+          },
+          "schema_version": {
+            "const": "1",
+            "default": "1",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "ok",
+              "uncertain"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "top_k": {
+            "items": {
+              "$ref": "#/components/schemas/ScoredClassSchema"
+            },
+            "title": "Top K",
+            "type": "array"
+          },
+          "warnings": {
+            "items": {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            "title": "Warnings",
+            "type": "array"
+          }
+        },
+        "required": [
+          "status",
+          "class_id",
+          "top_k",
+          "model_version",
+          "knowledge_version",
+          "care_card_id",
+          "warnings"
+        ],
+        "title": "PredictResponse",
+        "type": "object"
+      },
+      "ScoredClassSchema": {
+        "properties": {
+          "class_id": {
+            "pattern": "^[a-z][a-z0-9_]{0,63}$",
+            "title": "Class Id",
+            "type": "string"
+          },
+          "score": {
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Score",
+            "type": "number"
+          }
+        },
+        "required": [
+          "class_id",
+          "score"
+        ],
+        "title": "ScoredClassSchema",
+        "type": "object"
+      }
+    }
+  },
+  "info": {
+    "title": "Tomato Desktop API",
+    "version": "1"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/api/v1/care/{class_id}": {
+      "get": {
+        "operationId": "care_api_v1_care__class_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "class_id",
+            "required": true,
+            "schema": {
+              "title": "Class Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CareResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          }
+        },
+        "summary": "Care"
+      }
+    },
+    "/api/v1/health": {
+      "get": {
+        "operationId": "health_api_v1_health_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        },
+        "summary": "Health"
+      }
+    },
+    "/api/v1/predict": {
+      "post": {
+        "operationId": "predict_api_v1_predict_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "image": {
+                    "format": "binary",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "image"
+                ],
+                "type": "object"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PredictResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Request Entity Too Large"
+          },
+          "415": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unsupported Media Type"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Too Many Requests"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        },
+        "summary": "Predict"
+      }
+    }
+  }
+}

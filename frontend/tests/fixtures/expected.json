@@ -1,0 +1,86 @@
+{
+  "care": {
+    "class_id": "healthy",
+    "name_vi": "Lá khỏe theo nhãn dữ liệu",
+    "name_en": "Synthetic fixture card",
+    "category": "healthy",
+    "symptoms": [
+      "Fixture symptom text"
+    ],
+    "confusable_conditions": [
+      "Fixture comparison text"
+    ],
+    "observe_next": [
+      "Fixture observation text"
+    ],
+    "actions": [
+      {
+        "text": "Fixture action, not advice",
+        "source_ids": [
+          "fixture_source"
+        ],
+        "applicability": "Synthetic fixture only"
+      }
+    ],
+    "limits": [
+      "Synthetic fixture; no clinical or agronomic validity"
+    ],
+    "sources": [
+      {
+        "source_id": "fixture_source",
+        "url": "https://example.com/fixture",
+        "locator": "Fixture section 1",
+        "geographic_scope": "Synthetic fixture only",
+        "rights_status": "permitted",
+        "rights_basis": "Synthetic test data authored for this test",
+        "rights_evidence": "Fixture statement only; not a real source approval",
+        "checked_at": "2026-11-02"
+      }
+    ],
+    "reviewer": "fixture-author",
+    "checked_at": "2026-11-02",
+    "review_status": "source_checked",
+    "reviewer_role": "project_author",
+    "expert_verified": false,
+    "schema_version": "1",
+    "knowledge_version": "fixture-knowledge-v1"
+  },
+  "prediction": {
+    "schema_version": "1",
+    "status": "ok",
+    "class_id": "healthy",
+    "top_k": [
+      {
+        "class_id": "healthy",
+        "score": 0.8
+      },
+      {
+        "class_id": "fixture_other",
+        "score": 0.2
+      }
+    ],
+    "model_version": "fixture-model-v1",
+    "knowledge_version": "fixture-knowledge-v1",
+    "care_card_id": "healthy",
+    "warnings": []
+  },
+  "uncertain": {
+    "schema_version": "1",
+    "status": "uncertain",
+    "class_id": null,
+    "top_k": [
+      {
+        "class_id": "healthy",
+        "score": 0.8
+      },
+      {
+        "class_id": "fixture_other",
+        "score": 0.2
+      }
+    ],
+    "model_version": "fixture-model-v1",
+    "knowledge_version": "fixture-knowledge-v1",
+    "care_card_id": null,
+    "warnings": []
+  }
+}

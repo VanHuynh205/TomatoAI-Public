@@ -1,0 +1,55 @@
+{
+  "class_id": "bacterial_spot",
+  "name_vi": "Đốm vi khuẩn",
+  "name_en": "Bacterial spot",
+  "category": "disease",
+  "symptoms": [
+    "Vết trên lá có thể trông úng nước, rồi chuyển từ vàng sang nâu sẫm; quả có thể xuất hiện đốm sần nâu."
+  ],
+  "confusable_conditions": [
+    "Đốm Septoria cũng tạo đốm nhỏ trên lá; màu đốm đơn lẻ không đủ phân biệt."
+  ],
+  "observe_next": [
+    "Quan sát thêm lá già, mặt dưới lá và quả; ghi nhận cây có bị thao tác khi tán còn ướt hay không."
+  ],
+  "actions": [
+    {
+      "text": "Tránh thao tác trên cây hoặc ruộng khi tán còn ướt để hạn chế phát tán.",
+      "source_ids": [
+        "pw_bacterial"
+      ],
+      "applicability": "Biện pháp trong factsheet Kenya; cần đối chiếu mưa, tưới và điều kiện lao động tại nơi trồng."
+    }
+  ],
+  "limits": [
+    "Ảnh và điểm mô hình không xác nhận bệnh học. Nội dung tham khảo chưa được thẩm định chuyên môn tại địa phương.",
+    "Chỉ biên soạn phần quan sát và canh tác có nguồn; không áp liều thuốc, biện pháp đốt cây hoặc lịch mùa vụ từ tài liệu nước ngoài."
+  ],
+  "sources": [
+    {
+      "source_id": "pw_bacterial",
+      "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804207.pdf",
+      "locator": "Trang 1, Recognize the problem; Background; Management / Non-chemical control",
+      "geographic_scope": "Kenya, 12/2012; tài liệu ghi nhiều nước có vấn đề này, chưa là quy trình đã thẩm định tại Việt Nam",
+      "rights_status": "permitted",
+      "rights_basis": "Bacterial Spot on tomato. KENGAP Horticulture, The Tomato Farming Handbook (2011); Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+      "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804207.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "source_id": "pw_septoria",
+      "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804217.pdf",
+      "locator": "Trang 1, Recognize the problem; Background; Management / Non-chemical control",
+      "geographic_scope": "Kenya, 12/2012; nguồn ghi All Countries, không đồng nghĩa đã thẩm định tại Việt Nam",
+      "rights_status": "permitted",
+      "rights_basis": "Septoria on Tomato. KENGAP Horticulture, The Tomato Farming Handbook (2011); Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+      "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804217.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "checked_at": "2026-11-05"
+    }
+  ],
+  "reviewer": "Công Văn",
+  "checked_at": "2026-11-05",
+  "review_status": "source_checked",
+  "reviewer_role": "project_author",
+  "expert_verified": false
+}

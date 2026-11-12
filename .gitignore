@@ -10,3 +10,11 @@ ai/artifacts/
 *.pth
 *.pt
 *.onnx
+frontend/.e2e/
+frontend/.api-types-*/
+.ruff_cache/
+.mypy_cache/
+/build/
+/dist/
+verification/*.log
+verification/*-report.json

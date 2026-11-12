@@ -1,0 +1,55 @@
+{
+  "class_id": "leaf_mold",
+  "name_vi": "Mốc lá",
+  "name_en": "Leaf mold",
+  "category": "disease",
+  "symptoms": [
+    "Mặt trên lá có mảng vàng nhạt; mặt dưới xuất hiện lớp mốc ban đầu xám trắng rồi chuyển xám nâu hoặc nâu sẫm; thường bắt đầu ở lá thấp."
+  ],
+  "confusable_conditions": [
+    "Nhện cũng gây bạc hoặc vàng lá; cần phân biệt lớp mốc với tơ mịn và tìm nhện ở mặt dưới lá."
+  ],
+  "observe_next": [
+    "Đối chiếu hai mặt cùng một lá và ghi nhận ẩm, đọng sương, mật độ tán và thông gió."
+  ],
+  "actions": [
+    {
+      "text": "Trong nhà kính, điều chỉnh thông gió và cách tưới để giảm ẩm và thời gian đọng sương trên lá.",
+      "source_ids": [
+        "pw_leaf_mold"
+      ],
+      "applicability": "Nguồn Trung Quốc mô tả quản lý nhà kính; không suy ra ngưỡng vận hành hoặc lịch tưới chung cho nhà màng Việt Nam."
+    }
+  ],
+  "limits": [
+    "Ảnh và điểm mô hình không xác nhận bệnh học. Nội dung tham khảo chưa được thẩm định chuyên môn tại địa phương.",
+    "Chỉ biên soạn phần quan sát và canh tác có nguồn; không áp liều thuốc, biện pháp đốt cây hoặc lịch mùa vụ từ tài liệu nước ngoài."
+  ],
+  "sources": [
+    {
+      "source_id": "pw_leaf_mold",
+      "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804306.pdf",
+      "locator": "Trang 1, 问题识别 (nhận biết); 背景 (bối cảnh); 管理 / 1. 农业防治 (quản lý canh tác)",
+      "geographic_scope": "Trung Quốc; tạo 2012, sửa 2020; phần canh tác mô tả nhà kính",
+      "rights_status": "permitted",
+      "rights_basis": "番茄叶霉病 (Mốc lá cà chua). 赵世福, 北京市顺义区植保植检站; Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+      "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804306.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "checked_at": "2026-11-05"
+    },
+    {
+      "source_id": "pw_mites",
+      "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804187.pdf",
+      "locator": "Trang 1, Recognize the problem; Background; Management / Cultural",
+      "geographic_scope": "Kenya, 10/2012; cà chua ngoài đồng và nhà kính",
+      "rights_status": "permitted",
+      "rights_basis": "Tomato red spider mite. Faith Toroitich, James Kimani; University of Nairobi; Plantwise biên tập. ©CAB International. Văn bản nguồn ghi CC BY-SA 4.0. Bản Việt do agent dịch/rút gọn, bỏ ảnh và phần thuốc; bản phái sinh áp dụng cùng giấy phép. Không có bảo đảm hoặc chứng thực của CABI/tác giả. Chủ dự án Công Văn chấp thuận bản biên soạn để tham khảo offline ngày 2026-11-05, giữ ghi công và CC BY-SA 4.0.",
+      "rights_evidence": "Thông báo giấy phép ở cuối trang 1: https://factsheetadmin.plantwise.org/Uploads/PDFs/20137804187.pdf ; điều khoản: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "checked_at": "2026-11-05"
+    }
+  ],
+  "reviewer": "Công Văn",
+  "checked_at": "2026-11-05",
+  "review_status": "source_checked",
+  "reviewer_role": "project_author",
+  "expert_verified": false
+}

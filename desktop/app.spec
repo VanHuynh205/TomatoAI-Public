@@ -36,6 +36,9 @@ datas = [
     (str(root / 'desktop/notices'), 'notices'),
     (str(root / 'LICENSE'), 'notices/project'),
     (str(root / 'THIRD_PARTY_NOTICES.md'), 'notices/project'),
+    (str(root / 'NOTICE'), 'notices/project'),
+    (str(root / 'DATASET_ATTRIBUTIONS.md'), 'notices/project'),
+    (str(root / 'MODEL_CARD.md'), 'notices/project'),
     (str(root / 'infra/knowledge/CONTENT-LICENSE.md'), 'notices/care'),
 ]
 datas += [(str(root / DEFAULT_MODEL_BUNDLE / name), 'model') for name in DINO_V2_FILES]

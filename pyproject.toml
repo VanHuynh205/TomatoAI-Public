@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "tomato-desktop"
 version = "0.1.0"
-license = "MIT"
+license = "Apache-2.0"
 description = "Tomato desktop application contracts"
 requires-python = ">=3.12,<3.13"
 dependencies = ["pydantic>=2.10,<3"]
@@ -26,7 +26,7 @@ include = ["ai", "ai.*", "backend", "backend.*", "desktop", "desktop.*"]
 exclude = ["backend.tests*", "desktop.tests*"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests/ai", "backend/tests", "desktop/tests"]
+testpaths = ["tests", "backend/tests", "desktop/tests"]
 
 [tool.ruff]
 target-version = "py312"

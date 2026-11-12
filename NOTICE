@@ -1,0 +1,28 @@
+Tomato Desktop
+Copyright (c) 2026 VanHuynh205
+
+The project-authored application code is licensed under the Apache License,
+Version 2.0. Earlier public revisions were distributed under the MIT License;
+the original notice is retained in desktop/notices/project-MIT-legacy.txt.
+This change does not revoke the license granted for those earlier revisions.
+
+DINOv2
+Copyright (c) Meta Platforms, Inc. and affiliates.
+Original model: facebook/dinov2-base (ViT-B/14), revision
+f9e44c814b77203eaa57a6bdbbd535f21ede1415.
+DINOv2 is licensed under the Apache License, Version 2.0; its license is
+retained in desktop/notices/dinov2/LICENSE.
+
+Project modifications to the pretrained model: a nine-class leaf head and
+fine-tuning of the last four backbone blocks and final normalization;
+checkpoint selected at epoch 6 with 224 px training input. The project v1
+runtime uses that same checkpoint at 280 px with horizontal-flip averaging.
+This repository does not distribute that fine-tuned checkpoint pending
+clarification of training-data rights. No retraining was performed for this
+licensing and reproducibility update.
+
+Care text, datasets, dependency code and pretrained/fine-tuned weights are
+not relicensed by the application's Apache-2.0 license. See
+THIRD_PARTY_NOTICES.md, DATASET_ATTRIBUTIONS.md, MODEL_CARD.md and
+infra/knowledge/CONTENT-LICENSE.md for their separate terms and limitations.
+No upstream author or dataset provider endorses this application.
