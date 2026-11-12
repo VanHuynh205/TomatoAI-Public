@@ -71,7 +71,7 @@ Pop-Location
 
 Không commit token. Các bài E2E hiện dùng locator/assertion tường minh, không có bước `agent.act`, nên không cần model API key. Runner cần trình duyệt Chromium phù hợp. Báo cáo nằm trong `frontend/.e2e/`.
 
-Kết quả clone mới, 283 test Python, 33 test frontend, 9 E2E và giới hạn kiểm chứng được ghi trong [báo cáo ngày 13/11/2026](docs/verification/2026-11-13-public-release.md). Các kết quả này không có nghĩa repo đã phân phối model hoặc đã kiểm native/offline release.
+Kết quả clone mới, 284 test Python, 33 test frontend, 9 E2E và giới hạn kiểm chứng được ghi trong [báo cáo ngày 13/11/2026](docs/verification/2026-11-13-public-release.md). Các kết quả này không có nghĩa repo đã phân phối model hoặc đã kiểm native/offline release.
 
 ## Giấy phép và ghi công
 
