@@ -21,6 +21,14 @@ Windows x64, CPython 3.12.14, Node 26.2.0, npm 11.13.0, uv 0.13.5. Clone độc 
 | CPU smoke với source public + bundle v1 cục bộ | Đạt; cả 5 SHA-256 đầu vào không đổi trước/sau | Ảnh RGB tổng hợp, không chứng minh accuracy, không sao chép weights vào repo |
 | Gitleaks 8.30.1 | Không phát hiện secret trong staged source và lịch sử đến code commit | Không bảo đảm không còn secret chưa phát hiện hoặc ở repo khác |
 
+### Kiểm bổ sung trên commit GitHub `02d6889`
+
+Đã fetch trực tiếp GitHub và cài editable bằng CPython 3.12.14 với `--no-deps --no-build-isolation`. Metadata `License-Expression` là `Apache-2.0`, có kèm [LICENSE](../../LICENSE) và [NOTICE](../../NOTICE); ba package dự án đều trỏ vào clone kiểm chứng.
+
+Đã chạy [bootstrap](../../Start.ps1) với `-CheckOnly` và bundle v1 có sẵn cục bộ. Kết quả: `dinov2-v1-280`, `Runtime inputs verified.`, exit 0. Lượt này kiểm đủ model manifest/hash, care export, CPython x64 và WebView2; không mở native window.
+
+Để kiểm đúng đường dẫn bundle mà README yêu cầu, đã tạo sáu bản sao tạm trong vùng bị Git ignore của clone kiểm chứng. Sau chạy, đã đối chiếu và xóa từng bản sao theo đường dẫn tuyệt đối, kích thước và SHA-256; cả sáu file gốc (gồm manifest) giữ nguyên hash, clone trở lại sạch và không còn bundle. Không đưa weights vào Git. Kiểm tương thích cục bộ này không xác nhận quyền phân phối model.
+
 Lệnh cài runtime đã chạy:
 
 ```powershell
