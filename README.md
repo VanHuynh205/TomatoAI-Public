@@ -71,6 +71,8 @@ Pop-Location
 
 Không commit token. Các bài E2E hiện dùng locator/assertion tường minh, không có bước `agent.act`, nên không cần model API key. Runner cần trình duyệt Chromium phù hợp. Báo cáo nằm trong `frontend/.e2e/`.
 
+Kết quả clone mới, 283 test Python, 33 test frontend, 9 E2E và giới hạn kiểm chứng được ghi trong [báo cáo ngày 13/11/2026](docs/verification/2026-11-13-public-release.md). Các kết quả này không có nghĩa repo đã phân phối model hoặc đã kiểm native/offline release.
+
 ## Giấy phép và ghi công
 
 Mã ứng dụng do dự án sở hữu dùng [Apache License 2.0](LICENSE), bản quyền ©2026 VanHuynh205. Giữ [NOTICE](NOTICE) khi phân phối theo điều khoản Apache. Các revision public trước lần đổi giấy phép này đã dùng MIT; [thông báo MIT cũ](desktop/notices/project-MIT-legacy.txt) vẫn được giữ và quyền đã cấp cho các bản cũ không bị thu hồi.
