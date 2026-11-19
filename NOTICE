@@ -6,7 +6,13 @@ Version 2.0. Earlier public revisions were distributed under the MIT License;
 the original notice is retained in desktop/notices/project-MIT-legacy.txt.
 This change does not revoke the license granted for those earlier revisions.
 
-DINOv2
+G2 ConvNeXt-Tiny + BiGRU
+The G2 desktop bundle uses a Meta ConvNeXt-Tiny backbone initialized from
+convnext_tiny_22k_1k_384 and a project-trained classification head.
+The upstream pretrained checkpoint notice is in desktop/notices/convnext/LICENSE.
+See MODEL_CARD.md for the trained bundle, source provenance and limitations.
+
+Historical DINOv2 release
 Copyright (c) Meta Platforms, Inc. and affiliates.
 Original model: facebook/dinov2-base (ViT-B/14), revision
 f9e44c814b77203eaa57a6bdbbd535f21ede1415.

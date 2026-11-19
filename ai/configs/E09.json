@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "run_id": "E09",
+  "architecture": "yolo26s_cls",
+  "stage": "frozen",
+  "parent_best": null,
+  "dataset_dir": "infra/derived/pv8-plantdoc-v1",
+  "seal_sha256": "eb3eb127583cfc3b2d8b81946f308cbec367707872fac92e1518aabb7d9205fa",
+  "split_hash": "214a6716234d9aeae1574db4d6f2f44b883e330a901b4b702204af82ef441550",
+  "pretrained_path": "ai/pretrained/yolo26/yolo26s-cls-state-dict.pth",
+  "pretrained_sha256": "bcc5048db549f5ca71ff4c65b88e043d13c26d4f86863a6a4bbc7c983dabb7ed",
+  "train_split": "train",
+  "val_split": "val",
+  "class_ids": [
+    "bacterial_spot",
+    "early_blight",
+    "late_blight",
+    "leaf_mold",
+    "septoria_leaf_spot",
+    "spider_mites",
+    "yellow_leaf_curl",
+    "healthy"
+  ],
+  "preprocessing": {
+    "profile_version": "whole-frame-yolo-v1",
+    "spec": {
+      "schema_version": 1,
+      "color_mode": "RGB",
+      "geometry": "fit_pad",
+      "resize_size": 224,
+      "crop_size": 224,
+      "interpolation": "bicubic",
+      "antialias": true,
+      "mean": [
+        0,
+        0,
+        0
+      ],
+      "std": [
+        1,
+        1,
+        1
+      ],
+      "horizontal_flip_p": 0.5,
+      "rotation_degrees": 0.0,
+      "random_crop_scale": [
+        1.0,
+        1.0
+      ],
+      "random_crop_ratio": [
+        1.0,
+        1.0
+      ],
+      "fill": [
+        124,
+        116,
+        104
+      ]
+    }
+  },
+  "seed": 42,
+  "batch": 8,
+  "accumulation": 2,
+  "precision": "amp_fp16",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001
+  },
+  "epochs": 5,
+  "patience": 5,
+  "sample_prefix_weights": {
+    "pv:": 0.75,
+    "plantdoc:": 0.25
+  }
+}

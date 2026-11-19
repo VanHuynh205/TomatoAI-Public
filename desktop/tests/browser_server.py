@@ -4,6 +4,7 @@ import argparse
 import os
 import socket
 from pathlib import Path
+from tempfile import TemporaryDirectory
 from typing import cast
 
 import uvicorn
@@ -11,6 +12,7 @@ from fastapi import FastAPI
 from PIL import Image
 
 from ai.artifacts import load_bundle
+from ai.cnn_gru_inference import CNN_GRU_MANIFEST, validate_cnn_gru_export
 from ai.contracts import Prediction, ScoredClass
 from ai.dinov2_inference import DINO_V2_MANIFEST
 from backend.app import create_app
@@ -48,16 +50,38 @@ def create_browser_app(mode: str, token: str, origin: str) -> FastAPI:
         )
         add_frontend(app, ROOT / "frontend/dist")
         return app
-    if mode not in ("real", "fixture-bundle", "dinov3"):
+    if mode not in ("real", "fixture-bundle", "dinov3", "cnn-gru"):
         raise ValueError("unknown browser harness mode")
+    if mode == "fixture-bundle" and not os.getenv("TOMATO_E2E_MODEL_DIR"):
+        from tests.ai.test_yolo import write_yolo_fixture
+
+        with TemporaryDirectory(prefix="tomato-e2e-yolo-") as directory:
+            return _bundle_app(mode, write_yolo_fixture(Path(directory)), token, origin)
     model_dir = (
         Path(os.getenv("TOMATO_E2E_MODEL_DIR") or ROOT / DEFAULT_MODEL_BUNDLE)
         if mode == "real"
         else Path(os.environ["TOMATO_E2E_MODEL_DIR"])
     )
+    return _bundle_app(mode, model_dir, token, origin)
+
+
+def _bundle_app(mode: str, model_dir: Path, token: str, origin: str) -> FastAPI:
     if mode == "dinov3":
-        if not (model_dir / "leaf-classifier.json").is_file():
+        if (
+            not (model_dir / "leaf-classifier.json").is_file()
+            or (model_dir / DINO_V2_MANIFEST).is_file()
+            or (model_dir / CNN_GRU_MANIFEST).is_file()
+        ):
             raise ValueError("dinov3 mode requires an explicit DINOv3 leaf export")
+    elif mode == "cnn-gru":
+        validate_cnn_gru_export(
+            model_dir,
+            require_trained=os.getenv("TOMATO_E2E_REQUIRE_TRAINED") == "1",
+        )
+    elif (model_dir / CNN_GRU_MANIFEST).is_file():
+        metadata = validate_cnn_gru_export(model_dir, require_trained=mode == "real")
+        if mode == "fixture-bundle" and metadata["artifact_kind"] != "fixture":
+            raise ValueError("fixture-bundle mode requires fixture weights")
     elif mode == "fixture-bundle" or not (model_dir / DINO_V2_MANIFEST).is_file():
         bundle = load_bundle(model_dir, require_trained=mode == "real")
         if mode == "fixture-bundle" and bundle.metadata["artifact_kind"] != "fixture":
@@ -78,7 +102,9 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--port", type=int, required=True)
     parser.add_argument(
-        "--mode", choices=("fixture", "real", "fixture-bundle", "dinov3"), required=True
+        "--mode",
+        choices=("fixture", "real", "fixture-bundle", "dinov3", "cnn-gru"),
+        required=True,
     )
     args = parser.parse_args()
     token = os.environ["TOMATO_E2E_SESSION_TOKEN"]

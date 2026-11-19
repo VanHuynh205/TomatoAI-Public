@@ -7,13 +7,14 @@ from starlette.responses import Response
 from starlette.staticfiles import StaticFiles
 from starlette.types import Scope
 
+from ai.cnn_gru_inference import CNN_GRU_MANIFEST, CnnGruPredictor
 from ai.dinov2_inference import DINO_V2_MANIFEST, DinoV2Predictor
 from ai.inference import Predictor
 from backend.app import PredictorContract, create_app
 from backend.care import CareCatalog
 from backend.security import ApiError
 
-DEFAULT_MODEL_BUNDLE = "ai/artifacts/dinov2-v1-280"
+DEFAULT_MODEL_BUNDLE = "ai/artifacts/cnn-bigru-20261118-g2-convnext_tiny_axial_bigru"
 
 
 class _FrontendFiles(StaticFiles):
@@ -35,6 +36,8 @@ def create_desktop_app(
     predictor: PredictorContract
     if (model_dir / DINO_V2_MANIFEST).is_file():
         predictor = DinoV2Predictor(model_dir)
+    elif (model_dir / CNN_GRU_MANIFEST).is_file():
+        predictor = CnnGruPredictor(model_dir)
     elif (model_dir / "leaf-classifier.json").is_file():
         from ai.dinov3_inference import DinoV3Predictor
 

@@ -1,0 +1,1394 @@
+{
+  "run": "cnn-bigru-20261118",
+  "archives_sha256": {
+    "train": "9c59ecbff409fb7eb60d4dd7a3c13ca8c402ab9410677f6927fe50b5a4fdc80f",
+    "test": "09fed10b421eb8f04f27048c6e536fd72309bcc3fec81b822b76cbdd7102bafc"
+  },
+  "local_registration_sha256": "15d68dec248fa231550ef984b431ac5bd2f658017a0821136c7a5973bdb0a5e2",
+  "training": {
+    "G0": {
+      "epochs": 22,
+      "global_step": 3299,
+      "selected_epoch": 14,
+      "variant": "ema",
+      "registration_sha256": "0724d22374babda4f6b66dffbd4d49583e0b7a27c67674e3584afe43695db27d",
+      "manifest_sha256": "e0fe14587c36076d2cb7cc242e7aa989a0bc6fa84d3788db8c4ff1373267ee19",
+      "guardrail_passed": true,
+      "selection": {
+        "s_select": 0.8063307295742435,
+        "source_macro_f1_nonlab": 0.7559387639187178,
+        "tomato_macro_f1": 0.906415919361184,
+        "recall_nonlab_healthy": 0.9041666666666667,
+        "precision_nonlab_bs": 0.7307692307692307,
+        "recall_negative": 0.958904109589041
+      },
+      "calibration": {
+        "schema_version": 1,
+        "model_version": "cnn-bigru-20261118-g0-resnet50_gap_baseline",
+        "temperature_fit_scope": "in_domain_9logits",
+        "temperature": 1.1109912863923637,
+        "nll_before": 0.4180846487563232,
+        "nll_after": 0.41374007887859054,
+        "at_bound": false,
+        "threshold": 0.6859006644799628,
+        "target_coverage": 0.85,
+        "guardrail_passed": true,
+        "in_domain_count": 1371,
+        "negative_count": 156,
+        "in_domain_coverage": 0.8504741064916119,
+        "negative_false_accept_rate": 0.02564102564102564,
+        "negative_rejection_rate": 0.9743589743589743
+      },
+      "weights_sha256": "2740c4be99e41ace0c6afdfa6a56324be0d30df888c8a62e2897e9a6b9acabff",
+      "weights_bytes": 94366764,
+      "frozen_utc": "2026-11-18T05:57:46.873968+00:00"
+    },
+    "G1": {
+      "epochs": 22,
+      "global_step": 3298,
+      "selected_epoch": 16,
+      "variant": "ema",
+      "registration_sha256": "0724d22374babda4f6b66dffbd4d49583e0b7a27c67674e3584afe43695db27d",
+      "manifest_sha256": "e0fe14587c36076d2cb7cc242e7aa989a0bc6fa84d3788db8c4ff1373267ee19",
+      "guardrail_passed": true,
+      "selection": {
+        "s_select": 0.7947355027306423,
+        "source_macro_f1_nonlab": 0.7461985389970351,
+        "tomato_macro_f1": 0.8859552299033147,
+        "recall_nonlab_healthy": 0.8541666666666666,
+        "precision_nonlab_bs": 0.7254901960784313,
+        "recall_negative": 0.952054794520548
+      },
+      "calibration": {
+        "schema_version": 1,
+        "model_version": "cnn-bigru-20261118-g1-resnet50_axial_bigru",
+        "temperature_fit_scope": "in_domain_9logits",
+        "temperature": 1.217612296684543,
+        "nll_before": 0.4823339539367755,
+        "nll_after": 0.4605765297050687,
+        "at_bound": false,
+        "threshold": 0.8113316323977015,
+        "target_coverage": 0.85,
+        "guardrail_passed": true,
+        "in_domain_count": 1371,
+        "negative_count": 156,
+        "in_domain_coverage": 0.8504741064916119,
+        "negative_false_accept_rate": 0.01282051282051282,
+        "negative_rejection_rate": 0.9871794871794872
+      },
+      "weights_sha256": "42258cb7584e2b49a2317ebfd4a8cfb85968dfea253fa4457c624f0c1d638e29",
+      "weights_bytes": 109114428,
+      "frozen_utc": "2026-11-18T06:37:19.587597+00:00"
+    },
+    "G2": {
+      "epochs": 22,
+      "global_step": 3299,
+      "selected_epoch": 15,
+      "variant": "raw",
+      "registration_sha256": "0724d22374babda4f6b66dffbd4d49583e0b7a27c67674e3584afe43695db27d",
+      "manifest_sha256": "e0fe14587c36076d2cb7cc242e7aa989a0bc6fa84d3788db8c4ff1373267ee19",
+      "guardrail_passed": true,
+      "selection": {
+        "s_select": 0.8056996370572547,
+        "source_macro_f1_nonlab": 0.7605571505118613,
+        "tomato_macro_f1": 0.8939454187687313,
+        "recall_nonlab_healthy": 0.8916666666666667,
+        "precision_nonlab_bs": 0.7474747474747475,
+        "recall_negative": 0.9452054794520548
+      },
+      "calibration": {
+        "schema_version": 1,
+        "model_version": "cnn-bigru-20261118-g2-convnext_tiny_axial_bigru",
+        "temperature_fit_scope": "in_domain_9logits",
+        "temperature": 1.2840329428784063,
+        "nll_before": 0.44403167386117504,
+        "nll_after": 0.4159418835304324,
+        "at_bound": false,
+        "threshold": 0.7854081940644378,
+        "target_coverage": 0.85,
+        "guardrail_passed": true,
+        "in_domain_count": 1371,
+        "negative_count": 156,
+        "in_domain_coverage": 0.8504741064916119,
+        "negative_false_accept_rate": 0.01282051282051282,
+        "negative_rejection_rate": 0.9871794871794872
+      },
+      "weights_sha256": "85e0450a49a95f77e640a9e1ff63d8d9dc4befb5fe8bcd8674caa16d316a1a9e",
+      "weights_bytes": 123453100,
+      "frozen_utc": "2026-11-18T07:22:42.161461+00:00"
+    },
+    "G3": {
+      "epochs": 22,
+      "global_step": 3300,
+      "selected_epoch": 16,
+      "variant": "ema",
+      "registration_sha256": "15d68dec248fa231550ef984b431ac5bd2f658017a0821136c7a5973bdb0a5e2",
+      "manifest_sha256": "e0fe14587c36076d2cb7cc242e7aa989a0bc6fa84d3788db8c4ff1373267ee19",
+      "guardrail_passed": true,
+      "selection": {
+        "s_select": 0.8120456586047217,
+        "source_macro_f1_nonlab": 0.7695584530033946,
+        "tomato_macro_f1": 0.897595625319946,
+        "recall_nonlab_healthy": 0.8791666666666667,
+        "precision_nonlab_bs": 0.7578947368421053,
+        "recall_negative": 0.9383561643835616
+      },
+      "calibration": {
+        "schema_version": 1,
+        "model_version": "cnn-bigru-20261118-g3-efficientnet_v2_s_axial_bigru",
+        "temperature_fit_scope": "in_domain_9logits",
+        "temperature": 1.2654083443318234,
+        "nll_before": 0.48008074016794977,
+        "nll_after": 0.44705417220709553,
+        "at_bound": false,
+        "threshold": 0.8749963817748071,
+        "target_coverage": 0.85,
+        "guardrail_passed": true,
+        "in_domain_count": 1371,
+        "negative_count": 156,
+        "in_domain_coverage": 0.8504741064916119,
+        "negative_false_accept_rate": 0.03205128205128205,
+        "negative_rejection_rate": 0.967948717948718
+      },
+      "weights_sha256": "e4066a68fa89ec53d7cb35e9db11dddbf8cfc83cd24517e58e83d16eba264580",
+      "weights_bytes": 94642260,
+      "frozen_utc": "2026-11-18T08:29:31.446651+00:00"
+    }
+  },
+  "results": {
+    "G0": {
+      "legacy": {
+        "model": "G0",
+        "dataset": "legacy",
+        "n": 2647,
+        "all_macro_f1": 0.6447556490909716,
+        "all_accuracy": 0.5889686437476388,
+        "field_n": 1730,
+        "field_macro_f1": 0.3343392634594231,
+        "field_accuracy": 0.3982658959537572,
+        "field_healthy_recall": 0.6384439359267735,
+        "field_healthy_n": 437,
+        "positive_n": 2351,
+        "positive_accepted": 1647,
+        "coverage": 0.7005529561888558,
+        "accepted_positive_accuracy": 0.6812386156648452,
+        "negative_n": 296,
+        "negative_rejected": 280,
+        "negative_rejection": 0.9459459459459459,
+        "correct_raw": 1559,
+        "correct_accepted": 1122,
+        "positive_field_coverage": 0.6121387283236994,
+        "sources": {
+          "ghana_ccmt": {
+            "n": 345,
+            "macro_f1": 0.9154164115125536,
+            "accuracy": 0.936231884057971
+          },
+          "imtiaz": {
+            "n": 18,
+            "macro_f1": 1.0,
+            "accuracy": 1.0
+          },
+          "openimages_hands": {
+            "n": 44,
+            "macro_f1": 1.0,
+            "accuracy": 1.0
+          },
+          "plantdoc": {
+            "n": 21,
+            "macro_f1": 0.5384920634920635,
+            "accuracy": 0.6190476190476191
+          },
+          "plantdoc_other_leaves": {
+            "n": 167,
+            "macro_f1": 0.919093851132686,
+            "accuracy": 0.8502994011976048
+          },
+          "plantvillage": {
+            "n": 600,
+            "macro_f1": 0.9766197705738433,
+            "accuracy": 0.9766666666666667
+          },
+          "rachin": {
+            "n": 1367,
+            "macro_f1": 0.28138576887364836,
+            "accuracy": 0.25457205559619606
+          },
+          "soilclass": {
+            "n": 85,
+            "macro_f1": 1.0,
+            "accuracy": 1.0
+          }
+        },
+        "prediction_file": "G0/G0-legacy-predictions.csv",
+        "predictions_sha256": "fe61c9439ebefbc0436067efc5f887f2f8cc99d6fb058955db67acce72fe85cf",
+        "delta_field_macro_f1_vs_dinov2": 0.11961441899442027,
+        "delta_field_macro_f1_vs_dinov2_group_ci95": [
+          0.09807969594914699,
+          0.14257192851607653
+        ]
+      },
+      "external": {
+        "model": "G0",
+        "dataset": "external",
+        "n": 460,
+        "all_macro_f1": 0.540674851500884,
+        "all_accuracy": 0.4826086956521739,
+        "field_n": 139,
+        "field_macro_f1": 0.3319590462447605,
+        "field_accuracy": 0.35251798561151076,
+        "field_healthy_recall": 0.2597402597402597,
+        "field_healthy_n": 77,
+        "positive_n": 390,
+        "positive_accepted": 144,
+        "coverage": 0.36923076923076925,
+        "accepted_positive_accuracy": 0.6458333333333334,
+        "negative_n": 70,
+        "negative_rejected": 70,
+        "negative_rejection": 1.0,
+        "correct_raw": 222,
+        "correct_accepted": 93,
+        "positive_field_coverage": 0.4676258992805755,
+        "sources": {
+          "taiwan_tomato": {
+            "n": 313,
+            "macro_f1": 0.5407547528352897,
+            "accuracy": 0.4249201277955272
+          },
+          "tom2024": {
+            "n": 147,
+            "macro_f1": 0.6887030495277917,
+            "accuracy": 0.6054421768707483
+          }
+        },
+        "prediction_file": "G0/G0-external-predictions.csv",
+        "predictions_sha256": "b1ae4e216e78d30b0e2d685ffba3ade64b900ab8e89b30f6ce635bb0db86415c",
+        "delta_field_macro_f1_vs_dinov2": -0.4317077938222876,
+        "delta_field_macro_f1_vs_dinov2_group_ci95": [
+          -0.5268169750792926,
+          -0.2966151949660824
+        ]
+      },
+      "slif": {
+        "model": "G0",
+        "dataset": "slif",
+        "n": 21,
+        "all_macro_f1": 0.8,
+        "all_accuracy": 0.6666666666666666,
+        "field_n": 21,
+        "field_macro_f1": 0.8,
+        "field_accuracy": 0.6666666666666666,
+        "field_healthy_recall": null,
+        "field_healthy_n": 0,
+        "positive_n": 21,
+        "positive_accepted": 10,
+        "coverage": 0.47619047619047616,
+        "accepted_positive_accuracy": 0.9,
+        "negative_n": 0,
+        "negative_rejected": 0,
+        "negative_rejection": null,
+        "correct_raw": 14,
+        "correct_accepted": 9,
+        "positive_field_coverage": 0.47619047619047616,
+        "sources": {
+          "slif_tomato_v1": {
+            "n": 21,
+            "macro_f1": 0.8,
+            "accuracy": 0.6666666666666666
+          }
+        },
+        "prediction_file": "G0/G0-slif-predictions.csv",
+        "predictions_sha256": "9d7be461a03e5be73492a5666da76550a5e54f81d020e8c475712383af8b7948"
+      }
+    },
+    "G1": {
+      "legacy": {
+        "model": "G1",
+        "dataset": "legacy",
+        "n": 2647,
+        "all_macro_f1": 0.6459146650194275,
+        "all_accuracy": 0.5965243672081602,
+        "field_n": 1730,
+        "field_macro_f1": 0.34096796081238506,
+        "field_accuracy": 0.4115606936416185,
+        "field_healthy_recall": 0.6819221967963387,
+        "field_healthy_n": 437,
+        "positive_n": 2351,
+        "positive_accepted": 1647,
+        "coverage": 0.7005529561888558,
+        "accepted_positive_accuracy": 0.689738919247116,
+        "negative_n": 296,
+        "negative_rejected": 283,
+        "negative_rejection": 0.956081081081081,
+        "correct_raw": 1579,
+        "correct_accepted": 1136,
+        "positive_field_coverage": 0.6115606936416185,
+        "sources": {
+          "ghana_ccmt": {
+            "n": 345,
+            "macro_f1": 0.9145004217467985,
+            "accuracy": 0.9333333333333333
+          },
+          "imtiaz": {
+            "n": 18,
+            "macro_f1": 1.0,
+            "accuracy": 1.0
+          },
+          "openimages_hands": {
+            "n": 44,
+            "macro_f1": 1.0,
+            "accuracy": 1.0
+          },
+          "plantdoc": {
+            "n": 21,
+            "macro_f1": 0.7090909090909091,
+            "accuracy": 0.7142857142857143
+          },
+          "plantdoc_other_leaves": {
+            "n": 167,
+            "macro_f1": 0.9155844155844156,
+            "accuracy": 0.844311377245509
+          },
+          "plantvillage": {
+            "n": 600,
+            "macro_f1": 0.9699456819750459,
+            "accuracy": 0.97
+          },
+          "rachin": {
+            "n": 1367,
+            "macro_f1": 0.2783942522687322,
+            "accuracy": 0.2721287490855889
+          },
+          "soilclass": {
+            "n": 85,
+            "macro_f1": 1.0,
+            "accuracy": 1.0
+          }
+        },
+        "prediction_file": "G1/G1-legacy-predictions.csv",
+        "predictions_sha256": "af835bff7ef76f73e6c5ea17166d2963f562f5dd7599561c552ebc565d7b358e",
+        "delta_field_macro_f1_vs_dinov2": 0.12624311634738222,
+        "delta_field_macro_f1_vs_dinov2_group_ci95": [
+          0.10213428226024666,
+          0.15055618893626196
+        ]
+      },
+      "external": {
+        "model": "G1",
+        "dataset": "external",
+        "n": 460,
+        "all_macro_f1": 0.5309033624584806,
+        "all_accuracy": 0.48478260869565215,
+        "field_n": 139,
+        "field_macro_f1": 0.38653198653198656,
+        "field_accuracy": 0.37410071942446044,
+        "field_healthy_recall": 0.2597402597402597,
+        "field_healthy_n": 77,
+        "positive_n": 390,
+        "positive_accepted": 158,
+        "coverage": 0.40512820512820513,
+        "accepted_positive_accuracy": 0.6392405063291139,
+        "negative_n": 70,
+        "negative_rejected": 69,
+        "negative_rejection": 0.9857142857142858,
+        "correct_raw": 223,
+        "correct_accepted": 101,
+        "positive_field_coverage": 0.5179856115107914,
+        "sources": {
+          "taiwan_tomato": {
+            "n": 313,
+            "macro_f1": 0.5421461940522471,
+            "accuracy": 0.43450479233226835
+          },
+          "tom2024": {
+            "n": 147,
+            "macro_f1": 0.658888269713012,
+            "accuracy": 0.5918367346938775
+          }
+        },
+        "prediction_file": "G1/G1-external-predictions.csv",
+        "predictions_sha256": "020a923b863c84efa330261e5a36fe56c77d7b857f4101fcb50ca42f9c5ad2ca",
+        "delta_field_macro_f1_vs_dinov2": -0.37713485353506154,
+        "delta_field_macro_f1_vs_dinov2_group_ci95": [
+          -0.49620230221119926,
+          -0.1399752203941624
+        ]
+      },
+      "slif": {
+        "model": "G1",
+        "dataset": "slif",
+        "n": 21,
+        "all_macro_f1": 0.9230769230769231,
+        "all_accuracy": 0.8571428571428571,
+        "field_n": 21,
+        "field_macro_f1": 0.9230769230769231,
+        "field_accuracy": 0.8571428571428571,
+        "field_healthy_recall": null,
+        "field_healthy_n": 0,
+        "positive_n": 21,
+        "positive_accepted": 12,
+        "coverage": 0.5714285714285714,
+        "accepted_positive_accuracy": 0.9166666666666666,
+        "negative_n": 0,
+        "negative_rejected": 0,
+        "negative_rejection": null,
+        "correct_raw": 18,
+        "correct_accepted": 11,
+        "positive_field_coverage": 0.5714285714285714,
+        "sources": {
+          "slif_tomato_v1": {
+            "n": 21,
+            "macro_f1": 0.9230769230769231,
+            "accuracy": 0.8571428571428571
+          }
+        },
+        "prediction_file": "G1/G1-slif-predictions.csv",
+        "predictions_sha256": "9dc27678e072355db863b3e678398ce803bdab75b8c7c55ada21691e3c3ef078"
+      }
+    },
+    "G2": {
+      "legacy": {
+        "model": "G2",
+        "dataset": "legacy",
+        "n": 2647,
+        "all_macro_f1": 0.6580140390032053,
+        "all_accuracy": 0.6071023800528901,
+        "field_n": 1730,
+        "field_macro_f1": 0.3609129958907127,
+        "field_accuracy": 0.4236994219653179,
+        "field_healthy_recall": 0.43478260869565216,
+        "field_healthy_n": 437,
+        "positive_n": 2351,
+        "positive_accepted": 1506,
+        "coverage": 0.6405784772437261,
+        "accepted_positive_accuracy": 0.701195219123506,
+        "negative_n": 296,
+        "negative_rejected": 287,
+        "negative_rejection": 0.9695945945945946,
+        "correct_raw": 1607,
+        "correct_accepted": 1056,
+        "positive_field_coverage": 0.5526011560693641,
+        "sources": {
+          "ghana_ccmt": {
+            "n": 345,
+            "macro_f1": 0.9324912891986064,
+            "accuracy": 0.9536231884057971
+          },
+          "imtiaz": {
+            "n": 18,
+            "macro_f1": 1.0,
+            "accuracy": 1.0
+          },
+          "openimages_hands": {
+            "n": 44,
+            "macro_f1": 1.0,
+            "accuracy": 1.0
+          },
+          "plantdoc": {
+            "n": 21,
+            "macro_f1": 0.7763532763532762,
+            "accuracy": 0.7619047619047619
+          },
+          "plantdoc_other_leaves": {
+            "n": 167,
+            "macro_f1": 0.9463722397476341,
+            "accuracy": 0.8982035928143712
+          },
+          "plantvillage": {
+            "n": 600,
+            "macro_f1": 0.9647897136954786,
+            "accuracy": 0.965
+          },
+          "rachin": {
+            "n": 1367,
+            "macro_f1": 0.25943286857274156,
+            "accuracy": 0.28237015362106804
+          },
+          "soilclass": {
+            "n": 85,
+            "macro_f1": 1.0,
+            "accuracy": 1.0
+          }
+        },
+        "prediction_file": "G2/G2-legacy-predictions.csv",
+        "predictions_sha256": "0868a134a40190a58c241d2692b1d245797fc11fe2edcd312bf82f0aa93b8cd3",
+        "delta_field_macro_f1_vs_dinov2": 0.14618815142570984,
+        "delta_field_macro_f1_vs_dinov2_group_ci95": [
+          0.12405126769555945,
+          0.16835084794634003
+        ]
+      },
+      "external": {
+        "model": "G2",
+        "dataset": "external",
+        "n": 460,
+        "all_macro_f1": 0.641576633398729,
+        "all_accuracy": 0.5978260869565217,
+        "field_n": 139,
+        "field_macro_f1": 0.6070247610409732,
+        "field_accuracy": 0.5539568345323741,
+        "field_healthy_recall": 0.5064935064935064,
+        "field_healthy_n": 77,
+        "positive_n": 390,
+        "positive_accepted": 182,
+        "coverage": 0.4666666666666667,
+        "accepted_positive_accuracy": 0.7582417582417582,
+        "negative_n": 70,
+        "negative_rejected": 69,
+        "negative_rejection": 0.9857142857142858,
+        "correct_raw": 275,
+        "correct_accepted": 138,
+        "positive_field_coverage": 0.4892086330935252,
+        "sources": {
+          "taiwan_tomato": {
+            "n": 313,
+            "macro_f1": 0.6249167931410922,
+            "accuracy": 0.5431309904153354
+          },
+          "tom2024": {
+            "n": 147,
+            "macro_f1": 0.8179587213692424,
+            "accuracy": 0.7142857142857143
+          }
+        },
+        "prediction_file": "G2/G2-external-predictions.csv",
+        "predictions_sha256": "d876e1f1385e49421929ebe34f1746d976790d16a59f3327da4d2e5377cca023",
+        "delta_field_macro_f1_vs_dinov2": -0.15664207902607485,
+        "delta_field_macro_f1_vs_dinov2_group_ci95": [
+          -0.24566498332665668,
+          -0.043882116233775116
+        ]
+      },
+      "slif": {
+        "model": "G2",
+        "dataset": "slif",
+        "n": 21,
+        "all_macro_f1": 0.5517241379310345,
+        "all_accuracy": 0.38095238095238093,
+        "field_n": 21,
+        "field_macro_f1": 0.5517241379310345,
+        "field_accuracy": 0.38095238095238093,
+        "field_healthy_recall": null,
+        "field_healthy_n": 0,
+        "positive_n": 21,
+        "positive_accepted": 6,
+        "coverage": 0.2857142857142857,
+        "accepted_positive_accuracy": 0.16666666666666666,
+        "negative_n": 0,
+        "negative_rejected": 0,
+        "negative_rejection": null,
+        "correct_raw": 8,
+        "correct_accepted": 1,
+        "positive_field_coverage": 0.2857142857142857,
+        "sources": {
+          "slif_tomato_v1": {
+            "n": 21,
+            "macro_f1": 0.5517241379310345,
+            "accuracy": 0.38095238095238093
+          }
+        },
+        "prediction_file": "G2/G2-slif-predictions.csv",
+        "predictions_sha256": "7f67bfa46ba259e0e6d6fadb08d0ab5e0bd910b56822d2ad894dbf412c4e2b90"
+      }
+    },
+    "G3": {
+      "legacy": {
+        "model": "G3",
+        "dataset": "legacy",
+        "n": 2647,
+        "all_macro_f1": 0.6470399408306203,
+        "all_accuracy": 0.6078579523989422,
+        "field_n": 1730,
+        "field_macro_f1": 0.35829948024692165,
+        "field_accuracy": 0.4260115606936416,
+        "field_healthy_recall": 0.620137299771167,
+        "field_healthy_n": 437,
+        "positive_n": 2351,
+        "positive_accepted": 1314,
+        "coverage": 0.5589111016588686,
+        "accepted_positive_accuracy": 0.7884322678843226,
+        "negative_n": 296,
+        "negative_rejected": 286,
+        "negative_rejection": 0.9662162162162162,
+        "correct_raw": 1609,
+        "correct_accepted": 1036,
+        "positive_field_coverage": 0.423121387283237,
+        "sources": {
+          "ghana_ccmt": {
+            "n": 345,
+            "macro_f1": 0.9319970233854241,
+            "accuracy": 0.9391304347826087
+          },
+          "imtiaz": {
+            "n": 18,
+            "macro_f1": 1.0,
+            "accuracy": 1.0
+          },
+          "openimages_hands": {
+            "n": 44,
+            "macro_f1": 1.0,
+            "accuracy": 1.0
+          },
+          "plantdoc": {
+            "n": 21,
+            "macro_f1": 0.587037037037037,
+            "accuracy": 0.6666666666666666
+          },
+          "plantdoc_other_leaves": {
+            "n": 167,
+            "macro_f1": 0.9225806451612903,
+            "accuracy": 0.8562874251497006
+          },
+          "plantvillage": {
+            "n": 600,
+            "macro_f1": 0.9763921095151529,
+            "accuracy": 0.9766666666666667
+          },
+          "rachin": {
+            "n": 1367,
+            "macro_f1": 0.29263409059248446,
+            "accuracy": 0.28895391367959034
+          },
+          "soilclass": {
+            "n": 85,
+            "macro_f1": 1.0,
+            "accuracy": 1.0
+          }
+        },
+        "prediction_file": "G3/G3-legacy-predictions.csv",
+        "predictions_sha256": "e1ab3180c7e40a2115b3f13a1c82437818e939eace0a5d7e2bc54264f9b6c11a",
+        "delta_field_macro_f1_vs_dinov2": 0.1435746357819188,
+        "delta_field_macro_f1_vs_dinov2_group_ci95": [
+          0.1202040063594119,
+          0.16552885723929636
+        ]
+      },
+      "external": {
+        "model": "G3",
+        "dataset": "external",
+        "n": 460,
+        "all_macro_f1": 0.5853669018061851,
+        "all_accuracy": 0.5304347826086957,
+        "field_n": 139,
+        "field_macro_f1": 0.5182057708373499,
+        "field_accuracy": 0.4172661870503597,
+        "field_healthy_recall": 0.33766233766233766,
+        "field_healthy_n": 77,
+        "positive_n": 390,
+        "positive_accepted": 143,
+        "coverage": 0.36666666666666664,
+        "accepted_positive_accuracy": 0.6713286713286714,
+        "negative_n": 70,
+        "negative_rejected": 70,
+        "negative_rejection": 1.0,
+        "correct_raw": 244,
+        "correct_accepted": 96,
+        "positive_field_coverage": 0.381294964028777,
+        "sources": {
+          "taiwan_tomato": {
+            "n": 313,
+            "macro_f1": 0.5658139944296102,
+            "accuracy": 0.4728434504792332
+          },
+          "tom2024": {
+            "n": 147,
+            "macro_f1": 0.7069726390114739,
+            "accuracy": 0.6530612244897959
+          }
+        },
+        "prediction_file": "G3/G3-external-predictions.csv",
+        "predictions_sha256": "635e933e7f59e3a8b253604b25d55e1d89e40f1dfec6bf3a66356a418664576a",
+        "delta_field_macro_f1_vs_dinov2": -0.24546106922969824,
+        "delta_field_macro_f1_vs_dinov2_group_ci95": [
+          -0.3354213085891986,
+          -0.09487059774893508
+        ]
+      },
+      "slif": {
+        "model": "G3",
+        "dataset": "slif",
+        "n": 21,
+        "all_macro_f1": 0.6451612903225806,
+        "all_accuracy": 0.47619047619047616,
+        "field_n": 21,
+        "field_macro_f1": 0.6451612903225806,
+        "field_accuracy": 0.47619047619047616,
+        "field_healthy_recall": null,
+        "field_healthy_n": 0,
+        "positive_n": 21,
+        "positive_accepted": 5,
+        "coverage": 0.23809523809523808,
+        "accepted_positive_accuracy": 0.6,
+        "negative_n": 0,
+        "negative_rejected": 0,
+        "negative_rejection": null,
+        "correct_raw": 10,
+        "correct_accepted": 3,
+        "positive_field_coverage": 0.23809523809523808,
+        "sources": {
+          "slif_tomato_v1": {
+            "n": 21,
+            "macro_f1": 0.6451612903225806,
+            "accuracy": 0.47619047619047616
+          }
+        },
+        "prediction_file": "G3/G3-slif-predictions.csv",
+        "predictions_sha256": "ac3583e05a725ec68e20393c613487cb653fbe9e95a2a5a0f891d0f115de587a"
+      }
+    },
+    "DINOv2 v1 280": {
+      "legacy": {
+        "model": "DINOv2 v1 280",
+        "dataset": "legacy",
+        "n": 2647,
+        "all_macro_f1": 0.6254779317730609,
+        "all_accuracy": 0.5545901020022668,
+        "field_n": 1730,
+        "field_macro_f1": 0.21472484446500284,
+        "field_accuracy": 0.3352601156069364,
+        "field_healthy_recall": 0.6155606407322655,
+        "field_healthy_n": 437,
+        "positive_n": 2351,
+        "positive_accepted": 2012,
+        "coverage": 0.855806039982986,
+        "accepted_positive_accuracy": 0.5482107355864811,
+        "negative_n": 296,
+        "negative_rejected": 287,
+        "negative_rejection": 0.9695945945945946,
+        "correct_raw": 1468,
+        "correct_accepted": 1103,
+        "positive_field_coverage": 0.8121387283236994,
+        "sources": {
+          "ghana_ccmt": {
+            "n": 345,
+            "macro_f1": 0.9744092508798392,
+            "accuracy": 0.9797101449275363
+          },
+          "imtiaz": {
+            "n": 18,
+            "macro_f1": 1.0,
+            "accuracy": 1.0
+          },
+          "openimages_hands": {
+            "n": 44,
+            "macro_f1": 1.0,
+            "accuracy": 1.0
+          },
+          "plantdoc": {
+            "n": 21,
+            "macro_f1": 0.7794973544973546,
+            "accuracy": 0.7619047619047619
+          },
+          "plantdoc_other_leaves": {
+            "n": 167,
+            "macro_f1": 0.95625,
+            "accuracy": 0.9161676646706587
+          },
+          "plantvillage": {
+            "n": 600,
+            "macro_f1": 0.98323112222365,
+            "accuracy": 0.9833333333333333
+          },
+          "rachin": {
+            "n": 1367,
+            "macro_f1": 0.16242541982579933,
+            "accuracy": 0.16386247256766642
+          },
+          "soilclass": {
+            "n": 85,
+            "macro_f1": 1.0,
+            "accuracy": 1.0
+          }
+        },
+        "prediction_file": "infra/derived/benchmark-completion-20261112/colab-results/results/dinov2-v1-280-historic-predictions.csv",
+        "predictions_sha256": "a407ea03b017c776dee83bf210fa560b6884866da6975dc8bd675053f5bd5378"
+      },
+      "external": {
+        "model": "DINOv2 v1 280",
+        "dataset": "external",
+        "n": 460,
+        "all_macro_f1": 0.7979765876922085,
+        "all_accuracy": 0.7478260869565218,
+        "field_n": 139,
+        "field_macro_f1": 0.7636668400670481,
+        "field_accuracy": 0.7697841726618705,
+        "field_healthy_recall": 0.8831168831168831,
+        "field_healthy_n": 77,
+        "positive_n": 390,
+        "positive_accepted": 288,
+        "coverage": 0.7384615384615385,
+        "accepted_positive_accuracy": 0.8125,
+        "negative_n": 70,
+        "negative_rejected": 70,
+        "negative_rejection": 1.0,
+        "correct_raw": 344,
+        "correct_accepted": 234,
+        "positive_field_coverage": 0.8057553956834532,
+        "sources": {
+          "taiwan_tomato": {
+            "n": 313,
+            "macro_f1": 0.7630651340996168,
+            "accuracy": 0.65814696485623
+          },
+          "tom2024": {
+            "n": 147,
+            "macro_f1": 0.9689655172413794,
+            "accuracy": 0.9387755102040817
+          }
+        },
+        "prediction_file": "infra/derived/benchmark-completion-20261112/colab-results/results/dinov2-v1-280-taiwan-predictions.csv",
+        "predictions_sha256": "266ad0eb5787e49a01dd45d63211fc70c0273dd767fbb0289ecdf1c594ef5491"
+      },
+      "slif": {
+        "model": "DINOv2 v1 280",
+        "dataset": "slif",
+        "n": 21,
+        "all_macro_f1": 0.7647058823529411,
+        "all_accuracy": 0.6190476190476191,
+        "field_n": 21,
+        "field_macro_f1": 0.7647058823529411,
+        "field_accuracy": 0.6190476190476191,
+        "field_healthy_recall": null,
+        "field_healthy_n": 0,
+        "positive_n": 21,
+        "positive_accepted": 13,
+        "coverage": 0.6190476190476191,
+        "accepted_positive_accuracy": 0.6923076923076923,
+        "negative_n": 0,
+        "negative_rejected": 0,
+        "negative_rejection": null,
+        "correct_raw": 13,
+        "correct_accepted": 9,
+        "positive_field_coverage": 0.6190476190476191,
+        "sources": {
+          "slif_tomato_v1": {
+            "n": 21,
+            "macro_f1": 0.7647058823529411,
+            "accuracy": 0.6190476190476191
+          }
+        },
+        "prediction_file": "docs/progress/2026-11-18-cnn-bigru/dinov2-v1-280-slif-predictions.csv",
+        "predictions_sha256": "657d7303684434e107a0d15d3f5b46ea2c609c6baf796adf04103ee49410c97c"
+      }
+    },
+    "ResNet50 E08": {
+      "legacy": {
+        "model": "ResNet50 E08",
+        "dataset": "legacy",
+        "n": 2647,
+        "all_macro_f1": 0.34250690331112227,
+        "all_accuracy": 0.3736305251227805,
+        "field_n": 1730,
+        "field_macro_f1": 0.1875591036990195,
+        "field_accuracy": 0.223121387283237,
+        "field_healthy_recall": 0.0,
+        "field_healthy_n": 437,
+        "positive_n": 2351,
+        "positive_accepted": 2240,
+        "coverage": 0.9527860484900043,
+        "accepted_positive_accuracy": 0.4357142857142857,
+        "negative_n": 296,
+        "negative_rejected": 19,
+        "negative_rejection": 0.06418918918918919,
+        "correct_raw": 989,
+        "correct_accepted": 976,
+        "positive_field_coverage": 0.9375722543352601,
+        "sources": {
+          "ghana_ccmt": {
+            "n": 345,
+            "macro_f1": 0.3978685612788632,
+            "accuracy": 0.6492753623188405
+          },
+          "imtiaz": {
+            "n": 18,
+            "macro_f1": 0.06666666666666667,
+            "accuracy": 0.05555555555555555
+          },
+          "openimages_hands": {
+            "n": 44,
+            "macro_f1": 0.0,
+            "accuracy": 0.0
+          },
+          "plantdoc": {
+            "n": 21,
+            "macro_f1": 0.38888888888888884,
+            "accuracy": 0.5238095238095238
+          },
+          "plantdoc_other_leaves": {
+            "n": 167,
+            "macro_f1": 0.0,
+            "accuracy": 0.0
+          },
+          "plantvillage": {
+            "n": 600,
+            "macro_f1": 0.986677037418933,
+            "accuracy": 0.9866666666666667
+          },
+          "rachin": {
+            "n": 1367,
+            "macro_f1": 0.14115503737555488,
+            "accuracy": 0.11777615215801024
+          },
+          "soilclass": {
+            "n": 85,
+            "macro_f1": 0.0,
+            "accuracy": 0.0
+          }
+        },
+        "prediction_file": "infra/derived/dinov2-colab-v1/resnet50-adapt-predictions.csv",
+        "predictions_sha256": "cf782d42245b210374615aa13fe86ce92ef9b476edb4139cb9c2194e2934809f"
+      },
+      "external": {
+        "model": "ResNet50 E08",
+        "dataset": "external",
+        "n": 460,
+        "all_macro_f1": 0.2607305865184587,
+        "all_accuracy": 0.2543478260869565,
+        "field_n": 139,
+        "field_macro_f1": 0.32070426789489953,
+        "field_accuracy": 0.302158273381295,
+        "field_healthy_recall": 0.07792207792207792,
+        "field_healthy_n": 77,
+        "positive_n": 390,
+        "positive_accepted": 357,
+        "coverage": 0.9153846153846154,
+        "accepted_positive_accuracy": 0.3165266106442577,
+        "negative_n": 70,
+        "negative_rejected": 5,
+        "negative_rejection": 0.07142857142857142,
+        "correct_raw": 117,
+        "correct_accepted": 113,
+        "positive_field_coverage": 0.9280575539568345,
+        "sources": {
+          "taiwan_tomato": {
+            "n": 313,
+            "macro_f1": 0.4157198390506718,
+            "accuracy": 0.3546325878594249
+          },
+          "tom2024": {
+            "n": 147,
+            "macro_f1": 0.06593406593406594,
+            "accuracy": 0.04081632653061224
+          }
+        },
+        "prediction_file": "infra/derived/benchmark-completion-20261112/resnet-e08-taiwan-predictions.csv",
+        "predictions_sha256": "e05972715afdc94085913c159a79c6c978254c3e8dea5a950b89bd1d456202f0"
+      }
+    },
+    "YOLO26s P07": {
+      "legacy": {
+        "model": "YOLO26s P07",
+        "dataset": "legacy",
+        "n": 2647,
+        "all_macro_f1": 0.367491219325171,
+        "all_accuracy": 0.33849641103135625,
+        "field_n": 1730,
+        "field_macro_f1": 0.13291208772128424,
+        "field_accuracy": 0.17572254335260115,
+        "field_healthy_recall": 0.004576659038901602,
+        "field_healthy_n": 437,
+        "positive_n": 2351,
+        "positive_accepted": 2173,
+        "coverage": 0.924287537218205,
+        "accepted_positive_accuracy": 0.40266912103083297,
+        "negative_n": 296,
+        "negative_rejected": 34,
+        "negative_rejection": 0.11486486486486487,
+        "correct_raw": 896,
+        "correct_accepted": 875,
+        "positive_field_coverage": 0.8988439306358381,
+        "sources": {
+          "ghana_ccmt": {
+            "n": 345,
+            "macro_f1": 0.3989169675090253,
+            "accuracy": 0.6405797101449275
+          },
+          "imtiaz": {
+            "n": 18,
+            "macro_f1": 0.25925925925925924,
+            "accuracy": 0.2222222222222222
+          },
+          "openimages_hands": {
+            "n": 44,
+            "macro_f1": 0.0,
+            "accuracy": 0.0
+          },
+          "plantdoc": {
+            "n": 21,
+            "macro_f1": 0.5131313131313131,
+            "accuracy": 0.5714285714285714
+          },
+          "plantdoc_other_leaves": {
+            "n": 167,
+            "macro_f1": 0.0,
+            "accuracy": 0.0
+          },
+          "plantvillage": {
+            "n": 600,
+            "macro_f1": 0.9663365317862949,
+            "accuracy": 0.9666666666666667
+          },
+          "rachin": {
+            "n": 1367,
+            "macro_f1": 0.0948814919587293,
+            "accuracy": 0.05779078273591807
+          },
+          "soilclass": {
+            "n": 85,
+            "macro_f1": 0.0,
+            "accuracy": 0.0
+          }
+        },
+        "prediction_file": "infra/derived/dinov2-colab-v1/yolo26s-cls-p07-predictions.csv",
+        "predictions_sha256": "90bb35acd77c89d6cd934f1faca4e921a359a6eb98b1df8290f37cb73886f603"
+      },
+      "external": {
+        "model": "YOLO26s P07",
+        "dataset": "external",
+        "n": 460,
+        "all_macro_f1": 0.27559142337063053,
+        "all_accuracy": 0.2673913043478261,
+        "field_n": 139,
+        "field_macro_f1": 0.2942721916352748,
+        "field_accuracy": 0.2517985611510791,
+        "field_healthy_recall": 0.1038961038961039,
+        "field_healthy_n": 77,
+        "positive_n": 390,
+        "positive_accepted": 343,
+        "coverage": 0.8794871794871795,
+        "accepted_positive_accuracy": 0.3294460641399417,
+        "negative_n": 70,
+        "negative_rejected": 13,
+        "negative_rejection": 0.18571428571428572,
+        "correct_raw": 123,
+        "correct_accepted": 113,
+        "positive_field_coverage": 0.8561151079136691,
+        "sources": {
+          "taiwan_tomato": {
+            "n": 313,
+            "macro_f1": 0.4160701139351446,
+            "accuracy": 0.36741214057507987
+          },
+          "tom2024": {
+            "n": 147,
+            "macro_f1": 0.08602150537634409,
+            "accuracy": 0.05442176870748299
+          }
+        },
+        "prediction_file": "infra/derived/dinov3-colab-v1/p07-external.csv",
+        "predictions_sha256": "481eee3be1f94a6e118e9385c27148d4b3cc6a57099c097d2d70895b38d1c30a"
+      }
+    },
+    "DINOv3 v1": {
+      "legacy": {
+        "model": "DINOv3 v1",
+        "dataset": "legacy",
+        "n": 2647,
+        "all_macro_f1": 0.5671975529479879,
+        "all_accuracy": 0.5825462788061957,
+        "field_n": 1730,
+        "field_macro_f1": 0.37000268226396393,
+        "field_accuracy": 0.4144508670520231,
+        "field_healthy_recall": 0.5743707093821511,
+        "field_healthy_n": 437,
+        "positive_n": 2351,
+        "positive_accepted": 1205,
+        "coverage": 0.5125478519778818,
+        "accepted_positive_accuracy": 0.8,
+        "negative_n": 296,
+        "negative_rejected": 281,
+        "negative_rejection": 0.9493243243243243,
+        "correct_raw": 1542,
+        "correct_accepted": 964,
+        "positive_field_coverage": 0.3791907514450867,
+        "sources": {
+          "ghana_ccmt": {
+            "n": 345,
+            "macro_f1": 0.8966141929035483,
+            "accuracy": 0.8898550724637682
+          },
+          "imtiaz": {
+            "n": 18,
+            "macro_f1": 0.8666666666666667,
+            "accuracy": 0.8888888888888888
+          },
+          "openimages_hands": {
+            "n": 44,
+            "macro_f1": 1.0,
+            "accuracy": 1.0
+          },
+          "plantdoc": {
+            "n": 21,
+            "macro_f1": 0.7348484848484849,
+            "accuracy": 0.8095238095238095
+          },
+          "plantdoc_other_leaves": {
+            "n": 167,
+            "macro_f1": 0.919093851132686,
+            "accuracy": 0.8502994011976048
+          },
+          "plantvillage": {
+            "n": 600,
+            "macro_f1": 0.8955941989990934,
+            "accuracy": 0.895
+          },
+          "rachin": {
+            "n": 1367,
+            "macro_f1": 0.3264470400639216,
+            "accuracy": 0.288222384784199
+          },
+          "soilclass": {
+            "n": 85,
+            "macro_f1": 1.0,
+            "accuracy": 1.0
+          }
+        },
+        "prediction_file": "infra/derived/dinov3-colab-v1/dinov3-legacy-predictions.csv",
+        "predictions_sha256": "e62f127f2b6ea672d1d46e0864ef5fafe0ba9cfbac23a104a76213fcedb030a4"
+      },
+      "external": {
+        "model": "DINOv3 v1",
+        "dataset": "external",
+        "n": 460,
+        "all_macro_f1": 0.696589729352926,
+        "all_accuracy": 0.6760869565217391,
+        "field_n": 139,
+        "field_macro_f1": 0.7603904809787162,
+        "field_accuracy": 0.7841726618705036,
+        "field_healthy_recall": 0.948051948051948,
+        "field_healthy_n": 77,
+        "positive_n": 390,
+        "positive_accepted": 252,
+        "coverage": 0.6461538461538462,
+        "accepted_positive_accuracy": 0.7777777777777778,
+        "negative_n": 70,
+        "negative_rejected": 70,
+        "negative_rejection": 1.0,
+        "correct_raw": 311,
+        "correct_accepted": 196,
+        "positive_field_coverage": 0.7482014388489209,
+        "sources": {
+          "taiwan_tomato": {
+            "n": 313,
+            "macro_f1": 0.598803628166214,
+            "accuracy": 0.5431309904153354
+          },
+          "tom2024": {
+            "n": 147,
+            "macro_f1": 0.9794202898550726,
+            "accuracy": 0.9591836734693877
+          }
+        },
+        "prediction_file": "infra/derived/dinov3-colab-v1/dinov3-external-predictions.csv",
+        "predictions_sha256": "99cb08501a681e3676d49ebada35189d2fe326934d774f830f69bbf7072bfb62"
+      },
+      "slif": {
+        "model": "DINOv3 v1",
+        "dataset": "slif",
+        "n": 21,
+        "all_macro_f1": 0.8,
+        "all_accuracy": 0.6666666666666666,
+        "field_n": 21,
+        "field_macro_f1": 0.8,
+        "field_accuracy": 0.6666666666666666,
+        "field_healthy_recall": null,
+        "field_healthy_n": 0,
+        "positive_n": 21,
+        "positive_accepted": 13,
+        "coverage": 0.6190476190476191,
+        "accepted_positive_accuracy": 0.9230769230769231,
+        "negative_n": 0,
+        "negative_rejected": 0,
+        "negative_rejection": null,
+        "correct_raw": 14,
+        "correct_accepted": 12,
+        "positive_field_coverage": 0.6190476190476191,
+        "sources": {
+          "slif_tomato_v1": {
+            "n": 21,
+            "macro_f1": 0.8,
+            "accuracy": 0.6666666666666666
+          }
+        },
+        "prediction_file": "infra/derived/dinov3-colab-v2/dinov3-v1-slif-predictions.csv",
+        "predictions_sha256": "374951a1fd06f220bcbc6ee153c2efb123101b46e0af4accac668f6f0e37a2d3"
+      }
+    },
+    "DINOv3 v2": {
+      "legacy": {
+        "model": "DINOv3 v2",
+        "dataset": "legacy",
+        "n": 2647,
+        "all_macro_f1": 0.6022114237220051,
+        "all_accuracy": 0.5878352852285607,
+        "field_n": 1730,
+        "field_macro_f1": 0.3934090204869742,
+        "field_accuracy": 0.4138728323699422,
+        "field_healthy_recall": 0.5446224256292906,
+        "field_healthy_n": 437,
+        "positive_n": 2351,
+        "positive_accepted": 1352,
+        "coverage": 0.5750744364100383,
+        "accepted_positive_accuracy": 0.7655325443786982,
+        "negative_n": 296,
+        "negative_rejected": 282,
+        "negative_rejection": 0.9527027027027027,
+        "correct_raw": 1556,
+        "correct_accepted": 1035,
+        "positive_field_coverage": 0.4479768786127168,
+        "sources": {
+          "ghana_ccmt": {
+            "n": 345,
+            "macro_f1": 0.8954773070503139,
+            "accuracy": 0.8753623188405797
+          },
+          "imtiaz": {
+            "n": 18,
+            "macro_f1": 0.8472222222222222,
+            "accuracy": 0.8888888888888888
+          },
+          "openimages_hands": {
+            "n": 44,
+            "macro_f1": 1.0,
+            "accuracy": 1.0
+          },
+          "plantdoc": {
+            "n": 21,
+            "macro_f1": 0.6981481481481482,
+            "accuracy": 0.8095238095238095
+          },
+          "plantdoc_other_leaves": {
+            "n": 167,
+            "macro_f1": 0.9329073482428115,
+            "accuracy": 0.874251497005988
+          },
+          "plantvillage": {
+            "n": 600,
+            "macro_f1": 0.9136711140653838,
+            "accuracy": 0.9133333333333333
+          },
+          "rachin": {
+            "n": 1367,
+            "macro_f1": 0.35115378962239163,
+            "accuracy": 0.29114850036576445
+          },
+          "soilclass": {
+            "n": 85,
+            "macro_f1": 1.0,
+            "accuracy": 1.0
+          }
+        },
+        "prediction_file": "infra/derived/dinov3-colab-v2/dinov3-v2-legacy-predictions.csv",
+        "predictions_sha256": "1d287401a0cdb3b66e02f76be61e769432f69085a2df4eb2139b8606cb5bda01"
+      },
+      "external": {
+        "model": "DINOv3 v2",
+        "dataset": "external",
+        "n": 460,
+        "all_macro_f1": 0.685742339353896,
+        "all_accuracy": 0.6413043478260869,
+        "field_n": 139,
+        "field_macro_f1": 0.7425179758513091,
+        "field_accuracy": 0.7122302158273381,
+        "field_healthy_recall": 0.7922077922077922,
+        "field_healthy_n": 77,
+        "positive_n": 390,
+        "positive_accepted": 251,
+        "coverage": 0.6435897435897436,
+        "accepted_positive_accuracy": 0.7131474103585658,
+        "negative_n": 70,
+        "negative_rejected": 70,
+        "negative_rejection": 1.0,
+        "correct_raw": 295,
+        "correct_accepted": 179,
+        "positive_field_coverage": 0.7410071942446043,
+        "sources": {
+          "taiwan_tomato": {
+            "n": 313,
+            "macro_f1": 0.6010459675199559,
+            "accuracy": 0.5271565495207667
+          },
+          "tom2024": {
+            "n": 147,
+            "macro_f1": 0.9384318632050881,
+            "accuracy": 0.8843537414965986
+          }
+        },
+        "prediction_file": "infra/derived/dinov3-colab-v2/dinov3-v2-external-predictions.csv",
+        "predictions_sha256": "824a9ea75e205269615043976cc6cc13cbe81b1a148fc6ae71429a98c20ce3fa"
+      },
+      "slif": {
+        "model": "DINOv3 v2",
+        "dataset": "slif",
+        "n": 21,
+        "all_macro_f1": 0.8648648648648649,
+        "all_accuracy": 0.7619047619047619,
+        "field_n": 21,
+        "field_macro_f1": 0.8648648648648649,
+        "field_accuracy": 0.7619047619047619,
+        "field_healthy_recall": null,
+        "field_healthy_n": 0,
+        "positive_n": 21,
+        "positive_accepted": 14,
+        "coverage": 0.6666666666666666,
+        "accepted_positive_accuracy": 0.9285714285714286,
+        "negative_n": 0,
+        "negative_rejected": 0,
+        "negative_rejection": null,
+        "correct_raw": 16,
+        "correct_accepted": 13,
+        "positive_field_coverage": 0.6666666666666666,
+        "sources": {
+          "slif_tomato_v1": {
+            "n": 21,
+            "macro_f1": 0.8648648648648649,
+            "accuracy": 0.7619047619047619
+          }
+        },
+        "prediction_file": "infra/derived/dinov3-colab-v2/dinov3-v2-slif-predictions.csv",
+        "predictions_sha256": "9c8b0b71a360d28e235352076b8d6ed2e6b6ee71913b6d5fa1976ece55bb79fc"
+      }
+    }
+  },
+  "runtime": {
+    "G0": {
+      "colab_max_abs_gpu_cpu": 7.539987564086914e-06,
+      "windows_max_abs_vs_colab_cpu": 5.4836273193359375e-06,
+      "status_and_class_matches": 5,
+      "tested": 5,
+      "cpu_tta_median_ms": 171.33
+    },
+    "G1": {
+      "colab_max_abs_gpu_cpu": 2.5033950805664062e-06,
+      "windows_max_abs_vs_colab_cpu": 3.1888484954833984e-06,
+      "status_and_class_matches": 5,
+      "tested": 5,
+      "cpu_tta_median_ms": 185.67
+    },
+    "G2": {
+      "colab_max_abs_gpu_cpu": 3.2782554626464844e-06,
+      "windows_max_abs_vs_colab_cpu": 4.291534423828125e-06,
+      "status_and_class_matches": 5,
+      "tested": 5,
+      "cpu_tta_median_ms": 275.01
+    },
+    "G3": {
+      "colab_max_abs_gpu_cpu": 1.430511474609375e-06,
+      "windows_max_abs_vs_colab_cpu": 3.4421682357788086e-06,
+      "status_and_class_matches": 5,
+      "tested": 5,
+      "cpu_tta_median_ms": 174.21
+    },
+    "DINOv2 v1 280": {
+      "cpu_tta_median_ms": 818.03,
+      "weights_bytes": 346413820
+    }
+  },
+  "paired_bootstrap": {
+    "draws": 2000,
+    "seed": 42,
+    "sampling_unit": "group",
+    "stratified_by": "source and set of true labels in group",
+    "adjusted_for_multiple_comparisons": false
+  }
+}

@@ -20,7 +20,7 @@ from torch import nn
 
 from ai.contracts import CLASS_ID_PATTERN
 from ai.models import build_model
-from ai.preprocessing import build_transform
+from ai.preprocessing import YOLO_PREPROCESSING, build_transform
 
 _METADATA_LIMIT = 1_000_000
 _WEIGHTS_LIMIT = 256_000_000
@@ -103,7 +103,7 @@ def _metadata(meta: dict[str, Any]) -> None:
         raise ValueError("metadata fields mismatch")
     if type(meta["schema_version"]) is not int or meta["schema_version"] != 1:
         raise ValueError("unsupported bundle schema")
-    if meta["architecture"] not in ("efficientnet_b0", "resnet50"):
+    if meta["architecture"] not in ("efficientnet_b0", "resnet50", "yolo26s_cls"):
         raise ValueError("unsupported architecture")
     for field in ("model_version", "dataset_version"):
         if not _name(meta[field]):
@@ -142,13 +142,20 @@ def _metadata(meta: dict[str, Any]) -> None:
     if (
         not isinstance(profile, dict)
         or set(profile) != {"profile_version", "spec"}
-        or profile["profile_version"] != "whole-frame-v1"
+        or profile["profile_version"]
+        != (
+            "whole-frame-yolo-v1"
+            if meta["architecture"] == "yolo26s_cls"
+            else "whole-frame-v1"
+        )
     ):
         raise ValueError("unsupported preprocessing profile")
     try:
         build_transform(profile["spec"], training=False)
     except (ValueError, TypeError, KeyError, OverflowError) as error:
         raise ValueError("invalid preprocessing spec") from error
+    if meta["architecture"] == "yolo26s_cls" and profile != YOLO_PREPROCESSING:
+        raise ValueError("invalid YOLO preprocessing spec")
 
 
 def load_bundle(bundle_dir: Path, *, require_trained: bool = False) -> ModelBundle:
@@ -215,7 +222,7 @@ def export_bundle(
             type(decision["schema_version"]) is not int
             or decision["schema_version"] != 1
             or decision["architecture"]
-            not in ("efficientnet_b0", "resnet50")
+            not in ("efficientnet_b0", "resnet50", "yolo26s_cls")
             or decision["run_id"] != directory.name
             or len(ids) != 2
             or any(not _name(value) for value in ids)

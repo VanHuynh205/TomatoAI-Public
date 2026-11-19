@@ -10,6 +10,26 @@ from torchvision import transforms as T  # type: ignore[import-untyped]
 
 from ai.data import MAX_PIXELS
 
+YOLO_PREPROCESSING = {
+    "profile_version": "whole-frame-yolo-v1",
+    "spec": {
+        "schema_version": 1,
+        "color_mode": "RGB",
+        "geometry": "fit_pad",
+        "resize_size": 224,
+        "crop_size": 224,
+        "interpolation": "bicubic",
+        "antialias": True,
+        "mean": [0, 0, 0],
+        "std": [1, 1, 1],
+        "horizontal_flip_p": 0.5,
+        "rotation_degrees": 0.0,
+        "random_crop_scale": [1.0, 1.0],
+        "random_crop_ratio": [1.0, 1.0],
+        "fill": [124, 116, 104],
+    },
+}
+
 _FIELDS = {
     "schema_version",
     "color_mode",

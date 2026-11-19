@@ -6,11 +6,11 @@ try {
     if ([Environment]::OSVersion.Platform -ne 'Win32NT' -or -not [Environment]::Is64BitOperatingSystem) {
         throw 'Tomato Desktop requires Windows x64. macOS and Linux desktop hosts are not supported.'
     }
-    $bundle = Join-Path $PSScriptRoot 'ai/artifacts/dinov2-v1-280'
-    $required = @('classifier.safetensors', 'config.json', 'dinov2-release.json', 'leaf-classifier.json', 'model.safetensors', 'preprocessor_config.json')
+    $bundle = Join-Path $PSScriptRoot 'ai/artifacts/cnn-bigru-20261118-g2-convnext_tiny_axial_bigru'
+    $required = @('cnn-gru-release.json', 'leaf-classifier.json', 'model.safetensors')
     $missing = @($required | Where-Object { -not (Test-Path -LiteralPath (Join-Path $bundle $_) -PathType Leaf) })
     if ($missing.Count) {
-        throw ('Missing authorized DINOv2 v1 bundle files: ' + ($missing -join ', ') + '. Download dinov2-v1-280-model.zip from GitHub Release v0.1.0-dinov2-v1-280 and extract it into ai/artifacts; see README.md and MODEL_CARD.md. Weights are release assets, not Git blobs. Training-data rights remain unresolved.')
+        throw ('Missing trained G2 bundle files: ' + ($missing -join ', ') + '. Extract TomatoDesktop-G2-model.zip at the repository root. See README.md and MODEL_CARD.md for the expected paths.')
     }
     if (-not (Get-Command uv -ErrorAction SilentlyContinue)) {
         throw 'Install uv from https://docs.astral.sh/uv/getting-started/installation/ and rerun this script.'
@@ -29,7 +29,7 @@ try {
         if (-not (Test-Path -LiteralPath $python -PathType Leaf)) {
             throw 'Runtime environment missing. Run ./Start.ps1 without -CheckOnly first.'
         }
-        & $python -c "import struct,sys; assert sys.version_info[:3] == (3,12,14) and struct.calcsize('P') == 8, 'CPython 3.12.14 x64 required'; from pathlib import Path; from ai.dinov2_inference import validate_dinov2_export; from desktop.release import validate_care_export; from desktop.prerequisites import require_webview2; print(validate_dinov2_export(Path('ai/artifacts/dinov2-v1-280'))); validate_care_export(Path('infra/knowledge'), Path('infra/knowledge')); require_webview2(); print('Runtime inputs verified.')"
+        & $python -c "import struct,sys; assert sys.version_info[:3] == (3,12,14) and struct.calcsize('P') == 8, 'CPython 3.12.14 x64 required'; from pathlib import Path; from ai.cnn_gru_inference import validate_cnn_gru_export; from desktop.server import DEFAULT_MODEL_BUNDLE; from desktop.release import validate_care_export; from desktop.prerequisites import require_webview2; assert Path(sys.argv[1]).resolve() == Path(DEFAULT_MODEL_BUNDLE).resolve(), 'Bootstrap bundle path differs from desktop runtime'; print(validate_cnn_gru_export(Path(DEFAULT_MODEL_BUNDLE), require_trained=True)['model_version']); validate_care_export(Path('infra/knowledge'), Path('infra/knowledge')); require_webview2(); print('Runtime inputs verified.')" $bundle
         if ($LASTEXITCODE -ne 0) { throw 'Preflight failed. Check the bundle, care files, Python version and WebView2 prerequisites.' }
         if (-not $CheckOnly) {
             & $python -m desktop

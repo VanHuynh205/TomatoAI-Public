@@ -1,0 +1,394 @@
+{
+  "schema_version": 1,
+  "protocol_id": "yolo-image-P02-validation-only-v1",
+  "status": "locked",
+  "locked_at_utc": "2026-11-07T14:23:45.530660+00:00",
+  "task": "Task4",
+  "files_sha256": {
+    ".scratch/plantdoc-split-v1/freeze.py": "10e4a2e469d275a93dba7508ea17b1f5db77bdf70844632d5a02f480681726d0",
+    ".scratch/yolo-image/profile-E09-b8-v2/best.pth": "d7a178ca52703f6d3ef1c499b09b242c6ed3d2a10b4b4f1e92589d1494d04bc6",
+    ".scratch/yolo-image/profile-E09-b8-v2/last.pth": "2995c9fa673922e282b0025841e11f3bfb8aff7fcbdb0c118c942d31ed63ead6",
+    ".scratch/yolo-image/profile-E09-b8-v2/metadata.json": "ddb0f6d5d565f012276b5047f79e3f4f839abc4e3bb49df5813e84447f433388",
+    ".scratch/yolo-image/profile-E09-b8-v2/performance.json": "859e99be55b2398fa613541e0a9b182b6d5ffd96aca285103b87fbd0f218a33e",
+    ".scratch/yolo-image/profile-E10-b8-v2/best.pth": "035d56adfb1e40bdf6e13587e1103471da1604544edccb005d48908cde644225",
+    ".scratch/yolo-image/profile-E10-b8-v2/last.pth": "a3ad9df786444e4cb5ecce12e1c1b68b98d119ca2b0807860717e19a7f457404",
+    ".scratch/yolo-image/profile-E10-b8-v2/metadata.json": "5f1ef25aaf75b24a54d7711af97db6d5c007c013f7da2e1067bac4c977000565",
+    ".scratch/yolo-image/profile-E10-b8-v2/performance.json": "69c333cb23552d87cada8c8bec443b0e2671cc0dd74eb14f230992e280f91077",
+    "ai/__init__.py": "becb661d995b022d92a28fb54a8989928e8e27ab60d59a16e9f6675981dcb112",
+    "ai/artifacts.py": "09f7fba7dc46c7de03ef04ada77f342b33feefbfddc727803a5da059a88cce09",
+    "ai/artifacts/b0-v1/metadata.json": "a67851f5fefc01bf55963282189889cd18368ff570b47f3f9c2e6e7658d16760",
+    "ai/artifacts/b0-v1/model.pth": "68408857d6ffa9d466d61eaebe9d0cc551c21a396bd81f528b9b843cde8b4c8b",
+    "ai/artifacts/resnet50-v1/metadata.json": "e305a108047398545f85c525349802a9ae17917e08e8295af79ae9052778cfcc",
+    "ai/artifacts/resnet50-v1/model.pth": "fcf636eff6a731eaf5744134a06005c63209f3785412695b09214e3811ea5f16",
+    "ai/benchmark.py": "4c96f4267d49a3ab62b67d4b2621a9693be51bb249984e392adee41e7ca70f1d",
+    "ai/configs/E01.json": "83de2699d0e3aaaceeefd4a756718c8d76f1d4d320c205c84ed6096db9b9957e",
+    "ai/configs/E02.json": "646a4a4217ad530892d4edf2ce4a2e3ed749179f3735ddd6f6a88b3ac22fe803",
+    "ai/configs/E03.json": "ba807aed984d62206d8bb24eb24bdee336f96baa0dc4461df875db4031af7248",
+    "ai/configs/E04.json": "9f66be47f0a87e5126b000efe29d14812bed180c7ecb6c27f409674ee452ede7",
+    "ai/configs/E05.json": "923ce4c90d0d4fc501ae02be7f8be1dc571e874bed4c7022cb4a45e0fc67be8f",
+    "ai/configs/E06.json": "a49c56dcbcd4f86f89a570159c2ae995b7d9555b871fdc6672b252ca5e5e94e8",
+    "ai/configs/E07.json": "3583ced74d87504da25de492cebb106d5ca4a19029f9cca59384fb0b97b9c583",
+    "ai/configs/E08.json": "4b25eacd216eac01adbcf839bb8ee412500596a05c6b1f9c10f1cea67545358a",
+    "ai/configs/E09.json": "bfdd8a0faf8da51775f7fe771b227bf31b11754b8e9fbaaf5f0eeab3bd05ca46",
+    "ai/configs/E10.json": "f3be400dd1d6131604be32ca95b80bb25a13bc4ff694cb9006b226cdc188810e",
+    "ai/configs/smoke-resnet50.json": "c951b2d7efad9959c25f75af3f6cde18b43cf5db299fff2f9795bd3d367167ef",
+    "ai/configs/smoke.json": "444428ade6003e4444632645a54570b8e76516e9f88bde7aa1fdb34ce7c0e87a",
+    "ai/contracts.py": "4046d76eb10f13f93cb2c0e58789f00872daf3ea8e689f1b571cdc29fe3bb1d5",
+    "ai/data.py": "e0b23525fa8fda833913d2005ad10dbfa60af5d43f3803d528dbf1d594ffee78",
+    "ai/evaluate.py": "a01af4637990dc879ccb47767344273306d6dae762345bd6c5c87ea3a09ce4ef",
+    "ai/evaluation_protocol.py": "06c6925e4844b37d722abd21c95c0c91d4edcf360538f28a467879cc7f74d9c2",
+    "ai/experiments.py": "74f32dbb206c8c44484c527d53a9204561a66bfd7bdceeb24254cfca1eba2726",
+    "ai/inference.py": "fc668162e511213e0dee3bb97a74300bdb8034b9bc7ad85b4549877069a435a1",
+    "ai/models.py": "2e8dbedd270e1d56ca53cdd3b66902a84cbd3e2aea91d369f259a28f1e55c39c",
+    "ai/preprocessing.py": "1752f56aff19c58096005533168dcef5393b7a278c5377c96dde7ab92009b39e",
+    "ai/pretrained/yolo26/yolo26s-cls-state-dict.pth": "bcc5048db549f5ca71ff4c65b88e043d13c26d4f86863a6a4bbc7c983dabb7ed",
+    "ai/split.py": "09180dc5a75f205fcbfc55de0ca39db51500c6f2d3f5b51c8a39d061ba37344e",
+    "ai/train.py": "5157d016e39777fedf33cee0946517c716d887797697ee9fc7b99d4ae9ecadee",
+    "ai/yolo.py": "c43636775637145fad4868f6933763404bf3a935a2100681dd1ea1e3e19a4d6d",
+    "ai\\artifacts\\b0-adapt-v1\\metadata.json": "6dc9da324137c53ab20b4fc57339ae737f521b861c9df07595428b5e70825830",
+    "ai\\artifacts\\b0-adapt-v1\\model.pth": "b71fb87d6a9a388588ca5cc023952e569c15bf6ccc52fe93e2e3e3a34b2b3a81",
+    "ai\\artifacts\\resnet50-adapt-v1\\metadata.json": "a5eee1dd873916af4a6823d41e76523935a3d5bb12660a028ab5ac11652a1873",
+    "ai\\artifacts\\resnet50-adapt-v1\\model.pth": "ba9def5aeea3865ab506fd723b9c6aded6b86fa2a8d32590e5441503b679ce45",
+    "ai\\runs\\E06\\best.pth": "fe36669dde8bb487e95201190bf771c784772b414e1d7901398dfe9c7acbbbf0",
+    "ai\\runs\\E06\\decision.json": "0eebe0139ab63e619aac69a2c3ea6e7f41d25e0d91b68357ce57b89c1ffb2e60",
+    "ai\\runs\\E08\\best.pth": "a29155e61bed87664596ed4e2e96504ac4aff5f175298a09af8bef6ae9f6d6d0",
+    "ai\\runs\\E08\\decision.json": "6511b9580de16882c3a8c6d260e6a3886ffaff64e335660c1cdcadc7ee1597f4",
+    "backend/__init__.py": "9e05910ce7c5c4d976af48d620691e74cab6178b37ce6448cd614dac0d386549",
+    "backend/app.py": "9c8208e714caecf971891570dd23718310a7e19262a80ec3de4509687dec56f7",
+    "backend/care.py": "dd5ac8db6bc96c843801874d7084a293c335542edc3ff5cf6192f49ef43b1bb5",
+    "backend/images.py": "af23791ab329b9adff94b35d158ccc7344e8b8b9f84061c1ed2daa430547d37a",
+    "backend/openapi.py": "c82edab7ddabc77fb97eb2dc7da29bd7cdf61b7ceb73fd7a7e05e0093861d702",
+    "backend/schemas.py": "e9c62a301a2e091b38cd946cdc04ab400ff6ab401c86bc055050d2006e1d00e7",
+    "backend/security.py": "ca317dc35d747f319170bd894f01a2b3ca36efa2a7b8556431e2aa8d0858fcc3",
+    "backend/tests/conftest.py": "e4914b453e3cc5f86c51568cb2368ca74378214ec80e2c5f2ed9850c07662565",
+    "backend/tests/test_care.py": "d90b056bad8eaf02beb8ed87f2eaac111ff52c2ba1583c9cc8ea923adcc3ba5a",
+    "backend/tests/test_contract.py": "b71bfc3ed44e891128dbeadbd988234ee562edbd2b91229b5e03477b42afc991",
+    "backend/tests/test_integration.py": "a278cced489a044187a6726c08c6fbc7421423442c535ea451967bbfbe3d0580",
+    "backend/tests/test_predict.py": "ef1a28e817f17c30e98a1b3939a339ea28baf0596d9b73ec99d690dcd0a1fc1c",
+    "backend/tests/test_security.py": "2fd48d958415ceb13551085a17e1f84fefe4aaa60b6f3c7a7399ee578ae1dcd5",
+    "desktop/__init__.py": "5f7920c040369470fd208c8eaccc45fe36d62c4946343a8928c0fa6fa9fd3b79",
+    "desktop/__main__.py": "247a016db6b8b670cb0c6f7f4ba4ae53645fec1e32a0ee3a728cfc5e3bf6bc4e",
+    "desktop/build_care.py": "55a5baa6ac64d1ff82b9e5ee8257876ed27750a8853ee36fd00e73abff0837fc",
+    "desktop/launcher.py": "5a61a6d6ff43281ba2f1687330bb40a85640eb48b70c1c3bda751d3671930f63",
+    "desktop/prerequisites.py": "c3c158713b8fdab8cf4657a6713fa5aa62ead28e0376ac5121fdd6883b35b27d",
+    "desktop/release.py": "43bca4a8d99648b387ab206233d244c3365c11edb69b9d3288ddfaeb13406b92",
+    "desktop/server.py": "74287fa931c6e4ec6768086b3525ebb5b739ef59cda4efe1922fa079caf68b6e",
+    "desktop/spike.py": "f9bee85e46c737067b0d64bb4ab31739a5258354eccc5b9d4111e45142c89bf9",
+    "desktop/tests/browser_server.py": "43dc3726ae8e355833761b6b08619cda4620321262b0ec9740caa8980602c4c8",
+    "desktop/tests/check_spike_bundle.py": "b4607e0bc79cb16334480b1605a7658ff72c011658aa50e6003d1e9ba4f4af72",
+    "desktop/tests/check_spike_http.py": "c07d0eeb8d2f71c4d02cfd4e4a359368e2c1eb3d545c1ae5682d17fc728b2aa4",
+    "desktop/tests/conftest.py": "f53a77c987b513c28c548f7237eed639cad474f6be8273a12b35417347e71649",
+    "desktop/tests/fixtures/README.md": "669e80d6eb2dc81f8ed9d6228b5c39fe9f58384575144c1d389ae644a2a3f3a6",
+    "desktop/tests/fixtures/care.json": "c25e6ce406ce17483671d027918f3ebf39413b275d016ec348c8b3f03f517c71",
+    "desktop/tests/real_smoke.py": "bbbe0cf817b963e5b8309c66b9796d45b0bc5c86b9407e31edb23a60554bd32f",
+    "desktop/tests/test_bootstrap.py": "5f4eb6ac9fc310ac4bec31ad216813ec1741ef12e40a881fc8fa98dcaea03664",
+    "desktop/tests/test_browser_server.py": "29d73c557a681289f66b582514323a1c3151eae60d2760ef6184f5c780cc2e7c",
+    "desktop/tests/test_lifecycle.py": "9dd4d3aa5d9869e9f6572b5d3f635dcd82fdc86c9f4077d8e4ee3eaf0b81c999",
+    "desktop/tests/test_notice_paths.py": "b4c3f09ee9ac6309b27ec2c40f70636c1b6b4a20d35b58171ae73a779c1d027d",
+    "desktop/tests/test_package.py": "8e5c2931a9e2fb7dc73657b904e5b58705e37d3261e0bf5626c5140767d44879",
+    "desktop/tests/test_real_smoke.py": "0424a5c0646704f6740207cb0c10e50a5c351c07e20a4a0c87571fab710058b5",
+    "desktop/tests/test_server.py": "147a37f7d65a27476e7e01589f3ff163a4978855888ddba3fa2482bc52f051dc",
+    "desktop/tests/test_spike.py": "7bfe2d46b7aaeb1ca898ef6f1642412e29ab23f14c4156ccdf77309f38934f37",
+    "docs/progress/2026-11-07-retrain/source-comparison.json": "b8d6b7f6e9a5ecac85dfdff077c2e4af987ab1b369985a4efa400a34a8312a60",
+    "docs/progress/2026-11-07-yolo-setup/environment-download.cjs": "34a16b607bcb90212a469864e53db35c8f157800cde54df15ddfeb8c084bc99c",
+    "docs/progress/2026-11-07-yolo-setup/environment-smoke.py": "202c6b9e57b3c6fefa97f7f2c45d030deb02af04608cfe3a9263e43915d82d9a",
+    "docs/progress/2026-11-07-yolo-task4/E09-b8-v2.memory.json": "9242e78abfb77a14ed87ac85160e9a8cb1d3331406353dec10e90ac12740d5de",
+    "docs/progress/2026-11-07-yolo-task4/E09-b8-v2.monitor.json": "3fda17998df653ea8a6435f56c9d143dfe1db610ffe5be9d6debc170fc71a829",
+    "docs/progress/2026-11-07-yolo-task4/E09-b8-v2.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/progress/2026-11-07-yolo-task4/E09-b8-v2.stdout.log": "5987f493982efa139cb3fd56eda638df39e9d9d3898bf249f9280586e05e2bf0",
+    "docs/progress/2026-11-07-yolo-task4/E10-b8-v2.memory.json": "d773cd43bb8f4aee618f584ad20d9ffe0dfcf8b925499717ef8d170969ff4382",
+    "docs/progress/2026-11-07-yolo-task4/E10-b8-v2.monitor.json": "d90ce7d89ad1db6081ed934f175b9e372dcbe70e34c3b1a0e302cf6e2f6eb6d6",
+    "docs/progress/2026-11-07-yolo-task4/E10-b8-v2.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/progress/2026-11-07-yolo-task4/E10-b8-v2.stdout.log": "c492af8cf9b8a8a1da72b498fe56b8bb6ecd856d52850a4f402856cfb657eb9b",
+    "docs/progress/2026-11-07-yolo-task4/configs-locked/E09.json": "bfdd8a0faf8da51775f7fe771b227bf31b11754b8e9fbaaf5f0eeab3bd05ca46",
+    "docs/progress/2026-11-07-yolo-task4/configs-locked/E10.json": "f3be400dd1d6131604be32ca95b80bb25a13bc4ff694cb9006b226cdc188810e",
+    "docs/progress/2026-11-07-yolo-task4/environment-installed.json": "b785df33788e71aae16b1fae76a8fc8c23bf989679717024455c73546b72b925",
+    "docs/progress/2026-11-07-yolo-task4/profile-entry.py": "17c2ca1b0e10033ab09e7a59957013383597f312b49ac9857e3dd5045aa062b9",
+    "docs/progress/2026-11-07-yolo-task4/profile-monitor.ps1": "c85b2cfd1e21229c87627f39c36e8f2d397c1e82a5f241ac556afb6bec3beff2",
+    "docs/progress/yolo-image/data-preflight.json": "5ec9c079c8bc402c14db4faea1f8484c0c485b538a5dc5865d12c23d022d71aa",
+    "docs/progress/yolo-image/experiment-protocol.md": "2535d01f7d3d37e32b2e8db540ea08c487da7e32852b385a93e8426978338e24",
+    "docs/progress/yolo-image/profile.json": "84b2c45743e14e6d53af1c5f8561fc820aa35e1a636fc7f504491ac444770bfa",
+    "frontend/e2e.yolo.config.ts": "b89553eb53b87e28ebf2c46020c845e8b05beecab4091b66a681684837881e53",
+    "frontend/integration/yolo.e2e.ts": "a2c536c5b22bd11d77bc6611bdb856e7ad5adf303d64fb0614ebc9178626a5ce",
+    "frontend/src/App.test.tsx": "05809f931894ffc5b95441b19463a9e4b49aff7817b933fb51a97faeab9124c9",
+    "frontend/src/App.tsx": "ca75f7f8c3b6474b0500663fac32dfea3e7b3ff23439315af8190a3833b8410a",
+    "frontend/src/api/client.test.ts": "a9f1d9b8ccf29c4fd2ec2f12ce9e5df70f0858639c58f4ff05d45e350cfe55e5",
+    "frontend/src/api/client.ts": "b375d308a49fdeb18812547612d4167a24b18939b5bb5465d0e9514e5b0f9d2f",
+    "frontend/src/api/schema.d.ts": "c4deda95b9bcf947b617419df01b743f90a9e4f0be46623a4bcaf40be3694544",
+    "frontend/src/desktop.d.ts": "87ec52859c91d01e33c6964b1d41bbc3c7a8275afbe75135c5d0f8a31dca9e62",
+    "frontend/src/features/CareCard.tsx": "a5765d5fd80f70223a1df2e20f02ee311927afd350814df0d8f1702d8c958d48",
+    "frontend/src/features/Diagnosis.test.tsx": "23df82978c685c40eba84678889bc8ed0b3147f0f5210cd432080e3698498670",
+    "frontend/src/features/Diagnosis.tsx": "2054f693f7ef002d6611a3b970a67e79662056ec146ad05408db018969d8be22",
+    "frontend/src/main.tsx": "81df18e0d166e771fab98938d62cf02d971bc58c08bb368bb1d035a45b3b06ca",
+    "frontend/src/test/setup.ts": "268e7200d092daa3225eb06790ed72842e5d3234a53980c90ff463d7b81528d3",
+    "infra/derived/plantdoc-clean-v1/related-pairs.csv": "de491edb0e8a0fca696cfce85fba19512eb4947a3da99a7d18096fafade06a76",
+    "infra/derived/plantdoc-folder-review-v2/development.csv": "194b4be55e26bbd76361e1d84b13974201887445a41d633bb2e1a68134c49bc1",
+    "infra/derived/plantdoc-folder-review-v2/manifest.csv": "58a566aa39f1d99dae65fab7d9594f352e6e1a92668582969878eaf83cd7d389",
+    "infra/derived/plantdoc-folder-review-v2/reserved_test.csv": "d24934a66eeda82d167eefd34affc2391167f5cba7d565ee799e4551cd2b6a22",
+    "infra/derived/plantdoc-folder-review-v2/review-links.csv": "6355e426c44dbf519e9a49a9f895d5c71887f98891c783b240d6c6b35a0db22b",
+    "infra/derived/plantdoc-folder-review-v2/summary.json": "5df8968fcd1b99786f8b5e5bc1b7da66042dfa00a9034f890c1abbe0a1210863",
+    "infra/derived/plantdoc-split-v1/label_map.json": "2a9e2f7ad0168c03e6463ced0175d15a6a48c784f54b758f5c2f64a061754b5e",
+    "infra/derived/plantdoc-split-v1/lock.json": "d99055f59c311f9cfda0385cf62dac599b3ea3587009c59060db7336cfb708cf",
+    "infra/derived/plantdoc-split-v1/manifest.csv": "860438271169aea2004eb3f02a47d94d5854126b2b627653093cd702bf9b37e3",
+    "infra/derived/plantdoc-split-v1/reserved_test.csv": "d24934a66eeda82d167eefd34affc2391167f5cba7d565ee799e4551cd2b6a22",
+    "infra/derived/plantdoc-split-v1/split.json": "d99ea44ffb7db43e1c23b508af9f0ce2dc50a89fd0b76e272c2afaa09e89f5e9",
+    "infra/derived/plantdoc-split-v1/train.csv": "6e05f97a79a6a3cfc5f946340c26637161be2b8d1a074710182316bcb818af81",
+    "infra/derived/plantdoc-split-v1/val.csv": "88efd1f70541deecca79db6dca562f562c0a041d92df087184b9986422f78333",
+    "infra/derived/pv8-plantdoc-v1/exclusions.csv": "e73e3e27203640c7d6b8970e4853b610205faf92e2cf035abe21fe96121b176a",
+    "infra/derived/pv8-plantdoc-v1/inherited-splits.json": "bfb66535996cd19f560c8c6725c4a3de5bdfe29f42d06ff3bcc917ac35f9fc9d",
+    "infra/derived/pv8-plantdoc-v1/label_map.json": "2a9e2f7ad0168c03e6463ced0175d15a6a48c784f54b758f5c2f64a061754b5e",
+    "infra/derived/pv8-plantdoc-v1/manifest.csv": "786285b87fd6e2850b2d99112e8e1806d74a93a73ab75e63c5d1fc2e2504b456",
+    "infra/derived/pv8-plantdoc-v1/provenance.json": "4882312c70e3ada60f64ce58a848fcdc6be6610a0ef9d64e67aabc89de2d2e40",
+    "infra/derived/pv8-plantdoc-v1/review.json": "d3ebb886e8868120283a94dea9ab8ca0787890be4808f9b0ce7a9ab564ba7ca6",
+    "infra/derived/pv8-plantdoc-v1/seal.json": "eb3eb127583cfc3b2d8b81946f308cbec367707872fac92e1518aabb7d9205fa",
+    "infra/derived/pv8-plantdoc-v1/split.json": "214a6716234d9aeae1574db4d6f2f44b883e330a901b4b702204af82ef441550",
+    "infra/derived/pv8-v1/exclusions.csv": "be20283e6ff815adff1d7e37eb6f7a82577da151b7bc88891c97b970019fa633",
+    "infra/derived/pv8-v1/label_map.json": "2a9e2f7ad0168c03e6463ced0175d15a6a48c784f54b758f5c2f64a061754b5e",
+    "infra/derived/pv8-v1/manifest.csv": "1f5d9c19c0a7c4138557add9a2af6f223e1c74f997423f119284c19cade1c241",
+    "infra/derived/pv8-v1/provenance.json": "6e0da10f0a0fb928821553fa3cf777cf48fcc28b499d57b3f2b7769288a882be",
+    "infra/derived/pv8-v1/review.json": "bf70345bc425c558d5daa6084dd9b6931892e4341398ddfa9028f000925428da",
+    "infra/derived/pv8-v1/seal.json": "0e7f1600381a78a48a09aeda979e8200cbfa0762bd7373d98fc3f0d8575fdce8",
+    "infra/derived/pv8-v1/split.json": "0ee7a58bc4fabd80a95e7741fd318ca79f23680d052c123652ad7679e3ae766d",
+    "infra/plant_doc/LICENSE.txt": "95df2e9564862e51d69683a899b6dcc8218d577057bdf67322880769ff85f29e",
+    "infra/plant_doc/README.md": "60d40c75be99cf0c126ebd3c7606da58de81a1f9889415d993d4345fea842c32",
+    "infra/requirements-yolo-cu126.in": "e0511fcb39edc9b359ae7a479ba38f33d21de6a76a841f6c74374a36db49c5cf",
+    "infra/requirements-yolo-cu126.lock": "8e1fcc62be0c59b7f54cc4257d8c2243ff4b4c1f57fa019caea2dbb10bb76da6",
+    "infra/tomato_plantvillage/external-web-intake/2026-10-19-plantdoc-pilot-v1/records.csv": "83dc48a21d82fd29ecd631786b9980d8cb83e7bb3379755460c7630aeda86dcd",
+    "infra\\knowledge\\care-v1.json": "78361a5804b9e941f13f13e01256d742357946d7965e1b1f6a14ac7e3abeef56",
+    "tests/ai/check_train_cuda.py": "ca30b83d3dc3087c875de783d820a1a49ea266a936d17babd3ea10a5079fbe2e",
+    "tests/ai/conftest.py": "80606e3699589e516ed25a10ded728a87fccb263cbe3791e2d3487da0a5b014d",
+    "tests/ai/test_benchmark.py": "1ffcf782ec04dbb60418ae6ab5388a7dcdc62257dae15a3ee6934a2f621b3326",
+    "tests/ai/test_data.py": "0224eee41818857f029a64156477b404697a71b8ce7ec468a099d65fdcf7cf63",
+    "tests/ai/test_evaluate.py": "3554218534dbf50e11235c7a79cdfc6dd229681bd5b91f1d466f64c4d6fa0740",
+    "tests/ai/test_evaluation_protocol.py": "e1a251027bb12288d8e370d6e0dba09434ee8ddbb9fc0cc55b09dc7ece9f4db9",
+    "tests/ai/test_experiments.py": "c76947f82bc30ee5c0e5247ac76b9b8fb32dca0c4bcf3da8a07259c00dcf1b39",
+    "tests/ai/test_inference.py": "19bc14cd7fdf9794dd4bc06ef8e9773e54ca3f04d9ee9ba0c65ad46a9e5d13cd",
+    "tests/ai/test_loader.py": "a602ef7f1b351773fa689c6b599d109acd5a4182a91b0894dc1a582017ee67d1",
+    "tests/ai/test_models.py": "47a4c48937cab726e3842ed946978b2157befdf558e44567ce8292c2dc0a6875",
+    "tests/ai/test_split.py": "52e28059ecad1a74ff40c576af8871e495fbf0b4605172269ff1a0928dfa691f",
+    "tests/ai/test_train.py": "1dc66aa4cabf73db6748e8814a26b7db6894fb71b973636d989ea6c14946b62f",
+    "tests/ai/test_yolo.py": "4f82021303d8b756bdd91f63a7ed8d1566d083b1773f2e6371feff6e53020352"
+  },
+  "environment": {
+    "python": "3.12.14 (main, Sep  1 2026, 14:17:39) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": [
+      {
+        "name": "anyio",
+        "version": "4.16.0"
+      },
+      {
+        "name": "certifi",
+        "version": "2026.10.23"
+      },
+      {
+        "name": "charset-normalizer",
+        "version": "3.5.2"
+      },
+      {
+        "name": "clip",
+        "version": "1.0"
+      },
+      {
+        "name": "colorama",
+        "version": "0.4.6"
+      },
+      {
+        "name": "contourpy",
+        "version": "1.4.0"
+      },
+      {
+        "name": "cycler",
+        "version": "0.12.1"
+      },
+      {
+        "name": "filelock",
+        "version": "4.2.9"
+      },
+      {
+        "name": "fonttools",
+        "version": "4.68.0"
+      },
+      {
+        "name": "fsspec",
+        "version": "2026.9.0"
+      },
+      {
+        "name": "ftfy",
+        "version": "6.3.1"
+      },
+      {
+        "name": "h11",
+        "version": "0.16.0"
+      },
+      {
+        "name": "httpcore",
+        "version": "1.0.9"
+      },
+      {
+        "name": "httpx",
+        "version": "0.28.1"
+      },
+      {
+        "name": "idna",
+        "version": "3.20"
+      },
+      {
+        "name": "Jinja2",
+        "version": "3.1.6"
+      },
+      {
+        "name": "kiwisolver",
+        "version": "1.5.1"
+      },
+      {
+        "name": "MarkupSafe",
+        "version": "3.0.4"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.11.2"
+      },
+      {
+        "name": "mpmath",
+        "version": "1.3.0"
+      },
+      {
+        "name": "networkx",
+        "version": "3.7"
+      },
+      {
+        "name": "numpy",
+        "version": "2.5.4"
+      },
+      {
+        "name": "nvidia-ml-py",
+        "version": "13.615.71"
+      },
+      {
+        "name": "opencv-python",
+        "version": "5.0.0.93"
+      },
+      {
+        "name": "packaging",
+        "version": "26.3"
+      },
+      {
+        "name": "pillow",
+        "version": "13.0.0"
+      },
+      {
+        "name": "polars",
+        "version": "2.1.0"
+      },
+      {
+        "name": "polars-runtime-32",
+        "version": "2.1.0"
+      },
+      {
+        "name": "psutil",
+        "version": "7.2.2"
+      },
+      {
+        "name": "pyparsing",
+        "version": "3.3.3"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "4.0.0"
+      },
+      {
+        "name": "regex",
+        "version": "2026.11.7"
+      },
+      {
+        "name": "requests",
+        "version": "2.34.2"
+      },
+      {
+        "name": "setuptools",
+        "version": "84.2.1"
+      },
+      {
+        "name": "sympy",
+        "version": "1.14.0"
+      },
+      {
+        "name": "tomato-desktop",
+        "version": "0.1.0"
+      },
+      {
+        "name": "torch",
+        "version": "2.14.1+cu126"
+      },
+      {
+        "name": "torchvision",
+        "version": "0.29.1+cu126"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.70.1"
+      },
+      {
+        "name": "typing_extensions",
+        "version": "4.16.0"
+      },
+      {
+        "name": "tzdata",
+        "version": "2026.6"
+      },
+      {
+        "name": "ultralytics",
+        "version": "8.4.204"
+      },
+      {
+        "name": "ultralytics-platform",
+        "version": "0.1.107"
+      },
+      {
+        "name": "ultralytics-thop",
+        "version": "2.2.5"
+      },
+      {
+        "name": "urllib3",
+        "version": "2.8.0"
+      },
+      {
+        "name": "wcwidth",
+        "version": "0.9.4"
+      }
+    ]
+  },
+  "environment_overrides": {
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "YOLO_OFFLINE": "true",
+    "YOLO_AUTOINSTALL": "false"
+  },
+  "sampling": {
+    "pv:": 0.75,
+    "plantdoc:": 0.25
+  },
+  "seed": 42,
+  "research_gate": {
+    "plantdoc_supported_macro_f1_strictly_greater_than": 0.4908373605852598,
+    "pv_macro_f1_minimum": 0.9780424202954058
+  },
+  "threshold_selection": {
+    "grid": [
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "minimum_coverage": 0.5,
+    "minimum_accepted_accuracy": 0.9,
+    "tie_rule": "maximum coverage then minimum threshold",
+    "if_none": "null; no operating candidate"
+  },
+  "full_training_started": false,
+  "test_authorized": false,
+  "default_changed": false,
+  "epoch_timing_deferred_to_first_real_epoch": true
+}

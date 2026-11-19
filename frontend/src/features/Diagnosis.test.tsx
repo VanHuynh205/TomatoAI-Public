@@ -151,6 +151,28 @@ it('shows source, geographic limits, review date, and opens the external bridge'
   expect(screen.getByText('Synthetic fixture; no clinical or agronomic validity')).toBeVisible();
 });
 
+it('moves keyboard focus to the selected care section with an instant scroll when motion is unavailable', async () => {
+  const originalUrl = window.location.href;
+  vi.stubGlobal('matchMedia', undefined);
+  try {
+    render(<Diagnosis api={api()} />);
+    await userEvent.upload(screen.getByLabelText('Chọn ảnh lá'), newFile());
+    await userEvent.click(screen.getByRole('button', { name: 'Nhận diện' }));
+    const link = await screen.findByRole('link', { name: 'Nguồn tham khảo' });
+    const heading = screen.getByRole('heading', { name: 'Nguồn tham khảo' });
+    heading.scrollIntoView = vi.fn();
+    link.focus();
+    await userEvent.keyboard('{Enter}');
+    expect(window.location.hash).toBe('#care-sources');
+    expect(heading).toHaveFocus();
+    expect(heading.scrollIntoView).toHaveBeenCalledWith({ behavior: 'instant', block: 'start' });
+    expect(window.pywebview?.api.open_external_url).not.toHaveBeenCalled();
+  } finally {
+    window.history.replaceState(null, '', originalUrl);
+    vi.unstubAllGlobals();
+  }
+});
+
 it('reports care lookup failure without stale care content', async () => {
   const client = api();
   client.care.mockRejectedValue(new ApiError(404, 'care_not_found', 'missing'));

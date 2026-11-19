@@ -1,0 +1,55 @@
+{
+  "reference_rows": 12530,
+  "holdout_lock_sha256": "5d5d1e18981412ba7c5b1861457d717ceaa937312c3a6f066b46cddcbf9479bc",
+  "train_val_sha256": "24e3e7c2c40b03ac1bcc510073975d94e1c234733b43f092ebeec1c2e3d0b944",
+  "addition_zip_sha256": "44a55bd86d7406351b19d0b5fd71ff9993356df48e5e829c6a09ee31b966054f",
+  "pilot": {
+    "source": "slif_tomato_v1",
+    "domain": "field",
+    "manifest_sha256": "4b6c0ce43f0ab93b1c90385ca3004c50786b810e144977ae01d12bbe96049c27",
+    "zip_sha256": "ac9777531bbd78e725aa777fcb02f32d465753a9dfb110cedb7bc3a9c0625dda",
+    "rows": 21,
+    "clear_rows": 20,
+    "provisional_scene_groups": {
+      "slif:review:t0559": 13,
+      "slif:review:t0560": 4,
+      "slif:review:t0569": 3,
+      "slif:review:t0618": 1
+    }
+  },
+  "visual_exclusions_sha256": "0127443f64cb42194c2ba50bbb53e3a3b80f11a4290347a4f0c853e242f6a146",
+  "holdout_geometry_exclusions_sha256": "69feaaf5ad7ab08bac08b136b1c88a8c1d509169343d9aeee8a4944d9af7a0b0",
+  "split_count": {
+    "val": 1642,
+    "train": 8069
+  },
+  "additions": {
+    "chen_tomato_disease_2025": {
+      "late_blight": 3,
+      "healthy": 2,
+      "septoria_leaf_spot": 19,
+      "yellow_leaf_curl": 6,
+      "leaf_mold": 3,
+      "early_blight": 9
+    },
+    "hossain_v1": {
+      "early_blight": 4,
+      "leaf_mold": 1
+    },
+    "plantseg_v7": {
+      "leaf_mold": 51,
+      "septoria_leaf_spot": 40,
+      "yellow_leaf_curl": 46,
+      "early_blight": 66,
+      "late_blight": 35,
+      "bacterial_spot": 3
+    }
+  },
+  "screen_results": {
+    "intake_or_review_exclusion": 1438,
+    "visual_exclusion": 209,
+    "holdout_geometry_overlap": 12,
+    "added": 288,
+    "locked_reference_overlap": 1
+  }
+}

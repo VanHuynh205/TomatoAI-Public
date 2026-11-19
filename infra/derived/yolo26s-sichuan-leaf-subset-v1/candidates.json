@@ -1,0 +1,1614 @@
+{
+  "source": "https://data.mendeley.com/datasets/c2x8rynybg/1",
+  "inputs_sha256": {
+    "annotations.json": "4bb60c21ee8668c0dd1c0d4b3a713509e61f6698fcb1bb7166c745637d8003dd",
+    "files.json": "68b4c1a77d8255421493f9aac47670f8f84df734d71b55f87f825872c50defb6"
+  },
+  "coordinates": "publisher Pascal VOC xyxy in raw pixel coordinates",
+  "records": [
+    {
+      "id": "sichuan-Gray_0509_017",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_017.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_017.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/e8dd1b49-8b34-4587-ab5b-bc89a46e2466/file_downloaded",
+      "image_sha256": "73e36f422eaa4fa8c88b1dd48e7a817dafbdcdb582018bd583ab8f180b868781",
+      "image_bytes": 7457634,
+      "annotation_sha256": "5f3a5918055b8e58dee9c5e37ca3f04799d50e59cc0c34db726f683a43a8ff18",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_017.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1178.0,
+            735.0,
+            3049.0,
+            2129.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_018",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "prior_audit_quarantine",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_018.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_018.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/1adbcfa9-e28f-4e42-9003-cd3a23552ebf/file_downloaded",
+      "image_sha256": "45da1c5085f5a88dc488440cc297c67692368173990d55756b4f7590827881d6",
+      "image_bytes": 7052027,
+      "annotation_sha256": "e7be7a137c017f77abe3bd303668b5b81143f42fc8a60030a52a1512f3b5c81d",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_018.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1159.0,
+            603.0,
+            3333.0,
+            2306.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_025",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_025.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_025.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/4ab8339c-7c04-4606-b4cf-4c815402ac2b/file_downloaded",
+      "image_sha256": "e1979bf7755628a7816aa3fa3513685983c256e2e2f532e5ff0a4c41ab226def",
+      "image_bytes": 6307366,
+      "annotation_sha256": "8edacc7ce3dc6effdcabd1ea63b5b53b6c801cc08733040d6b5b8084d076877f",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_025.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1775.0,
+            1119.0,
+            3101.0,
+            2158.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2649.0,
+            261.0,
+            3214.0,
+            1026.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2932.0,
+            1.0,
+            3488.0,
+            613.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_026",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_026.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_026.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/4bde796d-0821-4e72-bc11-435278b27729/file_downloaded",
+      "image_sha256": "dabbe390c95be96e630153ead7015ae15a3fb52a3404d1f6ccbb3a395c9b086f",
+      "image_bytes": 7014324,
+      "annotation_sha256": "3c38d66e09194d2bb252a832222c91cff673013db256371abe549519c25ff26f",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_026.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2233.0,
+            613.0,
+            2872.0,
+            1239.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2430.0,
+            1.0,
+            3072.0,
+            613.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2149.0,
+            1568.0,
+            3207.0,
+            2313.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1714.0,
+            2032.0,
+            2514.0,
+            2803.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_027",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_027.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_027.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/20ca32a2-a478-4402-90a6-872538f8348f/file_downloaded",
+      "image_sha256": "cc14dddc186233d0729cf7b7e9874f5de105316723fe7e3165c7de7eec0461f4",
+      "image_bytes": 7292728,
+      "annotation_sha256": "dec945e7bfa91be21a5d9cf71f262ca39bbd119836941bb72bae42aed4cb54fd",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_027.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2530.0,
+            558.0,
+            3220.0,
+            1242.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2765.0,
+            1.0,
+            3362.0,
+            619.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2469.0,
+            1494.0,
+            3433.0,
+            2229.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1953.0,
+            1848.0,
+            2727.0,
+            2503.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_028",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_028.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_028.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/168ff5f9-f8dd-4fa7-bf7a-ff01fd6dd802/file_downloaded",
+      "image_sha256": "3c1f29d06137eaee1d68f1e04d0d5ae72c6a7319d24310673c9b997dca340aaf",
+      "image_bytes": 6879070,
+      "annotation_sha256": "36f2c58f7f043274efb191f5ab21f06699b1fdab74924512689acf6eb73e1adc",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_028.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            830.0,
+            881.0,
+            1565.0,
+            1900.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1488.0,
+            1035.0,
+            2114.0,
+            1765.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2107.0,
+            858.0,
+            2669.0,
+            1297.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            3301.0,
+            1287.0,
+            4032.0,
+            2056.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_029",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_029.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_029.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/8c246dfe-3962-4bbf-9d78-24c498e84552/file_downloaded",
+      "image_sha256": "8c5c2952c430086fe20f1f0dd48e3dd5576ceefc2a38e26c01438ca6974dda3b",
+      "image_bytes": 5844617,
+      "annotation_sha256": "35a25ce738f61db754763fe0549746bad2a60f1002885d4333eb4190fbdd2b8d",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_029.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1014.0,
+            968.0,
+            1578.0,
+            1803.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1524.0,
+            1094.0,
+            1994.0,
+            1652.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2036.0,
+            919.0,
+            2453.0,
+            1365.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2875.0,
+            1445.0,
+            3733.0,
+            1932.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_030",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_030.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_030.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/3f9214e7-31b7-4480-9a87-ab30310fe612/file_downloaded",
+      "image_sha256": "fd2a0a55f8d27f24a2c441fcfb0784194be0c0a9b55af9e9ad20bf10454d794a",
+      "image_bytes": 6494893,
+      "annotation_sha256": "4e840d20c2dd1832df2a4f8c8d3375a0abe1e51c754f4de2dcc464b21f65ffbc",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_030.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2465.0,
+            1197.0,
+            3375.0,
+            2048.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1046.0,
+            1752.0,
+            2327.0,
+            2390.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            7.0,
+            1523.0,
+            962.0,
+            2006.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_031",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_031.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_031.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/e133096e-790d-4764-a8e2-82859cf31720/file_downloaded",
+      "image_sha256": "70a8cb64f7b717f0e5d92e285b2bb754adc21bc584157ad967f81e6e028596cf",
+      "image_bytes": 6216856,
+      "annotation_sha256": "73b44e20731788f7fdd266330ade18eb12e05666b84a99c3f9a4d760639e7583",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_031.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2265.0,
+            1261.0,
+            3211.0,
+            2006.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            775.0,
+            1784.0,
+            2156.0,
+            2361.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1.0,
+            1558.0,
+            691.0,
+            1980.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_032",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_032.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_032.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/b4dd6ee1-2f0b-4953-8d75-dcd59f021aef/file_downloaded",
+      "image_sha256": "96d2a6aa85906c2985ed9309fe783d5534308edf185ca66e38db5c10db5c180f",
+      "image_bytes": 6129665,
+      "annotation_sha256": "be9fb2ed95b20527aaf7137ebe0461e5468a3863e35a2c68c72690435ab9de90",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_032.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2124.0,
+            806.0,
+            3104.0,
+            1826.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1014.0,
+            2197.0,
+            2340.0,
+            2723.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1.0,
+            1461.0,
+            672.0,
+            2292.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_034",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_034.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_034.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/a4775445-c305-4d6d-a29a-b66005decceb/file_downloaded",
+      "image_sha256": "53dc6235f1b39f0f0b05b9c9cc118414f6c0a62750045df9a3ce8240ccfe42ce",
+      "image_bytes": 5072777,
+      "annotation_sha256": "bdda812d95852a3ee117f32920ba7fe0c1c8798fd37b56775fe8f13e626a65b3",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_034.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Fruit",
+          "xyxy": [
+            1817.0,
+            1090.0,
+            3104.0,
+            2365.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2546.0,
+            35.0,
+            3891.0,
+            635.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_035",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_035.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_035.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/b221d764-0d01-4467-9582-d5117fceb9e5/file_downloaded",
+      "image_sha256": "767a1e7c96502e6706ce0224aeca870fb696418b71ff1b9dfd58be8fb170f338",
+      "image_bytes": 6184195,
+      "annotation_sha256": "d2a75550afe22e58fa853781a709c133e4d78bac2c45db96add8bd8aef112f3b",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_035.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            3178.0,
+            894.0,
+            3965.0,
+            1929.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1553.0,
+            452.0,
+            3036.0,
+            1903.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_036",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_036.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_036.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/b44a5485-1ab7-44ea-a466-adfa354e89d2/file_downloaded",
+      "image_sha256": "acebe78d250bb2daa087728d91555562b093a8e78ae0653c00afae53437c5fff",
+      "image_bytes": 6168112,
+      "annotation_sha256": "729e458b1efd744914173d44333df2685f0bc70478e69f0e65194f4e12c3502d",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_036.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            3198.0,
+            758.0,
+            4017.0,
+            1739.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1814.0,
+            1355.0,
+            2794.0,
+            1919.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            917.0,
+            94.0,
+            1353.0,
+            377.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_037",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_037.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_037.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/880282b7-4468-4e87-825b-3453a4fa2468/file_downloaded",
+      "image_sha256": "be57f6231a4ebf1dc06cbcd358618339f7810486c91e264f3f4e6220e8ecc26b",
+      "image_bytes": 6002052,
+      "annotation_sha256": "7041ab06dfe5e6d5d7016b05f645912e24671fa108fb318e56f257806853652e",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_037.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2449.0,
+            935.0,
+            3224.0,
+            2148.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_038",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_038.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_038.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/a850811f-4b87-4600-8046-79f27b9cebcc/file_downloaded",
+      "image_sha256": "c03fd995d529d4dd25b69c68d8da6eb377c29af253b5440874fa921e4f6e0249",
+      "image_bytes": 5551272,
+      "annotation_sha256": "0257108cd5168aabc351483f87e08a4e0023e4d56d1572baed2af1eb7c31da1f",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_038.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1372.0,
+            868.0,
+            2414.0,
+            2165.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_039",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_039.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_039.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/c74ba7a4-2332-4d08-ae7c-04524b7a2a11/file_downloaded",
+      "image_sha256": "ed9d99ca97d5e0ea73a9716c650ec7c7861e215fef36256c574ef9ad7f596c69",
+      "image_bytes": 5905318,
+      "annotation_sha256": "28d5b8bc7d5471e640a46d5874e8c77ab43c91414709b7be6f0367f00906e8ca",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_039.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1162.0,
+            813.0,
+            2336.0,
+            2439.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2385.0,
+            1874.0,
+            3082.0,
+            3016.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_040",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_040.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_040.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/5bc739d6-3c7c-4bcd-ba95-678936256310/file_downloaded",
+      "image_sha256": "5475e21add1b6151246652103bbd4089bacac1793a078fb461968e1caebbcc96",
+      "image_bytes": 5965801,
+      "annotation_sha256": "4c67efa1c409e53d6a7969dd5a6aa8cc2787ccbe750c0981c2eec363e339a629",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_040.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            3020.0,
+            2000.0,
+            3698.0,
+            3013.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1959.0,
+            929.0,
+            3014.0,
+            2400.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_041",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_041.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_041.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/4a8181c5-3cc5-44af-aa8c-79cca3dfd9e8/file_downloaded",
+      "image_sha256": "7584288a4c365b00e556b6989c39b9afefb031aaeb836b466c54e74555c7ef0d",
+      "image_bytes": 6095925,
+      "annotation_sha256": "87fa680332d6172fefcdb305250baa2537c2c11367df7c0927231f34e76e21a2",
+      "exif_orientation": 1,
+      "filename": "Gray_0509_041.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1307.0,
+            587.0,
+            3191.0,
+            2306.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_042",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_042.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_042.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/18363ebc-bb5e-43a8-b50d-cbb81f34fe62/file_downloaded",
+      "image_sha256": "e3f1bdf6c5985d3ee32e22fc3c5fe577900a5c9a762d1c2aaef5cda88b8a81da",
+      "image_bytes": 5554956,
+      "annotation_sha256": "1a0640b23bdb701733d00a2b752e059caf417eabd13a3613ae4dc1ccaa955977",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_042.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2591.0,
+            1326.0,
+            3575.0,
+            2023.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_043",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_043.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_043.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/d913b2d5-2efb-43d0-aa2d-85dcbfeae900/file_downloaded",
+      "image_sha256": "4b3678ee1906501ea3f02cd38b38f396a31593ee25daddb2873bb93ca9142db7",
+      "image_bytes": 6023962,
+      "annotation_sha256": "022d4bc0f8fd8f8484272d4c617b54f81757859bd5849ad38a0e3a32eab0f604",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_043.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2353.0,
+            1368.0,
+            3378.0,
+            1984.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_044",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_044.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_044.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/8a5cce96-dd62-4890-807c-3b528eac2817/file_downloaded",
+      "image_sha256": "4615330e93c9dbc359cbdd47ca4fc603b9d922f65309b969aa0e35a250f798b1",
+      "image_bytes": 6230359,
+      "annotation_sha256": "5310dc9a9dae87feb8a8251200e496c4664a26cda9bf3bfb0b3adf48030d9873",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_044.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1540.0,
+            1245.0,
+            2853.0,
+            1932.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_045",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_045.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_045.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/01e5aac4-8d4b-4a0c-9464-f121b9b46231/file_downloaded",
+      "image_sha256": "cf5f30549b2404d581714823827026824ab0fb85160810c794ae36a970dd9bc6",
+      "image_bytes": 6501886,
+      "annotation_sha256": "3d23961e4cf64042f5f9c49296ef119178dab2c76cd9a1b0b34ccfb1483a1607",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_045.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1685.0,
+            919.0,
+            3240.0,
+            1929.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_046",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_046.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_046.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/c7c6d7da-cc2c-458e-a19f-2e80985e0658/file_downloaded",
+      "image_sha256": "f1cadd07d79c18fcf9954c10f75fe750acd94b7320686b1eedca2c1b318df8ad",
+      "image_bytes": 6795422,
+      "annotation_sha256": "d078368cb2e00f9f15f73555d577a17e8581f8752f87a82a6e6067f8235de792",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_046.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1817.0,
+            1032.0,
+            3211.0,
+            2032.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_052",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_052.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_052.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/50d82a60-3f34-4868-84a8-9d226d8f946f/file_downloaded",
+      "image_sha256": "28513b2039d1729fa6ad4157c283fe84180dbb4aecbbc5b5ecd438b004c136de",
+      "image_bytes": 6283160,
+      "annotation_sha256": "1ae313a07cd73d3a7a349bd13d3014a2af3731fd981969af62a7d74638ff99a9",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_052.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1817.0,
+            855.0,
+            2753.0,
+            1794.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2043.0,
+            32.0,
+            2930.0,
+            848.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1956.0,
+            1952.0,
+            3124.0,
+            2927.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1072.0,
+            1126.0,
+            1359.0,
+            1523.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_053",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_053.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_053.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/013d8896-7e0e-4026-b990-59a45f29cca7/file_downloaded",
+      "image_sha256": "0496cc6ef046776c62fb04f2cf34ca362279e6e3c34613c04f60c2b66d7976a1",
+      "image_bytes": 6605037,
+      "annotation_sha256": "f5b48dad33355263c258865afa8815882fd3e7f2aa77575082ea74dce09afebb",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_053.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            391.0,
+            139.0,
+            1291.0,
+            800.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1214.0,
+            600.0,
+            2249.0,
+            1248.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1556.0,
+            1165.0,
+            2411.0,
+            1842.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2275.0,
+            1561.0,
+            3162.0,
+            2113.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_055",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_055.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_055.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/48b32068-1555-4482-8da0-a7d58ba99018/file_downloaded",
+      "image_sha256": "9c7d7f918b93495a8af758b10f22b3fe78bba9a444b6b966a2fa25cd89f5f0e5",
+      "image_bytes": 5123859,
+      "annotation_sha256": "18d14bc9a77979f22ea9bca06036676acd63e10935f9e965991308aee259c4d0",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_055.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Fruit",
+          "xyxy": [
+            1830.0,
+            1171.0,
+            3069.0,
+            2477.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2704.0,
+            181.0,
+            3920.0,
+            777.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_056",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_056.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_056.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/10c2474a-5706-460c-a3f6-c9e1e98303fe/file_downloaded",
+      "image_sha256": "a77da605f8b8c0cfe3cd08c63f400d4337de8d8cf9047b0932d638bb9e9677e6",
+      "image_bytes": 6254421,
+      "annotation_sha256": "b72fa831b0860f820fcfd7816752306c20904bdbf60f0d131a1f76575bb41f8e",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_056.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2978.0,
+            752.0,
+            3817.0,
+            2665.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1959.0,
+            1381.0,
+            2653.0,
+            1710.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_057",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_057.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_057.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/24ef51fe-eabd-4b05-a113-34a95c467e8f/file_downloaded",
+      "image_sha256": "6ee3a3e2cd51b27563eb922489f740b7ce3210945a3f2785c694bec7b50dd1b9",
+      "image_bytes": 6272126,
+      "annotation_sha256": "aa6ad3fc32ec18a1ff18864590455838a01c9696f375d6e5908c04c13de44237",
+      "exif_orientation": 1,
+      "filename": "Gray_0509_057.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1030.0,
+            545.0,
+            3020.0,
+            1906.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            265.0,
+            2155.0,
+            1736.0,
+            2703.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_058",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_058.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_058.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/34b943d7-f19f-4f62-ab26-6ce33e4fea50/file_downloaded",
+      "image_sha256": "60e24640728a03115432caf57dfe3c96fd2abfc1b5e112cabc90b6b6f3ab15e1",
+      "image_bytes": 6342251,
+      "annotation_sha256": "e087a92e95464c0c800722886c4026c871f5eb9143bc9ac849cdf0ba7bd3bef0",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_058.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1382.0,
+            1329.0,
+            2953.0,
+            2058.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_060",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_060.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_060.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/04baf6b9-aaed-44f8-a456-50deee8ea0ab/file_downloaded",
+      "image_sha256": "7a3c5b7be859f3a6590f069fcee60a16a25ae04586140d4984942df1aa1577a8",
+      "image_bytes": 6866263,
+      "annotation_sha256": "52cf07e412dffe0b7cf176625a57e3a251bc1bc961fec66f7bb96009859e9ac2",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_060.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1207.0,
+            887.0,
+            3211.0,
+            2090.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_061",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_061.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_061.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/023c90f2-1940-414d-aa48-6a3b8f5da941/file_downloaded",
+      "image_sha256": "402877b7acd9e2daa7a8152db02d733848f998333ebb1de05981d5c2b9d7c497",
+      "image_bytes": 6996862,
+      "annotation_sha256": "d0408e22f38583ef3d02ab7fe221e81c6aad0169398bc3acfa325f8c79214bb5",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_061.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1211.0,
+            1013.0,
+            3162.0,
+            2203.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_062",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_062.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_062.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/d2450732-f2a3-4b23-abfa-f49005ca5af3/file_downloaded",
+      "image_sha256": "52c45c30591490f29eb30cde88adeb043a70e0373482b90be5a80e6ac1662cf7",
+      "image_bytes": 5955776,
+      "annotation_sha256": "b9461872692d6ecb8e50c699271f020be1b13dc79d5f245b24f1eae684ab3aad",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_062.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1730.0,
+            729.0,
+            3259.0,
+            2055.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_063",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_063.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_063.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/611fc955-82b3-45e6-b00d-c514f48fa8ea/file_downloaded",
+      "image_sha256": "38af22419a733f64ea5ef71f0b8425cc0f8a5eb5728237e75c4cde16ada59089",
+      "image_bytes": 6477646,
+      "annotation_sha256": "d7587bec5dce5986f9a3e9c405575aaf2c6ac8dc3840b3c8d3185075c33e87af",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_063.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1936.0,
+            774.0,
+            3030.0,
+            2190.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_064",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_064.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_064.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/d7dc0425-55ed-4295-81a3-4a79034be548/file_downloaded",
+      "image_sha256": "96e103d05c2f34b67d11f6ec6888db07758618a017562b131998727bd0048ea3",
+      "image_bytes": 5109547,
+      "annotation_sha256": "9e4058ff698b480fd3399c103e10376125df3052c0d08d3d650f6c1556a3b6aa",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_064.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1862.0,
+            987.0,
+            3053.0,
+            1671.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_067",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_067.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_067.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/1c205ece-8b29-40d0-a8a1-61b8f254019c/file_downloaded",
+      "image_sha256": "9b748eb98d689098bdefd9f4e70f1f61e80660a75d4b5e72366b4ad9cfc7447c",
+      "image_bytes": 5299612,
+      "annotation_sha256": "8e0f0315228fddddf12b2eacb043e19a526337e6d46f9dd8b2335c9cc24fad3c",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_067.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1004.0,
+            1055.0,
+            2943.0,
+            2123.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_068",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_068.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_068.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/638f4a00-a11a-4a3b-9833-a945001c8f7d/file_downloaded",
+      "image_sha256": "d779e7b7aee9f0f5ddaacdcef275666a80f947279e5cb7c208a9d0d117784efb",
+      "image_bytes": 6124614,
+      "annotation_sha256": "8df774ce418e9919282413bcf2b82cd9b28d619678be20a7e46674c1634300e7",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_068.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1117.0,
+            852.0,
+            3553.0,
+            2542.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0509_069",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0509_069.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0509_069.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/9126f964-7265-4f58-a7fc-440f9b0bb84e/file_downloaded",
+      "image_sha256": "b1289e34d4ae7290c07146600be855eef4b293f29a35d017003c15d082f2e649",
+      "image_bytes": 5123977,
+      "annotation_sha256": "98e9d33572def133226ce63f4fae553299e4b243ae59094852e1ab827e8ac16a",
+      "exif_orientation": 6,
+      "filename": "Gray_0509_069.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1214.0,
+            929.0,
+            3269.0,
+            2245.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0617_008",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0617_008.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0617_008.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/5a1acc5a-77ef-4f7a-82f5-d1157a39350e/file_downloaded",
+      "image_sha256": "98ce281e0478b93923d20e94cd9057eb57cd52ca17d6c20d9d3c68f152a0d06d",
+      "image_bytes": 4933687,
+      "annotation_sha256": "b5c4cfaeae3a1cd4ffcce0bd808ee9148741777d48d708a2a9c1cc628533071f",
+      "exif_orientation": 6,
+      "filename": "Gray_0617_008.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Fruit",
+          "xyxy": [
+            1753.0,
+            1023.0,
+            3378.0,
+            2735.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            1027.0,
+            1332.0,
+            2272.0,
+            3019.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0617_009",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0617_009.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0617_009.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/a6e42d60-9c20-49df-a552-686e15d5b58d/file_downloaded",
+      "image_sha256": "7b4927d47e014cf76db44cb61186476be0bbd5206cd9fabf5e552fa171a78a29",
+      "image_bytes": 6563868,
+      "annotation_sha256": "941ca9c19f2ea8709d1404487bd7c391f4b9321c730e06c147e7a7b4765c83f9",
+      "exif_orientation": 6,
+      "filename": "Gray_0617_009.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Fruit",
+          "xyxy": [
+            1082.0,
+            542.0,
+            2956.0,
+            2416.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2920.0,
+            942.0,
+            4030.0,
+            2065.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0617_010",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0617_010.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0617_010.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/f391df2b-cd11-4136-bbec-c8e6cdbba87f/file_downloaded",
+      "image_sha256": "03b6a79435643ea7c081a2e9775ef67dc34d0003e2d54b90f84f5c1bb3cf4720",
+      "image_bytes": 5806412,
+      "annotation_sha256": "e1aac9bfa8bf68b5a34496aae392663f4d4b95ae7bd404bc2ea4591ae81019de",
+      "exif_orientation": 6,
+      "filename": "Gray_0617_010.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Fruit",
+          "xyxy": [
+            1207.0,
+            523.0,
+            3178.0,
+            2426.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2982.0,
+            910.0,
+            4032.0,
+            2129.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0617_011",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0617_011.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0617_011.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/1bea2eae-3bda-4d47-a30c-b81a62395820/file_downloaded",
+      "image_sha256": "4367713077973f565c92ba087109693a4409bcb5a020345ec16b9e46383bcd62",
+      "image_bytes": 5882416,
+      "annotation_sha256": "dc35eb46c6b5cb628fa9f1a1fe429e7f6ddd15587f0f0a05662d257de637e3fe",
+      "exif_orientation": 6,
+      "filename": "Gray_0617_011.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Fruit",
+          "xyxy": [
+            940.0,
+            619.0,
+            2653.0,
+            2403.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2365.0,
+            1.0,
+            3317.0,
+            1255.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0617_012",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "prior_audit_quarantine",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0617_012.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0617_012.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/e2c79cfa-18c8-4756-8070-c299dc1ff19c/file_downloaded",
+      "image_sha256": "3fc4ec7a00e77c51a9fe27390e84044dbfbeaed9162379be47c4b86914b3266a",
+      "image_bytes": 6292632,
+      "annotation_sha256": "d86ba1f1940e50ec7d9a105c690e1f1138be16bb1bb41052b50eb6cf9691df3b",
+      "exif_orientation": 6,
+      "filename": "Gray_0617_012.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Fruit",
+          "xyxy": [
+            1285.0,
+            613.0,
+            2943.0,
+            2410.0
+          ],
+          "difficult": "0"
+        },
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2769.0,
+            3.0,
+            3620.0,
+            1345.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    },
+    {
+      "id": "sichuan-Gray_0617_013",
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "eligibility": "visual_review_required",
+      "final_holdout_eligible": false,
+      "source_image": "images/GrayMold/Gray_0617_013.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0617_013.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/e436e55c-4831-4a25-b89a-bfe9266d8bea/file_downloaded",
+      "image_sha256": "ef57de49ad2eb26e36885d80895bbe4ff0c408824191f6ae58ae1a059163f6b7",
+      "image_bytes": 5636523,
+      "annotation_sha256": "0b7f9614cf9654ccfb325ebf4a4bf64ed9c277c88c5e776711a94081ca94f202",
+      "exif_orientation": 6,
+      "filename": "Gray_0617_013.jpg",
+      "width": 4032,
+      "height": 3024,
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            843.0,
+            390.0,
+            3662.0,
+            2832.0
+          ],
+          "difficult": "0"
+        }
+      ]
+    }
+  ]
+}

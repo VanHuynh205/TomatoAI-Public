@@ -5,3 +5,16 @@ frontend/index.html text eol=lf
 infra/knowledge/** -text whitespace=cr-at-eol
 frontend/dist/** -text
 desktop/notices/microsoft-webview2-sdk/LICENSE.txt -text
+
+# Historical training seals hash configuration bytes.
+ai/configs/** -text whitespace=cr-at-eol
+ai/configs/E01.json whitespace=cr-at-eol,-blank-at-eof
+desktop/notices/frontend/components.json -text whitespace=cr-at-eol
+infra/derived/yolo26s-sichuan-leaf-subset-v1/*.json -text whitespace=cr-at-eol
+
+# Preserve upstream license text verbatim.
+desktop/notices/libffi-3.4.8/** -text
+desktop/notices/openssl-3.5.8/** -text
+desktop/notices/proxy-tools/** -text
+desktop/notices/torchvision-codecs/** -text
+desktop/notices/torchvision-codecs/libwebp-1.6.0/COPYING whitespace=-blank-at-eof

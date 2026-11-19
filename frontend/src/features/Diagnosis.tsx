@@ -1,4 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState, type MouseEvent } from 'react';
+import { gsap } from 'gsap';
+import Lenis from 'lenis';
 import { ApiError, type CareResponse, type PredictResponse, type createApiClient } from '../api/client';
 import { CareCard } from './CareCard';
 
@@ -28,6 +30,9 @@ export function Diagnosis({ api }: { api: ReturnType<typeof createApiClient> }) 
   const [error, setError] = useState('');
   const sequence = useRef(0);
   const request = useRef<AbortController | null>(null);
+  const previewImage = useRef<HTMLImageElement>(null);
+  const resultRegion = useRef<HTMLElement>(null);
+  const cancelScroll = useRef<(() => void) | null>(null);
   const busy = phase !== 'idle';
 
   useEffect(() => {
@@ -37,6 +42,57 @@ export function Diagnosis({ api }: { api: ReturnType<typeof createApiClient> }) 
     return () => URL.revokeObjectURL(url);
   }, [file]);
   useEffect(() => () => { sequence.current++; request.current?.abort(); }, []);
+  useEffect(() => () => cancelScroll.current?.(), [card]);
+
+  useLayoutEffect(() => {
+    const image = previewImage.current;
+    if (!preview || !image || !window.matchMedia) return;
+    const motion = gsap.matchMedia();
+    motion.add('(prefers-reduced-motion: no-preference)', () => {
+      gsap.from(image, { opacity: 0.55, scale: 0.98, duration: 0.24, ease: 'power3.out', clearProps: 'opacity,transform' });
+    });
+    return () => motion.revert();
+  }, [preview]);
+
+  useLayoutEffect(() => {
+    const region = resultRegion.current;
+    if (!result || !region || !window.matchMedia) return;
+    const motion = gsap.matchMedia(region);
+    motion.add('(prefers-reduced-motion: no-preference)', () => {
+      gsap.from('[data-result-reveal]', {
+        opacity: 0.6, y: 6, duration: 0.28, stagger: 0.04, ease: 'power3.out', clearProps: 'opacity,transform',
+      });
+    });
+    return () => motion.revert();
+  }, [result]);
+
+  function followReference(event: MouseEvent<HTMLDivElement>) {
+    if (event.defaultPrevented || event.button !== 0 || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    const anchor = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>('a[href^="#"]') : null;
+    const target = anchor && document.getElementById(anchor.hash.slice(1));
+    if (!anchor || !target || !event.currentTarget.contains(target)) return;
+
+    event.preventDefault();
+    cancelScroll.current?.();
+    if (window.location.hash !== anchor.hash) window.history.pushState(null, '', anchor.hash);
+    target.focus({ preventScroll: true });
+    if (!window.matchMedia?.('(prefers-reduced-motion: no-preference)').matches) {
+      target.scrollIntoView({ behavior: 'instant', block: 'start' });
+      return;
+    }
+
+    const scroll = new Lenis({ smoothWheel: false, autoResize: false });
+    const frame = (seconds: number) => scroll.raf(seconds * 1000);
+    const finish = () => {
+      gsap.ticker.remove(frame);
+      scroll.destroy();
+      cancelScroll.current = null;
+    };
+    cancelScroll.current = finish;
+    scroll.on('virtual-scroll', finish);
+    gsap.ticker.add(frame);
+    scroll.scrollTo(target, { duration: 0.32, easing: t => 1 - (1 - t) ** 3, onComplete: finish });
+  }
 
   function select(next: File | undefined) {
     sequence.current++;
@@ -80,25 +136,39 @@ export function Diagnosis({ api }: { api: ReturnType<typeof createApiClient> }) 
       <section className="image-panel" aria-labelledby="image-heading">
         <h2 id="image-heading">Ảnh cần nhận diện</h2>
         <p className="secondary">Chọn ảnh rõ nét của một lá, thấy đủ phiến lá.</p>
-        <label className="file-label" htmlFor="leaf-image">Chọn ảnh lá
+        {preview && <div className="preview"><img ref={previewImage} src={preview} alt="Ảnh lá đã chọn" /></div>}
+        <label className={`file-label${preview ? ' has-preview' : ''}`} htmlFor="leaf-image">
+          <span className="upload-icon" aria-hidden="true" />
+          <span>Chọn ảnh lá</span>
           <input id="leaf-image" type="file" accept="image/jpeg,image/png" aria-describedby="image-limits" onChange={(event) => select(event.target.files?.[0])} />
         </label>
         <p id="image-limits" className="secondary">JPEG hoặc PNG · Tối đa 10 MB, 20 triệu điểm ảnh</p>
-        <div className="preview">
-          {preview ? <img src={preview} alt="Ảnh lá đã chọn" /> : <p>Ảnh bạn chọn sẽ hiện ở đây.</p>}
-        </div>
-        {file && <p className="filename">{file.name}<span>{new Intl.NumberFormat('vi-VN').format(file.size)} byte</span></p>}
-        <button className="primary" disabled={!file || busy} onClick={() => void recognize()}>Nhận diện</button>
-        <p role="status" aria-live="polite" className="status">{status}</p>
+        {file && <p className="filename"><strong>{file.name}</strong><span>{new Intl.NumberFormat('vi-VN').format(file.size)} byte</span></p>}
+        <button className="primary" disabled={!file || busy} onClick={() => void recognize()}>Nhận diện<span className="action-arrow" aria-hidden="true" /></button>
+        <p role="status" aria-live="polite" className="status" data-phase={phase}>
+          <span className="status-mark" data-ready={Boolean(file)} aria-hidden="true" />{status}
+        </p>
         <p className="privacy">Ảnh được xử lý trên máy, không lưu sau phiên.</p>
       </section>
 
-      <div className="reading-panel">
+      <div className="reading-panel" onClick={followReference}>
         {error && <p role="alert" className="error">{error}</p>}
-        <section className={`result ${result?.status === 'uncertain' ? 'uncertain' : ''}`} aria-label="Kết quả nhận diện" aria-busy={busy}>
-          {!result && <><h2>{busy ? 'Đang xem ảnh của bạn' : 'Nhận diện để bắt đầu đối chiếu'}</h2><p>Chọn ảnh rồi bấm Nhận diện. Kết quả và thông tin chăm sóc có nguồn sẽ xuất hiện tại đây.</p></>}
-          {result?.status === 'uncertain' && <><h2>Chưa đủ cơ sở xác định</h2><p>Hãy thử ảnh rõ hơn, đủ ánh sáng và chỉ có một lá. Kết quả này chưa chọn được thẻ chăm sóc.</p></>}
-          {result?.status === 'ok' && <><h2>{card?.name_vi ?? (phase === 'care' ? 'Đang tải tên lớp nhận diện…' : 'Đã nhận diện ảnh')}</h2>{score !== undefined && <p className="score"><span>Điểm mô hình</span><strong>{new Intl.NumberFormat('vi-VN', { style: 'percent', maximumFractionDigits: 1 }).format(score)}</strong></p>}<p className="secondary">Điểm dùng để xếp hạng nhãn, không phải xác nhận bệnh học.</p></>}
+        <section ref={resultRegion} className={`result ${result?.status === 'uncertain' ? 'uncertain' : ''}`} aria-labelledby="result-heading" aria-busy={busy}>
+          <h2 id="result-heading">Kết quả nhận diện</h2>
+          {!result && !error && <div className="result-placeholder">
+            <div className="result-page" aria-hidden="true"><span /><span /><span /></div>
+            <h3>{busy ? 'Đang xem ảnh của bạn' : 'Nhận diện để bắt đầu đối chiếu'}</h3>
+            {!busy && <p>{file ? 'Bấm Nhận diện để đối chiếu ảnh đã chọn.' : 'Chọn ảnh rồi bấm Nhận diện. Kết quả và thông tin chăm sóc có nguồn sẽ xuất hiện tại đây.'}</p>}
+          </div>}
+          {result?.status === 'uncertain' && <>
+            <h3 className="result-title" data-result-reveal>Chưa đủ cơ sở xác định</h3>
+            <p data-result-reveal>Hãy thử ảnh rõ hơn, đủ ánh sáng và chỉ có một lá. Kết quả này chưa chọn được thẻ chăm sóc.</p>
+          </>}
+          {result?.status === 'ok' && <>
+            <h3 className="result-title" data-result-reveal>{card?.name_vi ?? (phase === 'care' ? 'Đang tải tên lớp nhận diện…' : 'Đã nhận diện ảnh')}</h3>
+            {score !== undefined && <p className="score" data-result-reveal><span>Điểm mô hình</span><strong>{new Intl.NumberFormat('vi-VN', { style: 'percent', maximumFractionDigits: 1 }).format(score)}</strong></p>}
+            <p className="secondary">Điểm dùng để xếp hạng nhãn, không phải xác nhận bệnh học.</p>
+          </>}
           {result && <>
             {result.warnings.map((warning, index) => <p key={index} className="warning">{warning}</p>)}
             <details className="prediction-details"><summary>Xem điểm các nhãn</summary><dl>{result.top_k.map((item) => <div key={item.class_id}><dt>{item.class_id}</dt><dd>{new Intl.NumberFormat('vi-VN', { maximumFractionDigits: 4 }).format(item.score)}</dd></div>)}</dl><p className="secondary">Mô hình: {result.model_version}<br />Tri thức: {result.knowledge_version}</p></details>

@@ -272,7 +272,7 @@ def main(*, model_dir: Path | None = None) -> int:
                 width=1080,
                 height=760,
                 min_size=(640, 480),
-                background_color="#f3f6f5",
+                background_color="#f5f1e6",
             )
             if window is None:
                 raise RuntimeError("Không tạo được cửa sổ WebView2.")

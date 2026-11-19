@@ -66,7 +66,8 @@ def test_bootstrap_missing_bundle_stops_before_installing(tmp_path: Path) -> Non
     )
     assert result.returncode == 1
     output = result.stdout + result.stderr
-    assert "Missing authorized DINOv2 v1 bundle files" in output
-    assert "classifier.safetensors" in output
+    assert "Missing trained G2 bundle files" in output
+    assert "cnn-gru-release.json" in output
+    assert "leaf-classifier.json" in output
     assert "model.safetensors" in output
     assert not (tmp_path / ".venv-runtime").exists()

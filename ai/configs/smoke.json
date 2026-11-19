@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "run_id": "smoke",
+  "architecture": "efficientnet_b0",
+  "stage": "frozen",
+  "parent_best": null,
+  "dataset_dir": "infra/derived/pv8-v1",
+  "seal_sha256": "0e7f1600381a78a48a09aeda979e8200cbfa0762bd7373d98fc3f0d8575fdce8",
+  "split_hash": "0ee7a58bc4fabd80a95e7741fd318ca79f23680d052c123652ad7679e3ae766d",
+  "pretrained_path": "ai/efficientnet_b0_rwightman-7f5810bc.pth",
+  "pretrained_sha256": "7f5810bc96def8f7552d5b7e68d53c4786f81167d28291b21c0d90e1fca14934",
+  "train_split": "train",
+  "val_split": "val",
+  "class_ids": [
+    "bacterial_spot",
+    "early_blight",
+    "late_blight",
+    "leaf_mold",
+    "septoria_leaf_spot",
+    "spider_mites",
+    "yellow_leaf_curl",
+    "healthy"
+  ],
+  "preprocessing": {
+    "profile_version": "whole-frame-v1",
+    "spec": {
+      "schema_version": 1,
+      "color_mode": "RGB",
+      "geometry": "fit_pad",
+      "resize_size": 224,
+      "crop_size": 224,
+      "interpolation": "bicubic",
+      "antialias": true,
+      "mean": [0.485, 0.456, 0.406],
+      "std": [0.229, 0.224, 0.225],
+      "horizontal_flip_p": 0.5,
+      "rotation_degrees": 0.0,
+      "random_crop_scale": [1.0, 1.0],
+      "random_crop_ratio": [1.0, 1.0],
+      "fill": [124, 116, 104]
+    }
+  },
+  "seed": 42,
+  "batch": 8,
+  "accumulation": 2,
+  "precision": "amp_fp16",
+  "optimizer": {"name": "AdamW", "lr": 0.001, "weight_decay": 0.0001},
+  "epochs": 5,
+  "patience": 5
+}

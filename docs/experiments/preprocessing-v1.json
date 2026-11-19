@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "profile_version": "whole-frame-v1",
+  "profiles": {
+    "efficientnet_b0": {
+      "schema_version": 1,
+      "color_mode": "RGB",
+      "geometry": "fit_pad",
+      "resize_size": 224,
+      "crop_size": 224,
+      "interpolation": "bicubic",
+      "antialias": true,
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "horizontal_flip_p": 0.5,
+      "rotation_degrees": 0.0,
+      "random_crop_scale": [
+        1.0,
+        1.0
+      ],
+      "random_crop_ratio": [
+        1.0,
+        1.0
+      ],
+      "fill": [
+        124,
+        116,
+        104
+      ]
+    },
+    "resnet50": {
+      "schema_version": 1,
+      "color_mode": "RGB",
+      "geometry": "fit_pad",
+      "resize_size": 224,
+      "crop_size": 224,
+      "interpolation": "bilinear",
+      "antialias": true,
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "horizontal_flip_p": 0.5,
+      "rotation_degrees": 0.0,
+      "random_crop_scale": [
+        1.0,
+        1.0
+      ],
+      "random_crop_ratio": [
+        1.0,
+        1.0
+      ],
+      "fill": [
+        124,
+        116,
+        104
+      ]
+    }
+  },
+  "reference_profiles": {
+    "efficientnet_b0": {
+      "schema_version": 1,
+      "color_mode": "RGB",
+      "geometry": "center_crop",
+      "resize_size": 256,
+      "crop_size": 224,
+      "interpolation": "bicubic",
+      "antialias": true,
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "horizontal_flip_p": 0.5,
+      "rotation_degrees": 10.0,
+      "random_crop_scale": [
+        0.9,
+        1.0
+      ],
+      "random_crop_ratio": [
+        1.0,
+        1.0
+      ],
+      "fill": [
+        124,
+        116,
+        104
+      ]
+    },
+    "resnet50": {
+      "schema_version": 1,
+      "color_mode": "RGB",
+      "geometry": "center_crop",
+      "resize_size": 256,
+      "crop_size": 224,
+      "interpolation": "bilinear",
+      "antialias": true,
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "horizontal_flip_p": 0.5,
+      "rotation_degrees": 10.0,
+      "random_crop_scale": [
+        0.9,
+        1.0
+      ],
+      "random_crop_ratio": [
+        1.0,
+        1.0
+      ],
+      "fill": [
+        124,
+        116,
+        104
+      ]
+    }
+  },
+  "decision": "Eight validation images reviewed before model training. The reference center crop clips visible leaf blade in seven. Project profile fits and pads the whole frame, then uses horizontal flip only for initial training. Rotation and random crop from the plan are implemented in the explicit reference profile and require separate validation before adoption.",
+  "validation_evidence": "docs/progress/2026-11-02-m3/transform-recon/transform-recon.json",
+  "limitations": [
+    "Eight images do not establish whole-corpus quality or best classification accuracy.",
+    "Preserves the source frame, including any clipping already present in source photos.",
+    "Training and inference must record this explicit profile; it differs from the published weights geometry."
+  ]
+}

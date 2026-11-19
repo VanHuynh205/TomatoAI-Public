@@ -195,7 +195,7 @@ def test_three_open_close_cycles_are_clean(host_case: SimpleNamespace) -> None:
     assert len(host_case.windows) == 3
 
 
-def test_source_host_selects_trained_yolo_by_default(
+def test_source_host_selects_trained_g2_by_default(
     host_case: SimpleNamespace, monkeypatch: pytest.MonkeyPatch
 ) -> None:
     launcher = importlib.import_module("desktop.launcher")
@@ -204,7 +204,7 @@ def test_source_host_selects_trained_yolo_by_default(
 
     assert launcher.main() == 0
     assert compose.call_args.args[1] == (
-        launcher.resource_root() / "ai/artifacts/dinov2-v1-280"
+        launcher.resource_root() / "ai/artifacts/cnn-bigru-20261118-g2-convnext_tiny_axial_bigru"
     )
 
 

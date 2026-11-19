@@ -1,5 +1,6 @@
 """Offline CPU prediction from a local DINOv3 ViT-S/16 leaf export."""
 
+import math
 import stat
 from pathlib import Path
 
@@ -7,6 +8,7 @@ import torch
 from PIL import Image, ImageOps
 
 from ai.artifacts import _json, _local, _name, _read
+from ai.calibration import scaled_probabilities
 from ai.contracts import Prediction, ScoredClass
 from ai.dinov3_field import CLASSES, LeafClassifier, leaf_transform
 
@@ -105,22 +107,49 @@ class DinoV3Predictor:
             )
 
 
-def prediction_from_logits(logits: torch.Tensor, model_version: str) -> Prediction:
+def prediction_from_logits(
+    logits: torch.Tensor,
+    model_version: str,
+    *,
+    temperature: float = 1.0,
+    threshold: float = 0.5,
+) -> Prediction:
     if (
         not isinstance(logits, torch.Tensor)
         or logits.shape != (1, len(CLASSES))
+        or not logits.is_floating_point()
         or not bool(torch.isfinite(logits).all())
     ):
         raise ValueError("invalid leaf classifier logits")
-    scores = logits.float().softmax(dim=1)[0].tolist()
-    order = sorted(range(len(CLASSES)), key=lambda index: (-scores[index], index))
+    if (
+        isinstance(temperature, bool)
+        or not isinstance(temperature, (int, float))
+        or not math.isfinite(temperature)
+        or temperature <= 0
+    ):
+        raise ValueError("temperature must be positive and finite")
+    if (
+        isinstance(threshold, bool)
+        or not isinstance(threshold, (int, float))
+        or not math.isfinite(threshold)
+        or not 0 <= threshold <= 1
+    ):
+        raise ValueError("threshold must be finite and in [0, 1]")
+    raw_logits = logits.detach().cpu().double()[0].tolist()
+    scores = scaled_probabilities(
+        logits.detach().cpu().double().numpy(), float(temperature)
+    )[0].tolist()
+    order = sorted(
+        range(len(CLASSES)),
+        key=lambda index: (-scores[index], -raw_logits[index], index),
+    )
     non_leaf = len(CLASSES) - 1
     top = [
         ScoredClass(CLASSES[index], scores[index])
         for index in order
         if index != non_leaf
     ][:3]
-    accepted = order[0] != non_leaf and top[0].score >= 0.5
+    accepted = order[0] != non_leaf and top[0].score >= float(threshold)
     return Prediction(
         top_k=top,
         status="ok" if accepted else "uncertain",

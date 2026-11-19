@@ -11,10 +11,14 @@ from torchvision import models  # type: ignore[import-untyped]
 def build_model(
     architecture: str, class_count: int, pretrained_path: Path | None = None
 ) -> nn.Module:
-    if architecture not in ("efficientnet_b0", "resnet50"):
+    if architecture not in ("efficientnet_b0", "resnet50", "yolo26s_cls"):
         raise ValueError("unsupported architecture")
     if type(class_count) is not int or class_count <= 0:
         raise ValueError("class_count must be a positive integer")
+    if architecture == "yolo26s_cls":
+        from ai.yolo import build_yolo26_classifier
+
+        return build_yolo26_classifier(class_count, pretrained_path)
     model: nn.Module = (
         models.efficientnet_b0(weights=None)
         if architecture == "efficientnet_b0"

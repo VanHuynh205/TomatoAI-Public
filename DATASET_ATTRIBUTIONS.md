@@ -1,3 +1,5 @@
+> Phần ghi công dưới đây thuộc DINOv2 v1 280, bản desktop trước G2.
+> Với model hiện tại, xem [kế hoạch CNN/BiGRU](docs/superpowers/plans/2026-11-18-cnn-bigru-colab-training.md) và [thông báo thành phần](desktop/notices/NOTICE.md).
 # Ghi công dữ liệu của DINOv2 v1
 
 Đối chiếu ngày 13/11/2026. Đây là provenance của checkpoint v1, không phải giấy phép phát hành checkpoint. Repo không chứa ảnh dataset, archive dữ liệu hoặc weights tinh chỉnh.

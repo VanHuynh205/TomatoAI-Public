@@ -32,8 +32,17 @@ export function App() {
   return (
     <div className="app-shell">
       <a className="skip-link" href="#main">Đến nội dung nhận diện</a>
-      <header className="app-header"><div><h1>Nhận diện lá cà chua</h1><p>Đối chiếu ảnh lá và đọc hướng dẫn có nguồn.</p></div><span className="local-label">Xử lý trên máy</span></header>
-      <main id="main">
+      <header className="app-header">
+        <div className="masthead">
+          <span className="masthead-name">Sổ tay cà chua</span>
+          <span className="local-label">Xử lý trên máy</span>
+        </div>
+        <div className="intro">
+          <h1>Nhận diện lá <span>cà chua</span></h1>
+          <p>Đối chiếu ảnh lá và đọc hướng dẫn chăm sóc có nguồn.</p>
+        </div>
+      </header>
+      <main id="main" tabIndex={-1}>
         {error ? <p role="alert" className="error">{error}</p> : session ? <Diagnosis api={session.api} /> : <p role="status">Đang kết nối ứng dụng desktop…</p>}
       </main>
       <footer>{session ? <><span>Mô hình: {session.health.model_version}</span><span>Tri thức: {session.health.knowledge_version}</span></> : <span>Ứng dụng desktop · Tiếng Việt</span>}</footer>

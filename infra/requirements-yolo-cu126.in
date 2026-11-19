@@ -1,0 +1,8 @@
+# Isolated training environment; do not install into the production app environment.
+ultralytics==8.4.204
+torch==2.14.1+cu126
+torchvision==0.29.1+cu126
+# 13.0.0 fixes the decoder advisories found in the initial 12.3.0 resolution.
+Pillow==13.0.0
+# YOLOE text prompts: official fork pinned by commit, archive hash locked below.
+clip @ https://github.com/ultralytics/CLIP/archive/7ffa84b3bfa40c42ecc1c77147a855e69cb2dd40.zip

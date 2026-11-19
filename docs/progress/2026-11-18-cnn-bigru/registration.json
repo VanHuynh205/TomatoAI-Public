@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "run_id": "cnn-bigru-20261118",
+  "track": "Track A (v2-3way-9c)",
+  "seed": "tomato-cnn-bigru-v1",
+  "ratios": [
+    0.74,
+    0.13,
+    0.13
+  ],
+  "classes": [
+    "bacterial_spot",
+    "early_blight",
+    "late_blight",
+    "leaf_mold",
+    "septoria_leaf_spot",
+    "spider_mites",
+    "yellow_leaf_curl",
+    "healthy",
+    "not_tomato_leaf"
+  ],
+  "input_size": 288,
+  "samples_per_epoch": 4800,
+  "batch_size": 32,
+  "steps_per_epoch": 150,
+  "epochs": 22,
+  "total_steps": 3300,
+  "sampler": "cnn_bigru_weights_strict",
+  "sampler_caps": {
+    "field": 1.4,
+    "other": 1.5,
+    "controlled": 0.85,
+    "negative": 1.05
+  },
+  "temperature_fit_scope": "in_domain_9logits",
+  "target_coverage": 0.85,
+  "guardrail_thresholds": {
+    "min_healthy_nonlab_recall": 0.85,
+    "min_bs_nonlab_precision": 0.7,
+    "min_negative_recall": 0.9
+  },
+  "counts": {
+    "train": 6762,
+    "val_select": 1422,
+    "val_calib": 1527
+  },
+  "total_rows": 9711,
+  "leakage_pairs": 0,
+  "split_block_overlap": 0,
+  "holdout_counts": {
+    "legacy": 2647,
+    "external": 460,
+    "slif": 21
+  },
+  "experiments": {
+    "G0": {
+      "name": "resnet50_gap_baseline",
+      "architecture": "resnet50",
+      "use_gru_head": false,
+      "pretrained_source": "torchvision:ResNet50_Weights.IMAGENET1K_V2",
+      "license": "BSD-3-Clause",
+      "backbone_lrs": {
+        "stage4": 8e-05,
+        "stage3": 2.5e-05,
+        "stage2": 1e-05
+      },
+      "freeze_bn_eval": true,
+      "mixstyle": false,
+      "input_size": 288,
+      "epochs": 22,
+      "samples_per_epoch": 4800,
+      "batch_size": 32,
+      "steps_per_epoch": 150,
+      "total_steps": 3300,
+      "cooldown_epochs": 3,
+      "head_peak_lr": 0.0008,
+      "head_main_lr": 0.0003,
+      "label_smoothing": 0.02,
+      "ema_max_decay": 0.992,
+      "ema_start_epoch": 4
+    },
+    "G1": {
+      "name": "resnet50_axial_bigru",
+      "architecture": "resnet50",
+      "use_gru_head": true,
+      "pretrained_source": "torchvision:ResNet50_Weights.IMAGENET1K_V2",
+      "license": "BSD-3-Clause",
+      "proj_dim": 512,
+      "hidden_dim": 256,
+      "backbone_lrs": {
+        "stage4": 8e-05,
+        "stage3": 2.5e-05,
+        "stage2": 1e-05
+      },
+      "freeze_bn_eval": true,
+      "mixstyle": false,
+      "input_size": 288,
+      "epochs": 22,
+      "samples_per_epoch": 4800,
+      "batch_size": 32,
+      "steps_per_epoch": 150,
+      "total_steps": 3300,
+      "cooldown_epochs": 3,
+      "head_peak_lr": 0.0008,
+      "head_main_lr": 0.0003,
+      "label_smoothing": 0.02,
+      "ema_max_decay": 0.992,
+      "ema_start_epoch": 4
+    },
+    "G2": {
+      "name": "convnext_tiny_axial_bigru",
+      "architecture": "convnext_tiny",
+      "use_gru_head": true,
+      "pretrained_source": "convnext_tiny_22k_1k_384",
+      "pretrained_url": "https://dl.fbaipublicfiles.com/convnext/convnext_tiny_22k_1k_384.pth",
+      "license": "MIT",
+      "proj_dim": 512,
+      "hidden_dim": 256,
+      "backbone_lrs": {
+        "stage4": 5e-05,
+        "stage3": 2e-05,
+        "stage2": 8e-06
+      },
+      "freeze_bn_eval": false,
+      "mixstyle": true,
+      "mixstyle_p": 0.35,
+      "mixstyle_alpha": 0.1,
+      "stochastic_depth": 0.15,
+      "input_size": 288,
+      "epochs": 22,
+      "samples_per_epoch": 4800,
+      "batch_size": 32,
+      "steps_per_epoch": 150,
+      "total_steps": 3300,
+      "cooldown_epochs": 3,
+      "head_peak_lr": 0.0008,
+      "head_main_lr": 0.0003,
+      "label_smoothing": 0.02,
+      "ema_max_decay": 0.992,
+      "ema_start_epoch": 4
+    },
+    "G3": {
+      "name": "efficientnet_v2_s_axial_bigru",
+      "architecture": "efficientnet_v2_s",
+      "use_gru_head": true,
+      "pretrained_source": "torchvision:EfficientNet_V2_S_Weights.IMAGENET1K_V1",
+      "license": "BSD-3-Clause",
+      "proj_dim": 512,
+      "hidden_dim": 256,
+      "backbone_lrs": {
+        "stage4": 8e-05,
+        "stage3": 2.5e-05,
+        "stage2": 1e-05
+      },
+      "freeze_bn_eval": true,
+      "mixstyle": false,
+      "input_size": 288,
+      "epochs": 22,
+      "samples_per_epoch": 4800,
+      "batch_size": 32,
+      "steps_per_epoch": 150,
+      "total_steps": 3300,
+      "cooldown_epochs": 3,
+      "head_peak_lr": 0.0008,
+      "head_main_lr": 0.0003,
+      "label_smoothing": 0.02,
+      "ema_max_decay": 0.992,
+      "ema_start_epoch": 4
+    }
+  },
+  "inputs_sha256": {
+    "source_train_val_csv": "24e3e7c2c40b03ac1bcc510073975d94e1c234733b43f092ebeec1c2e3d0b944",
+    "three_way_manifest_csv": "e0fe14587c36076d2cb7cc242e7aa989a0bc6fa84d3788db8c4ff1373267ee19",
+    "dinov3_colab_input_zip": "df6292e93d7d14a07b8e8946c0c4fe36959200d35c5b2d77685b075f6d2b64f9",
+    "dinov3_additions_zip": "44a55bd86d7406351b19d0b5fd71ff9993356df48e5e829c6a09ee31b966054f",
+    "dinov3_colab_holdout_zip": "48f2da68ac520097c21ab4064fc9700af4b19ab974c331138fc6c8ccf17254dd",
+    "dinov3_slif_pilot_zip": "ac9777531bbd78e725aa777fcb02f32d465753a9dfb110cedb7bc3a9c0625dda",
+    "legacy_test_csv": "721ab09d690a3ed12aaf06c1c8c3d55e06cef6e480211e003d750b1968bbbe47",
+    "external_test_csv": "09e46e7668f421a613ddc83b99c5d813da290b11c69ac406d59dd1ad786bb8a0",
+    "slif_test_csv": "4b6c0ce43f0ab93b1c90385ca3004c50786b810e144977ae01d12bbe96049c27",
+    "manifest_parts_json": "05959b02d414ec8c4ba2bd8cd12dcde5bd833dd86eb8d2d2736224b2c4c94e3b"
+  }
+}

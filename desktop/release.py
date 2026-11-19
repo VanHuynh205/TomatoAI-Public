@@ -19,8 +19,14 @@ from urllib.parse import unquote, urlsplit
 from pydantic import BaseModel, ConfigDict, Field, StringConstraints
 
 from ai.artifacts import load_bundle
+from ai.cnn_gru_inference import (
+    CNN_GRU_FILES,
+    CNN_GRU_MANIFEST,
+    validate_cnn_gru_export,
+)
 from ai.dinov2_inference import DINO_V2_FILES, DINO_V2_MANIFEST, validate_dinov2_export
 from ai.dinov3_field import CLASSES
+from ai.yolo import ULTRALYTICS_VERSION
 from backend.care import CareCatalog, _Bundle, _json, _read
 from backend.schemas import HealthResponse
 from desktop.build_care import _Allowlist, export_care
@@ -58,6 +64,11 @@ _REQUIRED_FILES = {
 }
 _LEGACY_MODEL_FILES = {"_internal/model/metadata.json", "_internal/model/model.pth"}
 _DINO_V2_MODEL_FILES = {f"_internal/model/{name}" for name in DINO_V2_FILES}
+_CNN_GRU_MODEL_FILES = {f"_internal/model/{name}" for name in CNN_GRU_FILES}
+_YOLO_FILES = {
+    "_internal/ultralytics/cfg/default.yaml",
+    "_internal/ultralytics/cfg/models/26/yolo26-cls.yaml",
+}
 _Hash = Annotated[str, StringConstraints(strict=True, pattern=r"^[0-9a-f]{64}$")]
 _Version = Annotated[
     str, StringConstraints(strict=True, min_length=1, max_length=128, pattern=r"^\S+$")
@@ -185,7 +196,8 @@ def _files(root: Path) -> dict[str, Path]:
                 raise ValueError(f"CUDA runtime forbidden in CPU release: {name}")
             if (
                 path.suffix.lower() in {".pth", ".pt", ".ckpt", ".safetensors"}
-                and name not in _LEGACY_MODEL_FILES | _DINO_V2_MODEL_FILES
+                and name
+                not in _LEGACY_MODEL_FILES | _DINO_V2_MODEL_FILES | _CNN_GRU_MODEL_FILES
             ):
                 raise ValueError(f"extra weights forbidden in release: {name}")
             total_bytes += info.st_size
@@ -271,11 +283,24 @@ def _frontend(internal: Path, files: dict[str, Path]) -> None:
 
 def _release_metadata(root: Path, files: dict[str, Path]) -> dict[str, Any]:
     dinov2 = f"_internal/model/{DINO_V2_MANIFEST}" in files
-    model_files = _DINO_V2_MODEL_FILES if dinov2 else _LEGACY_MODEL_FILES
+    cnn_gru = f"_internal/model/{CNN_GRU_MANIFEST}" in files
+    if dinov2 and cnn_gru:
+        raise ValueError("multiple model formats in release")
+    model_files = (
+        _DINO_V2_MODEL_FILES
+        if dinov2
+        else _CNN_GRU_MODEL_FILES
+        if cnn_gru
+        else _LEGACY_MODEL_FILES
+    )
     missing = (_REQUIRED_FILES | model_files) - files.keys()
     if missing:
         raise ValueError("missing release file: " + ", ".join(sorted(missing)))
-    if files.keys() & (_LEGACY_MODEL_FILES | _DINO_V2_MODEL_FILES) != model_files:
+    if (
+        files.keys()
+        & (_LEGACY_MODEL_FILES | _DINO_V2_MODEL_FILES | _CNN_GRU_MODEL_FILES)
+        != model_files
+    ):
         raise ValueError("multiple model formats in release")
     if not any(name.startswith("_internal/notices/") for name in files):
         raise ValueError("missing release notices")
@@ -289,8 +314,21 @@ def _release_metadata(root: Path, files: dict[str, Path]) -> dict[str, Any]:
             raise ValueError("bundled DINOv2 runtime is incomplete")
         model_version = validate_dinov2_export(internal / "model")
         class_ids = CLASSES[:-1]
+    elif cnn_gru:
+        if not {"safetensors", "numpy"} <= dependencies.keys():
+            raise ValueError("bundled CNN-GRU runtime is incomplete")
+        meta = validate_cnn_gru_export(internal / "model", require_trained=True)
+        if not meta["guardrail_passed"]:
+            raise ValueError("CNN-GRU release requires a passed selection guardrail")
+        model_version = meta["model_version"]
+        class_ids = CLASSES[:-1]
     else:
         model = load_bundle(internal / "model", require_trained=True)
+        if model.metadata["architecture"] == "yolo26s_cls" and (
+            not _YOLO_FILES <= files.keys()
+            or dependencies.get("ultralytics") != ULTRALYTICS_VERSION
+        ):
+            raise ValueError("bundled YOLO runtime is incomplete or incompatible")
         model_version = model.metadata["model_version"]
         class_ids = model.metadata["class_ids"]
     bundle = _Bundle.model_validate(_json(_read(internal / "knowledge/care-v1.json")))

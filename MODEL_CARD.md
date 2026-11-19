@@ -1,38 +1,16 @@
-# DINOv2 v1, suy luận 280px
+# Model card G2 ConvNeXt-Tiny + BiGRU
 
-## Danh tính và thay đổi
+G2 là model desktop mặc định. Kiến trúc gồm backbone ConvNeXt-Tiny và đầu phân loại BiGRU theo hai trục. Lượt train chọn checkpoint raw ở epoch 15. Suy luận CPU dùng ảnh 288 px, lật ngang ở bước test-time augmentation và hiệu chuẩn temperature 1,2840329428784063. Ngưỡng phục vụ là 0,7854081940644378. [Cấu hình inference](ai/cnn_gru_inference.py) · [Kết quả benchmark](docs/experiments/cnn-bigru-benchmark-2026-11-18.md)
 
-- Chủ dự án: [VanHuynh205](https://github.com/VanHuynh205).
-- Backbone: [facebook/dinov2-base](https://huggingface.co/facebook/dinov2-base/tree/f9e44c814b77203eaa57a6bdbbd535f21ede1415), ViT-B/14 của Meta AI Research (FAIR), revision `f9e44c814b77203eaa57a6bdbbd535f21ede1415`, Apache License 2.0.
-- Bài báo: Maxime Oquab và cộng sự, *DINOv2: Learning Robust Visual Features without Supervision*, 2023, [arXiv:2304.07193](https://arxiv.org/abs/2304.07193). Xem [ghi công đầy đủ](THIRD_PARTY_NOTICES.md).
-- Dự án thêm đầu phân loại chín nhãn, tinh chỉnh bốn khối cuối và lớp chuẩn hóa cuối của backbone. Checkpoint epoch 6 được train ở 224px. Runtime v1 dùng **cùng checkpoint** ở 280px; không thay model bằng DINOv3, model v2 hoặc backbone chưa tinh chỉnh.
-- Tiền xử lý: EXIF transpose, RGB, fit/pad bicubic, mean `[0.485, 0.456, 0.406]`, std `[0.229, 0.224, 0.225]`; trung bình logits của ảnh gốc và ảnh lật ngang. Runtime CPU, `eval()` và `torch.inference_mode()`.
-- Các nhãn: bacterial_spot, early_blight, late_blight, leaf_mold, septoria_leaf_spot, spider_mites, yellow_leaf_curl, healthy và not_tomato_leaf. Runtime không cung cấp thẻ chăm sóc cho not_tomato_leaf.
+Model có tám nhãn lá cùng lớp âm `not_tomato_leaf`. Điểm mô hình dùng để xếp hạng nhãn và quyết định từ chối. Sai khác giữa các tập thực địa cần được xem khi áp dụng ở vùng mới. Xem [catalog chăm sóc](infra/knowledge/CONTENT-LICENSE.md) và [phạm vi dự án](PRODUCT.md).
 
-280px là cấu hình suy luận của đồ án, không phải tên một checkpoint pretrained riêng của Meta. Metadata train `size: 224` phải giữ nguyên. Validator kiểm `evaluation_size: 280`, epoch 6, revision, cấu hình ViT-B/14 và hashes của năm đầu vào.
+Giải nén `TomatoDesktop-G2-model.zip` tại gốc repo. `cnn-gru-release.json` khóa SHA-256 cho metadata và state dict. Bundle chạy G2 đã huấn luyện, gồm backbone và đầu phân loại trong cùng `model.safetensors`. [Đường dẫn cài đặt](docs/SETUP_WINDOWS.md#chạy-từ-mã-nguồn)
 
-## Dữ liệu và giới hạn quyền
-
-Train: 6.969 ảnh; validation: 1.642 ảnh. [Danh sách nguồn, tác giả, phiên bản, điều kiện và khoảng trống](DATASET_ATTRIBUTIONS.md) phân biệt tập train/validation với đánh giá ngoài nguồn. Repo không phân phối ảnh huấn luyện.
-
-Chủ dự án yêu cầu phát hành checkpoint tinh chỉnh qua GitHub Release để cộng tác làm tiếp phần video. **Giấy phép riêng của checkpoint chưa được chốt; quyền dữ liệu còn các điểm chưa xác minh.** Việc chủ dự án yêu cầu upload không phải xác nhận clearance từ các nguồn dữ liệu. Apache của DINOv2 gốc và của mã ứng dụng không tự giải quyết điều khoản PlantVillage hoặc quyền ảnh thu từ web của PlantDoc. Việc bổ sung ghi công không thay thế xin quyền hoặc rà soát pháp lý. Người tái sử dụng phải đánh giá quyền phù hợp với cách dùng của mình.
-
-Lần cập nhật giấy phép/khả năng tái tạo này không train lại, không chọn checkpoint mới và không chỉnh weights. Không có độ chính xác mới hoặc cam kết độ chính xác trên mọi ảnh/địa phương. Test synthetic trong repo chỉ kiểm hợp đồng API/UI và cơ chế inference; chúng không đánh giá chất lượng phân loại thực tế.
-
-## Bundle kỹ thuật cần có khi đã được cấp quyền
-
-| Tệp | SHA-256 của bản lưu v1 hiện tại |
+| Tệp | SHA-256 |
 | --- | --- |
-| classifier.safetensors | `eb2337fbaca6915e9ccae39868fc305dbd5a8a8d95e0347abbf67a5cc1b05efa` |
-| config.json | `09a44ebed52dc88f73c7d27a1762a90f87e21c19dd014fe7b203e06de1db1732` |
-| leaf-classifier.json | `9814d67e774b1742f22177aafc3aaa0bbd7579aa9a1826d745176f09f8fe10d3` |
-| model.safetensors | `3274d01322f079a2b7d0df0048500b1094d67f8f308c47b989ad71e8c566a4ff` |
-| preprocessor_config.json | `14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828` |
+| `model.safetensors` | `85e0450a49a95f77e640a9e1ff63d8d9dc4befb5fe8bcd8674caa16d316a1a9e` |
+| `leaf-classifier.json` | `3a9d075b70208952c3e484187980432cb2ac867c9a9f330734eec69fcf4e4630` |
 
-Tệp thứ sáu `dinov2-release.json` khai báo `model_version: dinov2-v1-280`, `evaluation_size: 280` và đúng năm hash trên. Hash giúp đối chiếu bản lưu; hash không phải chữ ký, bằng chứng quyền sử dụng hoặc nguồn tải weights. Không sửa manifest để làm weights khác vượt kiểm tra.
+Trọng số tiền huấn luyện ConvNeXt-Tiny của Meta có thông báo MIT. Hồ sơ train ghi nhận 241 ảnh PlantSeg v7 theo CC BY-NC 4.0. Bản G2 được chia sẻ để cộng tác phi thương mại. Hồ sơ hiện có chưa xác nhận quyền phân phối đầy đủ cho trọng số tinh chỉnh. [Thông báo thành phần](desktop/notices/NOTICE.md) · [Giấy phép ConvNeXt](desktop/notices/convnext/LICENSE) · [Kế hoạch và provenance](docs/superpowers/plans/2026-11-18-cnn-bigru-colab-training.md)
 
-Đặt bundle được cấp quyền vào `ai/artifacts/dinov2-v1-280/`, theo [hướng dẫn chạy](README.md). Runtime tải model cục bộ, không tải pretrained thay thế. Không cần tải dataset hoặc chạy huấn luyện.
-
-## Phạm vi sử dụng
-
-Ứng dụng hỗ trợ tham khảo trên ảnh lá cà chua trong phạm vi nhãn đã học. Ánh sáng, nền, giống cây, nhiều bệnh cùng lúc và ảnh ngoài đối tượng có thể làm sai kết quả. Điểm softmax không phải xác suất chẩn đoán đã hiệu chuẩn. Thẻ chăm sóc chưa có thẩm định chuyên gia tại Việt Nam; giữ cảnh báo và provenance của từng thẻ.
+[DINOv2 v1 280](https://github.com/VanHuynh205/TomatoAI-Public/releases/tag/v0.1.0-dinov2-v1-280) là mốc đối chứng và bản desktop trước G2.

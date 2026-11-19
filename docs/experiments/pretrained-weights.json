@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "scope": "local pretrained ImageNet1000 preparation, not a trained tomato model",
+  "weights": [
+    {
+      "architecture": "efficientnet_b0",
+      "weights": "EfficientNet_B0_Weights.IMAGENET1K_V1",
+      "url": "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth",
+      "path": "ai/efficientnet_b0_rwightman-7f5810bc.pth",
+      "sha256": "7f5810bc96def8f7552d5b7e68d53c4786f81167d28291b21c0d90e1fca14934",
+      "bytes": 21444401,
+      "interpolation": "bicubic"
+    },
+    {
+      "architecture": "resnet50",
+      "weights": "ResNet50_Weights.IMAGENET1K_V1",
+      "url": "https://download.pytorch.org/models/resnet50-0676ba61.pth",
+      "path": "ai/resnet50-0676ba61.pth",
+      "bytes": 102530333,
+      "sha256": "0676ba61b6795bbe1773cffd859882e5e297624d384b6993f7c9e683e722fb8a",
+      "published_hash_prefix": "0676ba61",
+      "prefix_match": true,
+      "interpolation": "bilinear"
+    }
+  ]
+}

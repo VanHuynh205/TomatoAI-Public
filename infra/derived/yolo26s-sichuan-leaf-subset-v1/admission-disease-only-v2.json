@@ -1,0 +1,152 @@
+{
+  "source": "https://data.mendeley.com/datasets/c2x8rynybg/1",
+  "source_doi": "10.17632/c2x8rynybg.1",
+  "attribution": "Yongbo Liu, Tomato Disease Dataset, Mendeley Data, V1 (2025)",
+  "license": "CC-BY-4.0",
+  "coordinates": "publisher Pascal VOC xyxy in raw pixel coordinates",
+  "source_policy": {
+    "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+    "role": "train_only",
+    "final_holdout_eligible": false
+  },
+  "reviewed_images": 43,
+  "reviewed_leaf_boxes": 76,
+  "records": [
+    {
+      "id": "sichuan-Gray_0617_011",
+      "filename": "Gray_0617_011.jpg",
+      "source_image": "images/GrayMold/Gray_0617_011.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0617_011.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/1bea2eae-3bda-4d47-a30c-b81a62395820/file_downloaded",
+      "image_sha256": "4367713077973f565c92ba087109693a4409bcb5a020345ec16b9e46383bcd62",
+      "image_bytes": 5882416,
+      "annotation_sha256": "dc35eb46c6b5cb628fa9f1a1fe429e7f6ddd15587f0f0a05662d257de637e3fe",
+      "width": 4032,
+      "height": 3024,
+      "exif_orientation": 6,
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "role": "train_only",
+      "final_holdout_eligible": false,
+      "local_image": "raw/sichuan-Gray_0617_011.jpg",
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2365.0,
+            1.0,
+            3317.0,
+            1255.0
+          ],
+          "difficult": "0"
+        }
+      ],
+      "exif_transposed": {
+        "width": 3024,
+        "height": 4032,
+        "boxes": [
+          {
+            "name": "GrayMold_Leaf",
+            "xyxy": [
+              1769.0,
+              2365.0,
+              3023.0,
+              3317.0
+            ],
+            "difficult": "0"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sichuan-Gray_0617_012",
+      "filename": "Gray_0617_012.jpg",
+      "source_image": "images/GrayMold/Gray_0617_012.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0617_012.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/e2c79cfa-18c8-4756-8070-c299dc1ff19c/file_downloaded",
+      "image_sha256": "3fc4ec7a00e77c51a9fe27390e84044dbfbeaed9162379be47c4b86914b3266a",
+      "image_bytes": 6292632,
+      "annotation_sha256": "d86ba1f1940e50ec7d9a105c690e1f1138be16bb1bb41052b50eb6cf9691df3b",
+      "width": 4032,
+      "height": 3024,
+      "exif_orientation": 6,
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "role": "train_only",
+      "final_holdout_eligible": false,
+      "local_image": "raw/sichuan-Gray_0617_012.jpg",
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            2769.0,
+            3.0,
+            3620.0,
+            1345.0
+          ],
+          "difficult": "0"
+        }
+      ],
+      "exif_transposed": {
+        "width": 3024,
+        "height": 4032,
+        "boxes": [
+          {
+            "name": "GrayMold_Leaf",
+            "xyxy": [
+              1679.0,
+              2769.0,
+              3021.0,
+              3620.0
+            ],
+            "difficult": "0"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sichuan-Gray_0617_013",
+      "filename": "Gray_0617_013.jpg",
+      "source_image": "images/GrayMold/Gray_0617_013.jpg",
+      "source_annotation": "annotations/GrayMold/Gray_0617_013.xml",
+      "image_url": "https://data.mendeley.com/public-files/datasets/c2x8rynybg/files/e436e55c-4831-4a25-b89a-bfe9266d8bea/file_downloaded",
+      "image_sha256": "ef57de49ad2eb26e36885d80895bbe4ff0c408824191f6ae58ae1a059163f6b7",
+      "image_bytes": 5636523,
+      "annotation_sha256": "0b7f9614cf9654ccfb325ebf4a4bf64ed9c277c88c5e776711a94081ca94f202",
+      "width": 4032,
+      "height": 3024,
+      "exif_orientation": 6,
+      "group": "sichuan-c2x8rynybg-v1-single-greenhouse",
+      "role": "train_only",
+      "final_holdout_eligible": false,
+      "local_image": "raw/sichuan-Gray_0617_013.jpg",
+      "boxes": [
+        {
+          "name": "GrayMold_Leaf",
+          "xyxy": [
+            843.0,
+            390.0,
+            3662.0,
+            2832.0
+          ],
+          "difficult": "0"
+        }
+      ],
+      "exif_transposed": {
+        "width": 3024,
+        "height": 4032,
+        "boxes": [
+          {
+            "name": "GrayMold_Leaf",
+            "xyxy": [
+              192.0,
+              843.0,
+              2634.0,
+              3662.0
+            ],
+            "difficult": "0"
+          }
+        ]
+      }
+    }
+  ],
+  "target_policy": "disease_only_visible_leaf_extent"
+}

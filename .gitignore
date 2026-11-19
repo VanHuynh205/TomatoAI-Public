@@ -18,3 +18,8 @@ frontend/.api-types-*/
 /dist/
 verification/*.log
 verification/*-report.json
+
+/desktop/dist/
+/frontend/.e2e-*/
+/.scratch/
+.memlog.md

@@ -126,6 +126,35 @@ test('source link uses the bridge and keeps the privileged page', async ({ app, 
   expect(await browser.evaluate('localStorage.length + sessionStorage.length')).toBe(0);
 });
 
+test('care navigation moves keyboard focus to a source in either motion mode', async ({ app, screen, browser }) => {
+  await browser.setViewport({ width: 390, height: 740 });
+  for (const reducedMotion of ['no-preference', 'reduce'] as const) {
+    await browser.emulateMedia({ reducedMotion });
+    await app.open('/');
+    await screen.getByLabel('Chọn ảnh lá').setInputFiles(`${fixtures}/healthy.png`);
+    await screen.getByRole('button', 'Nhận diện', { exact: true }).tap();
+    const nav = screen.getByRole('navigation', 'Mục trong thẻ chăm sóc');
+    const jump = nav.getByRole('link', 'Nguồn tham khảo', { exact: true });
+    await jump.focus();
+    await jump.press('Enter');
+    const heading = screen.getByRole('heading', 'Nguồn tham khảo', { exact: true });
+    await expect(heading).toBeFocused();
+    await expect(browser).toHaveURL('/#care-sources');
+    // Focus can move before the scroll finishes. Check visibility without scrolling the target into view.
+    expect(await browser.evaluate(`new Promise(resolve => {
+      const target = document.getElementById('care-sources');
+      const observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) { clearTimeout(timer); observer.disconnect(); resolve(true); }
+      });
+      const timer = setTimeout(() => { observer.disconnect(); resolve(false); }, 2500);
+      observer.observe(target);
+    })`)).toBe(true);
+    await heading.press('Tab');
+    await expect(screen.getByRole('link', 'example.com — Fixture section 1')).toBeFocused();
+    expect(await browser.evaluate('window.__sourceUrls')).toEqual([]);
+  }
+});
+
 test('small viewport supports keyboard recognition without horizontal overflow', async ({ app, screen, browser }) => {
   await browser.setViewport({ width: 390, height: 844 });
   await app.open('/');
