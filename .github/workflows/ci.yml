@@ -1,0 +1,89 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    # Git Bash runs with -eo pipefail, so any failing command stops the step.
+    shell: bash
+
+jobs:
+  test:
+    # The desktop host (pywebview, WebView2) only supports Windows x64.
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: |
+            desktop/requirements-runtime-cpu.lock
+            pyproject.toml
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 26
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install Python dev environment
+        run: |
+          uv venv .venv-dev --python 3.12.14
+          uv pip sync --python .venv-dev/Scripts/python.exe --torch-backend cpu desktop/requirements-runtime-cpu.lock
+          uv pip install --python .venv-dev/Scripts/python.exe pytest ruff
+
+      # Same scope as docs/SETUP_WINDOWS.md; tests/ai needs training data and extras.
+      - name: Ruff
+        run: .venv-dev/Scripts/python.exe -m ruff check backend desktop tests/test_public_release.py
+
+      - name: Pytest
+        run: .venv-dev/Scripts/python.exe -m pytest tests/test_public_release.py backend/tests desktop/tests
+
+      - name: Install frontend dependencies
+        run: npm --prefix frontend ci
+
+      - name: Typecheck
+        run: npm --prefix frontend run typecheck
+
+      - name: Unit tests
+        run: npm --prefix frontend test
+
+      - name: Build
+        run: npm --prefix frontend run build
+
+      - name: API types match OpenAPI contract
+        run: npm --prefix frontend run api:check
+
+      - name: Install Chromium for E2E
+        working-directory: frontend
+        run: npx @e2e-dev/web install chromium
+
+      - name: E2E (fixture API on 127.0.0.1:8765)
+        working-directory: frontend
+        # e2e.config.ts defaults TOMATO_E2E_PYTHON to ../.venv-dev/Scripts/python.exe.
+        run: |
+          TOMATO_E2E_SESSION_TOKEN="$(../.venv-dev/Scripts/python.exe -c 'import secrets; print(secrets.token_hex(16))')"
+          echo "::add-mask::$TOMATO_E2E_SESSION_TOKEN"
+          export TOMATO_E2E_SESSION_TOKEN
+          npx e2e run
+
+      - name: Upload E2E report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-report
+          path: frontend/.e2e/
+          retention-days: 7
